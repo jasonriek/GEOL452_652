@@ -1,0 +1,124 @@
+BODY
+  {
+  background: white;
+  }  
+H1
+  {
+  font: 18px Arial, sans-serif;
+  padding-bottom: 3px;
+  border-bottom: solid 2px #663300;
+  margin-top:0px;
+  }
+H2
+  {
+  font: bold 15px Arial, sans-serif;
+  margin-top: 15px;
+  margin-bottom: 6px;
+  }
+H3
+  {
+  font: 15px Arial, sans-serif;
+  margin-top: 10px;
+  margin-bottom: 6px;
+  }
+P
+  {
+  margin-top:0px;
+  margin-bottom: 8px;
+  }
+UL
+  {
+  margin-top:0px;
+  }
+H3
+  {
+  font: 15px Arial, sans-serif;
+  }
+
+DIV.banner
+  {
+  font: 15px Arial, sans-serif;
+  position:absolute;
+  top: 30px;
+  left: 155px;
+  z-index:10;
+  }
+DIV.logo
+  {
+  position:absolute;
+  left:0px;
+  top:0px;
+  z-index:0;
+  }
+A
+  {
+  text-decoration:underline;
+  color: #663300;
+  }
+A:hover
+  {
+  text-decoration:underline;
+  color: #996633;
+  }
+A:visited
+  {
+  text-decoration:underline;
+  color: #996633;
+  }
+HR.gray
+  {
+  border-style: none none solid none;
+  color: #CCCCCC;
+  }
+DIV.header
+  {
+  font: 15px Arial, sans-serif;
+  position:absolute;
+  top: 110px;
+  left: 165px;
+  width: 480px;
+  z-index:10;
+  }
+DIV.butnavtop
+  {
+  font: 10px Arial, sans-serif;
+  position:absolute;
+  top: -10px;
+  left: 550px;
+  width: 100px;
+  z-index: 20;
+  }
+DIV.butnavbot
+  {
+  font: 10px Arial, sans-serif;
+  position:relative;
+  top: 5px;
+  left: 550px;
+  z-index: 20;
+  }
+
+
+DIV.main
+  {
+  font: 12px Arial, sans-serif;
+  position:absolute;
+  top: 150px;
+  left: 10px;
+  width: 620px;
+  line-height:130%;
+  z-index:10;
+  }
+
+DIV.footer
+  {
+  font: 9px Arial, sans-serif;
+  position:relative;
+  }
+IMG.bordered
+  {
+  border: thin #663300 solid;
+  }
+TH
+  {
+  font: 12px Arial, sans-serif;
+  }

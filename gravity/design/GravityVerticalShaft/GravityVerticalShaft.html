@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:color="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="appletFormat.css">
+    <title>Gravity Anomaly Over a Vertical Shaft</title>
+</head>
+
+<body>
+    <!--Control modules go here-->
+    <header style="text-align: center;">
+        <span style="color: #ffffff;"><strong>Gravity Anomaly Over a Vertical Shaft</strong></span>
+    </header>
+    <div class="row">
+        <!-- Control Modules -->
+        <div class="leftColumn" >
+                <div id="module_style_controls">
+                    <div class="slideGridContainer">
+                        <!-- slider section for the Station Spacing  -->
+                        <div class="slideGridItem">
+                           <strong>Station Spacing, dx (m): </strong>
+                            <table>
+                                <tr>
+                               <td><button class="ArrowButtons" onclick="dxf_LeftButton();" onmousedown="inter=setInterval(dxf_LeftButton, 100);" onmouseup="clearInterval(inter);" onmouseout="clearInterval(inter);">&#8249</button></td>
+                                <td><label for="station_spacing"></label><input type="range" class="slider" id="station_spacing"></td>
+                                <td><button class="ArrowButtons" onclick="dxf_RightButton();" onmousedown="inter=setInterval(dxf_RightButton, 100);" onmouseup="clearInterval(inter);" onmouseout="clearInterval(inter);">&#8250</button></td>
+                                </tr>
+                            </table>
+                        </div>
+                            <!--slider section for the Cross Line Location  -->
+                        <div class="slideGridItem">
+                            <strong>Density Contrast, Rho (g/cm^3): </strong>
+                            <table>
+                                <tr>
+                                    <td><button class="ArrowButtons" onclick="rho_LeftButton();" onmousedown="inter=setInterval(rho_LeftButton, 100);" onmouseup="clearInterval(inter);" onmouseout="clearInterval(inter);">&#8249</button></td>
+                                    <td><label for="densityContrast"></label><input type="range" class="slider" id="densityContrast"></td>
+                                    <td><button class="ArrowButtons" onclick="rho_RightButton();" onmousedown="inter=setInterval(rho_RightButton, 100);" onmouseup="clearInterval(inter);" onmouseout="clearInterval(inter);">&#8250</button></td>
+                                </tr>
+                            </table>
+
+                        </div>
+                        <div class="slideGridItem">
+                            <strong>Cross Line Location (m):</strong>
+                            <table>
+                                <tr>
+                                    <td><button class="ArrowButtons" onclick="cross_line_loc_LeftButton();" onmousedown="inter=setInterval(cross_line_loc_LeftButton, 100);" onmouseup="clearInterval(inter);" onmouseout="clearInterval(inter);">&#8249</button></td>
+                                    <td><label for="cross_line_loc"></label><input type="range" min="1" max="21" value="1" class="slider" id="cross_line_loc"></td>
+                                    <td><button class="ArrowButtons" onclick="cross_line_loc_RightButton();" onmousedown="inter=setInterval(cross_line_loc_RightButton, 100);" onmouseup="clearInterval(inter);" onmouseout="clearInterval(inter);">&#8250</button></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="slideGridItem">
+                            <strong>Number of Observation, N:</strong>
+                            <table>
+                                <tr>
+                                    <td><button class="ArrowButtons" onclick="n_of_obs_LeftButton();" onmousedown="inter=setInterval(n_of_obs_LeftButton, 100);" onmouseup="clearInterval(inter);" onmouseout="clearInterval(inter);">&#8249</button></td>
+                                    <td><label for="nOfObservations"></label><input type="range" min="1" max="21" value="1" class="slider" id="nOfObservations"></td>
+                                    <td><button class="ArrowButtons" onclick="n_of_obs_RightButton();" onmousedown="inter=setInterval(n_of_obs_RightButton, 100);" onmouseup="clearInterval(inter);" onmouseout="clearInterval(inter);">&#8250</button></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="slideGridItem">
+                            <strong>Std. Deviation of Observations (mgal):</strong>
+                            <table>
+                                <tr>
+                                    <td><button class="ArrowButtons" onclick="std_LeftButton();" onmousedown="inter=setInterval(std_LeftButton, 100);" onmouseup="clearInterval(inter);" onmouseout="clearInterval(inter);">&#8249</button></td>
+                                    <td><label for="stdDev"></label><input type="range" min="1" max="12" value="1" class="slider" id="stdDev"></td>
+                                    <td><button class="ArrowButtons" onclick="std_RightButton();" onmousedown="inter=setInterval(std_RightButton, 100);" onmouseup="clearInterval(inter);" onmouseout="clearInterval(inter);">&#8250</button></td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <!-- Radius Control Panel -->
+                        <canvas class="gtRadSample radius_control" width="240px" height="240px"></canvas>
+                        <!-- rescale button -->
+                        <div class="slideGridItem rescale_button"><button onclick="rescale()">Rescale Plot</button></div>
+                    </div>
+                </div>
+            </div>
+            <!-- Gravity Tunnel Applet Painted Here -->
+            <div class="rightColumn">
+                <div id = "module_style_canvas">
+                    <canvas class="gvsCanvas" id="GravityTunnelCanvas" onclick="moveTunnel(event)"></canvas>
+                    <!-- Gravity Vertical Shaft Labels -->
+                    <table id="stats">
+                        <tr>
+                            <td><span id="depth_label"><strong>Depth:</strong></span></td><td><span id="depth_val"></span></td>
+                        </tr>
+                        <tr>
+                            <td><span id="radius_label"><strong>Radius:</strong></span></td><td><span id="radius_val"></span></td>
+                        </tr>
+                        <tr>
+                            <td><span id="contrast_label"><strong>Contrast:</strong></span></td><td><span id="contrast_val"></span></td>
+                        </tr>
+                        <tr>
+                            <td><span id="y_location_label"><strong>Y Location:</strong></span></td><td><span id="y_location_val"></span></td>
+                        </tr>
+                        <tr>
+                            <td><span id="station_spacing_label"><strong>Station Spacing:</strong></span></td><td><span id="station_spacing_val"></span></td>
+                        </tr>
+                        <tr>
+                            <td><span id="num_of_obs_label"><strong>Number of Observations:</strong></span></td><td><span id="num_of_obs_value"></span></td>
+                        </tr>
+                        <tr>
+                            <td><span id="std_label"><strong>Standard Deviation:</strong></span></td><td><span id="std_val"></span></td>
+                        </tr>
+
+                    </table>
+                </div>
+            </div>
+        </div>
+    <article id="module_style_text_area">
+        <h2>Gravity Anomaly Over a Vertical Shaft</h2>
+        This JavaScript application will produce synthetic gravity anomalies over a buried vertical shaft.
+        You can use this script to design a gravity survey for the project described in the request for bid.
+        The gray rectangle represents a vertical shaft with a specific radius, depth of burial, and density contrast.
+        The depth of burial can be changed by clicking the up and down arrow buttons to the left of the page or by pressing the up and down arrow keys on your keyboard.
+        The radius of the shaft can be varied by clicking the left and right control arrows to the left, or by using the left and right keyboard arrow buttons. All other parameters are varied with the slider bars.
+        In addition to parameters that control the shaft, you can also vary parameters that control gravity survey from which you will interpret observations.
+        These parameters include the spacing between gravity readings, the number of gravity readings to be average at each station, and the expected standard deviation of the observed gravity readings.
+
+    </article>
+<script type="text/javascript" src="../../../assets/js/Shapes.js"></script>
+<script type="text/javascript" src="GravityVerticalShaft.js"></script>
+<script type="text/javascript" src="GravityControls.js"></script>
+</body>
+
+</html>

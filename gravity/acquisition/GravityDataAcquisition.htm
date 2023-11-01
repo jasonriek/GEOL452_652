@@ -1,0 +1,216 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <title>Gravity - Data Acquisition</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="entry.css">
+    <link href="../../assets/css/main.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<!-- Header -->
+<section id="header">
+		
+    <div class="icon major"><img class="logo" src="../../images/logo.png" alt="UNLV Geoscience">
+                    <h1 style="color: #FFFFFF;">GEOL 452/652 - Geophysics<br></h1>
+    <br>
+        
+    </div>
+    <div class="menu-container">
+        <nav id="menu">
+            <label for="tm" id="toggle-menu">Navigation <span class="drop-icon">▾</span></label>
+            <input type="checkbox" id="tm">
+            <ul class="main-menu cf">
+            
+            <li><a href="#">Introduction
+                <span class="drop-icon">▾</span>
+                <label title="Toggle Drop-down" class="drop-icon" for="sm0">▾</label>
+                </a>
+                <input type="checkbox" id="sm0">
+                <ul class="sub-menu">
+                    <li><a href="../../index.html">Home</a></li>
+                    <li><a href="../../Introduction_Philosophy.html">Philosophy</a></li>
+                    <li><a href="../../Introduction_Organization.html">Organization</a></li>
+                    <li><a href="../../Introduction_ModuleLayout.html">Module Layout</a></li>
+                    <li><a href="../../Introduction_CourseObjectives.html">Course Objectives</a></li>
+                    <li><a href="../../Introduction_TLE.html">TLE Reprint</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Gravity
+                <span class="drop-icon">▾</span>
+                <label title="Toggle Drop-down" class="drop-icon" for="sm1">▾</label>
+                </a>
+                <input type="checkbox" id="sm1">
+                <ul class="sub-menu">
+                    <li><a href="../../GravityHome.html">Notes</a></li>
+                    <li><a href="../observations/GravityObservations.htm">Observations</a></li>
+                    <li><a href="../rfb/GravityRequestforBid.htm">Request for Bid</a></li>
+                    <li><a href="../design/GravitySurveyDesign.htm">Survey Design</a></li>
+                    <li><a href="GravityDataAcquisition.htm">Data Acquisition</a></li>
+                    <li><a href="../reduction/GravityDataInterpretation.htm">Interpretation</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Magnetism
+                <span class="drop-icon">▾</span>
+                <label title="Toggle Drop-down" class="drop-icon" for="sm2">▾</label>
+                </a>
+                <input type="checkbox" id="sm2">
+            
+            <ul class="sub-menu">
+                <li><a href="../../MagneticsHome.htm">Notes</a></li>
+                <li><a href="../../magnetism/observations/obs.html">Observations</a></li>
+                <li><a href="../../magnetism/rfb/rfb.html">Request for Bid</a></li>
+                <li><a href="../../magnetism/design/MagneticSurveyDesign.html">Survey Design</a></li>
+                <li><a href="../../magnetism/acquisition/acq.html">Data Acquisition</a></li>
+                <li><a href="../../magnetism/reduction/red.html">Interpretation</a></li>
+            </ul>    
+        </li>
+            
+            <li><a href="#">Resistivity
+                    <span class="drop-icon">▾</span>
+                    <label title="Toggle Drop-down" class="drop-icon" for="sm3">▾</label>
+                    </a>
+                    <input type="checkbox" id="sm3">
+                
+                <ul class="sub-menu">
+                    <li><a href="../../DCResistivityHome.htm">Notes</a></li>
+                    <li><a href="../../resistivity/observations/obs.html">Observations</a></li>
+                    <li><a href="../../resistivity/rfb/rfb.html">Request for Bid</a></li>
+                    <li><a href="../../resistivity/design/design.html">Survey Design</a></li>
+                    <li><a href="../../resistivity/acquisition/acq.html">Data Acquisition</a></li>
+                    <li><a href="../../resistivity/reduction/red.html">Interpretation</a></li>
+                </ul>    
+            </li>
+            <li><a href="#">Refr. Seismic
+                <span class="drop-icon">▾</span>
+                <label title="Toggle Drop-down" class="drop-icon" for="sm4">▾</label>
+                </a>
+                <input type="checkbox" id="sm4">
+            
+            <ul class="sub-menu">
+                <li><a href="../../RefractionSeismicHome.htm">Notes</a></li>
+                    <li><a href="../../seismology/observations/obs.html">Observations</a></li>
+                    <li><a href="../../seismology/rfb/rfb.html">Request for Bid</a></li>
+                    <li><a href="../../seismology/design/design.html">Survey Design</a></li>
+                    <li><a href="../../seismology/acquisition/acq.html">Data Acquisition</a></li>
+                    <li><a href="../../seismology/reduction/red.html">Interpretation</a></li>
+            </ul>    
+        </li>
+            <li><a href="../../MapsInfoetc_Home.htm">Maps &amp; Info</a></li>
+            <li style="border: none;"><a href="../../OtherInformationHome.htm">Other Info.</a></li>
+            </ul>
+        </nav>
+    </div>
+</section>
+
+<!-- One -->
+<section class="main">
+    <div class="container">
+            <div class="center-container">
+                <h1 style="margin: 0;">Data Acquisition - Gravity</h1>
+            </div>
+            <hr />
+
+            <div class="center-container">
+                <div class="split-side-left">
+                    <h2>Acquiring Your Data</h2>
+                <p>
+                    Using the survey parameters you defined in the previous exercise you should now generate field
+                    observations for interpretation. Fill in the specified parameters in the form below, and
+                    a data set will be generated for you.
+                </p>
+
+                <div class="form-row">
+                    <div class="wrap-input100 validate-input bg1">
+                        <span class="label-input100">Line Location (m):</span>
+                        <input class="input100" step="any" name="loc"  aria-required="true" data-ok="false" value="" type="number" id="loc"  size="40" placeholder="Enter Value: (m)">
+
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="wrap-input100 validate-input bg1">
+                        <span class="label-input100">Station Spacing (m): </span>
+                        <input class="input100" step="any" name="spacing"  aria-required="true" data-ok="false"type="number" id="spacing"  size="40" placeholder="Enter Value: (m)">
+                    </div>
+                </div>
+
+
+                    <div class="form-row">
+                        <div class="wrap-input100 validate-input bg1">
+                            <span class="label-input100">Measurements per Station:</span>
+                            <input class="input100" step="any"  name="nread"  aria-required="true" data-ok="false" type="number" id="nread"  size="40" placeholder="Enter Value:">
+                        </div>
+                    </div>
+                        <div class="form-row">
+                            <div class="wrap-input100 validate-input bg1">
+                                <span class="label-input100">Base Station Location (m):</span>
+                                <input class="input100" step="any" name="base"  aria-required="true" data-ok="false" type="number" id="base"  size="40" placeholder="Enter Value: (m)">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="wrap-input100 validate-input bg1">
+                                <span class="label-input100">Return to Base Station every (minute):</span>
+                                <input class="input100" step="any" name="bfreq"  aria-required="true" data-ok="false" type="number" id="bfreq" size="40" placeholder="Enter Value: (minutes)">
+                            </div>
+                        </div>
+                        <button onclick="exportCSV()" id="export_button" class="export-button">
+                            Retrieve Data Set
+                        </button>
+                    <hr class="gray"/>
+                    <p>
+                        <b>Line Location:</b> The north-south location of the survey line. All gravity
+                        survey lines run east-west. A value of 0 will place the line in the exact
+                        center of the survey area, -250 will place it along the southern edge of the
+                        area, and 250 will place it along the northern edge of the area.
+                    </p>
+                    <p>
+                        <b>Station Spacing:</b> Indicates distance between observation points along survey line. This value is
+                        measured
+                        in meters.
+                    </p>
+                    <p>
+                        <b>Measurements per Station:</b> Number of gravity readings taken at each station. Reported gravity
+                        value will represent the average of the readings taken at each station. Multiple readings per
+                        station can be used to reduce the level of random noise associated with
+                        each measurement. The time
+                        required to complete the survey and the associated cost, however, increases as the number of
+                        readings increases.
+                    </p>
+                    <p>
+                        <b>Base Station Location:</b> Indicates the relative position of your gravity base station along the line.
+                        Observations from this base station are used to remove the temporally varying components of the
+                        earth's gravity field and instrument drift. This value is also measured in meters. It could be anything,
+                        but for logistical reasons, should be close to your survey line. The eastern limit of the survey
+                        line is at a distance of 250, the western limit is at a distance of -250.
+                    </p>
+                    <p>
+                        <b>Return to Base Station:</b> Indicates the temporal frequency with which you will reoccupy the base
+                        station.
+                        This value is measured in minutes.
+                    <p>
+                        <i>Total Survey Bid:</i> Your bid for completing the survey as defined in the
+                        <a href="../rfb/GravityRequestforBid.htm">Request For Bid</a>.
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+        <!-- Footer -->
+        <section id="footer">
+
+            <ul class="copyright">
+                <li>&copy; 2019</li><li>Design: Jason Reek, Brandon Fidler</li>
+                <li>Content: Tom Boyd, Pamela Burnley</li>
+            </ul>
+        </section>
+
+        <!-- Scripts -->
+        <script type="text/javascript" src="../../assets/js/seedrandom.js"></script>
+        <script type="text/javascript" src="GravityModel.js"></script>
+
+</body>
+</html>

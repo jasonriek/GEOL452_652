@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Seismology: Notes: Derivation of Travel Time Equations: Flat Layer over Halfspace </title>
+    <meta charset="utf-8">
+<link href="../../assets/css/main_style.css" rel="stylesheet" type="text/css"/></head>
+<body>
+    <div id="noteBG">
+        <div style="float: left">
+                <ul class="topnav" id="myTopnav">
+        <li><a href="../../index.html">Main Page</a></li>\n
+                    <li><a href="../../GravityHome.html">Gravity Notes</a></li>            
+                    <li><a href="../../MagneticsHome.htm">Magnetism Notes</a></li>
+                    <li><a href="../../DCResistivityHome.htm">DC Resistivity Notes</a></li>
+                    <li><a href="../../RefractionSeismicHome.htm">Refr. Seismic Notes</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="spacer"></div>
+
+<div class="mainContainer center_container">
+    <div class="main">
+<div>            <b style="margin-left: 500px;">pg 17</b>
+<h1>Derivation of Travel Time Equations: Flat Layer over Halfspace</h1>        </div>
+       
+        <p>
+            For those who are interested, this page outlines the details of how the
+            equations given on the <a target="_BLANK" href="SeismicNotes16SSimp_01.html">last page</a> were derived.
+            Although you don't need to memorize this derivation, a working knowledge of
+            its construction is useful, especially when we consider travel time curves
+            produced by more complex Earth models.
+        </p>
+        <p>
+            To derive the equations for the velocity of the halfspace and the depth to
+            the top of the halfspace shown previously, we first need to be able to
+            construct an equation that defines the time of arrival of a head wave,
+            <i>t<sub>T</sub></i>, off of a single interface at some offset, <i>x</i>. To do this
+            we will consider the <a target="_BLANK" href="SeismicNotes06RayPath.html">raypath</a> of the head wave
+            from the source to the receiver as defined by <a target="_BLANK" href="SeismicNotes08Snell.html">Snell's
+            law</a>.
+        </p>
+        <p>
+            Consider the simple Earth model shown below. It consists of a layer with
+            a velocity of <i>V<sub>1</sub></i> overlying a halfspace with a velocity of <i>V<sub>2</sub></i>.
+            The depth to the top of the halfspace is <i>h</i>.
+        </p>
+        <p>
+            <img src="seis_images/deriv1.gif" class="center">
+        </p>
+        <p>
+            The raypath of the head wave observed at an offset <i>x</i> is shown by
+            the red line. This raypath consists of three segments: one traveling down
+            through the layer, another traveling along the layer itself, and a third
+            (which is identical to the first) traveling back up through the layer to
+            the receiver. We could, as is done in most textbooks, derive our equation
+            for the travel time of this wave by computing the time along each of these
+            segments and summing them up. In this derivation, however, we will consider
+            an alternate method of calculation that makes the analysis through more
+            complex structures much easier.
+        </p>
+        <p>
+            From the <a target="_BLANK" href="SeismicNotes11Simp1.html">wave propagation movie</a> shown previously,
+            notice that the shape of the head wave as it travels back up through the
+            layer is that of a straight line. A graphical representation of this is
+            shown by the blue line in the figure above. Knowing that the head wave forms
+            a linear wavefront, we can consider an alternate ray path called the
+            <i>apparent raypath</i>. The apparent raypath is shown as the red dashed
+            line. Like the true raypath, it also consists of three segments. These segments,
+            however, are different. One travels downward vertically through the layer
+            from the source. The second travels along the boundary over a distance <i>x</i>.
+            The third travels vertically upward through the layer to the receiver.
+        </p>
+        <p>
+            Let's compute the travel time of the head wave by summing up the times along
+            the three segments of the apparent raypath. The time along each segment
+            is nothing more than the length of the segment divided by the velocity
+            the wave travels along that segment. That is,
+        </p>
+            <img src="seis_images/deriv1eq.gif" class="center">
+        <p>
+            Consider the two segments in the layer. They are identical to each other,
+            so the times the wave spends traveling along each must be identical. The
+            head wave shown by the blue line travels along the distance <i>s<sub>1</sub></i> over
+            the same time period that it travels along the true raypath for a distance <i>d</i>.
+            <i>d</i> is equal to <i>s<sub>1</sub></i> times the <i>cosine</i> of the angle <i>i<sub>c</sub></i>,
+            and <i>s<sub>1</sub></i> is simply equal to the thickness of the layer, <i>h</i>. Thus,
+        </p>
+       
+            <img src="seis_images/deriv3eq.gif" class="center">
+     
+        <p>
+            The travel time along the apparent raypath that lies along the layer boundary
+            is nothing more than the distance <i>x</i> divided by the velocity the wave
+            travels along the boundary, <i>V<sub>2</sub></i>.
+        </p>
+        <p>
+            <img src="seis_images/deriv2eq.gif" class="center">
+        </p>
+        <p>
+            Thus, the total travel time of the head wave is
+        </p>
+        <p>
+            <img src="seis_images/deriv4eq.gif" class="center">
+        </p>
+        <p>
+            It is easily shown that (we'll leave this one up to you) to get the answer, you
+            use Snell's law to compute the sine of the angle of incidence of the incoming wave,
+            <i>i<sub>1</sub></i> (which we've called <i>i<sub>c</sub></i> here) and then use trigometric
+            relations to get an expression for the cosine of the angle.
+        </p>
+        <p>
+            <img src="seis_images/deriv5eq.gif" class="center">
+        <p>
+            Substituting this into our travel time expression we get the following:
+        </p>
+        <p>
+            <img src="seis_images/deriv6eq.gif" class="center">
+        </p>
+        <p>
+            This is nothing more than an equation of a straight line. The slope of the
+            line is given by the first term on the right-hand side and is <i>1/V<sub>2</sub></i>.
+            The intercept of the line is given by the second term on the right-hand side and
+            is what we have called <i>t<sub>0</sub></i>. Set the second term on the right-hand
+            side equal to <i>t<sub>0</sub></i> and solve for the layer thickness, <i>h</i>. You
+            will get the expression given on the <a target="_BLANK" href="SeismicNotes16SSimp_01.html">previous</a>
+            page.
+        </p>
+        <br />
+
+        <div style="margin-bottom: 50px;">
+            <a href="SeismicNotes16SSimp_01.html" class="noteButton noteButtonBack"
+               style="color: #000000; float: left">❮❮ Previous</a>
+            <a href="SeismicNotes18Simp_02.html" class="noteButton noteButtonFor"
+               style="color: ivory; float: right">Next ❯❯</a>
+        </div>
+    </div>
+
+
+    <div class="noteOutline">
+<h1 style="margin-bottom: 0;">Seismology</h1>        <button class="accordion"><b> Introduction </b></button>
+        <div class="panel">
+            <ul id="myUL">
+                <li><a href="SeismicNotes01SIntro.html"> Seismic Methods: Refraction and Reflection <i
+                        style="float: right;">pg 1</i></a></li>
+                <li><a href="SeismicNotes02SAdv.html">Adv. and Disadv. of Seismic Methods V.S. Other Methods<i
+                        style="float: right;">pg 2</i></a></li>
+                <li><a href="SeismicNotes03SAdv2.html">Adv. and Disadv. of Refraction and Reflection Methods<i
+                        style="float: right;">pg 3</i></a></li>
+                <li><a href="SeismicNotes04Waves.html">Elastic Waves<i style="float: right;">pg 4</i></a></li>
+                <li><a href="SeismicNotes05SWaves.html">Types of Seismic Waves<i style="float: right;">pg 5</i></a></li>
+                <li><a href="SeismicNotes06RayPath.html">Wave Propagation: Wavefronts and Raypaths<i
+                        style="float: right;">pg 6</i></a></li>
+
+            </ul>
+        </div>
+
+        <button class="accordion"><b> Seismology and Geology </b></button>
+        <div class="panel">
+            <ul id="myUL">
+                <li><a href="SeismicNotes07Bound.html">Wave Interaction with Boundaries<i style="float: right;">pg 7</i></a>
+                </li>
+                <li><a href="SeismicNotes08Snell.html">Snell's Law<i style="float: right;">pg 8</i></a></li>
+                <li><a href="SeismicNotes09EVel.html">Velocities and Rock Properties<i style="float: right;">pg
+                    9</i></a></li>
+                <li><a href="SeismicNotes10RVel.html">Seismic Velocities of Common Earth Materials<i
+                        style="float: right;">pg 10</i></a></li>
+            </ul>
+        </div>
+
+        <button class="accordion"><b> Refraction Basics </b></button>
+        <div class="panel">
+            <ul id="myUL">
+                <li><a href="SeismicNotes11Simp1.html">Simple Earth Model: Low-Velocity Layer Over a Halfspace<i
+                        style="float: right;">pg 11</i></a></li>
+                <li><a href="SeismicNotes12Head.html">Head Waves<i style="float: right;">pg 12</i></a></li>
+                <li><a href="SeismicNotes13Seismogram.html">Records of Ground Motion<i style="float: right;">pg
+                    13</i></a></li>
+                <li><a href="SeismicNotes14TtSimp_01.html">Travel-time Curves for a Simple Earth Model<i
+                        style="float: right;">pg 14</i></a></li>
+                <li><a href="SeismicNotes015FirArr.html">First Arrivals<i style="float: right;">pg 15</i></a></li>
+                <li><a href="SeismicNotes16SSimp_01.html">Determining Earth Structure from Travel Times<i
+                        style="float: right;">pg 16</i></a></li>
+                <li><a href="SeismicNotes17Deriv_01.html">Derivation of Travel Time Equations<i style="float: right;">pg
+                    17</i></a></li>
+                <li><a href="SeismicNotes18Simp_02.html">High-Velocity Layer Over a Halfspace: Reprise<i
+                        style="float: right;">pg 18</i></a></li>
+            </ul>
+        </div>
+
+        <button class="accordion"><b> Refraction Seismic Equipment and Field Procedures </b></button>
+        <div class="panel">
+            <ul id="myUL">
+                <li><a href="SeismicNotes19EOverview.html">Equipment Overview<i style="float: right;">pg 19</i></a></li>
+                <li><a href="SeismicNotes20Source.html">Types of Seismic Sources<i style="float: right;">pg 20</i></a>
+                </li>
+                <li><a href="SeismicNotes21Geophone.html">Seismometers or Geophones<i style="float: right;">pg
+                    21</i></a></li>
+                <li><a href="SeismicNotes22Field_01.html">Rec. Ground Displacement at Several Offsets
+                    Simultaneously<i style="float: right;">pg 22</i></a></li>
+                <li><a href="SeismicNotes23Record.html">Recording Systems<i style="float: right;">pg 23</i></a></li>
+                <li><a href="SeismicNotes24First.html">Sources of Noise<i style="float: right;">pg 24</i></a></li>
+            </ul>
+        </div>
+
+        <button class="accordion"><b> Interpretation of Seismic Observations </b></button>
+        <div class="panel">
+            <ul id="myUL">
+                <li><a href="SeismicNotes25Noise.html">Picking Times of Arrivals<i style="float: right;">pg 25</i></a>
+                </li>
+                <li><a href="SeismicNotes26CMod.html">Wave Propagation with Multiple Horizontal Layers<i
+                        style="float: right;">pg 26</i></a></li>
+                <li><a href="SeismicNotes27CModTt.html">Travel Time Curves from Multiple Horizontal<i
+                        style="float: right;">pg 27</i></a></li>
+                <li><a href="SeismicNotes28Hidden.html">Hidden Layers<i style="float: right;">pg 28</i></a></li>
+                <li><a href="SeismicNotes29Dip_01.html">Head Waves from a Dipping Layer: Shooting Down Dip<i
+                        style="float: right;">pg 29</i></a></li>
+                <li><a href="SeismicNotes30Dip_02.html">Head Waves from a Dipping Layer: Shooting Up Dip<i
+                        style="float: right;">pg 30</i></a></li>
+                <li><a href="SeismicNotes31GField.html">A Field Procedure for Recognizing Dipping Beds<i
+                        style="float: right;">pg 31</i></a></li>
+                <li><a href="SeismicNotes32Dest.html">Estimating Dips and Depths from Travel<i style="float: right;">pg
+                    32</i></a></li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+
+<div id="spacer"></div>
+<div id="noteFBG"></div>
+<script src="../../assets/js/notes_accord.js"></script></body>
+</html>

@@ -1,0 +1,430 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Gravity - Interpretation</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link href="../../assets/css/main.css" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+
+<!-- Header -->
+<section id="header">
+		
+    <div class="icon major"><img class="logo" src="../../images/logo.png" alt="UNLV Geoscience">
+                    <h1 style="color: #FFFFFF;">GEOL 452/652 - Geophysics<br></h1>
+    <br>
+        
+    </div>
+    <div class="menu-container">
+        <nav id="menu">
+            <label for="tm" id="toggle-menu">Navigation <span class="drop-icon">▾</span></label>
+            <input type="checkbox" id="tm">
+            <ul class="main-menu cf">
+            
+            <li><a href="#">Introduction
+                <span class="drop-icon">▾</span>
+                <label title="Toggle Drop-down" class="drop-icon" for="sm0">▾</label>
+                </a>
+                <input type="checkbox" id="sm0">
+                <ul class="sub-menu">
+                    <li><a href="../../index.html">Home</a></li>
+                    <li><a href="../../Introduction_Philosophy.html">Philosophy</a></li>
+                    <li><a href="../../Introduction_Organization.html">Organization</a></li>
+                    <li><a href="../../Introduction_ModuleLayout.html">Module Layout</a></li>
+                    <li><a href="../../Introduction_CourseObjectives.html">Course Objectives</a></li>
+                    <li><a href="../../Introduction_TLE.html">TLE Reprint</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Gravity
+                <span class="drop-icon">▾</span>
+                <label title="Toggle Drop-down" class="drop-icon" for="sm1">▾</label>
+                </a>
+                <input type="checkbox" id="sm1">
+                <ul class="sub-menu">
+                    <li><a href="../../GravityHome.html">Notes</a></li>
+                    <li><a href="../observations/GravityObservations.htm">Observations</a></li>
+                    <li><a href="../rfb/GravityRequestforBid.htm">Request for Bid</a></li>
+                    <li><a href="../design/GravitySurveyDesign.htm">Survey Design</a></li>
+                    <li><a href="../acquisition/GravityDataAcquisition.htm">Data Acquisition</a></li>
+                    <li><a href="GravityDataInterpretation.htm">Interpretation</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Magnetism
+                <span class="drop-icon">▾</span>
+                <label title="Toggle Drop-down" class="drop-icon" for="sm2">▾</label>
+                </a>
+                <input type="checkbox" id="sm2">
+            
+            <ul class="sub-menu">
+                <li><a href="../../MagneticsHome.htm">Notes</a></li>
+                <li><a href="../../magnetism/observations/obs.html">Observations</a></li>
+                <li><a href="../../magnetism/rfb/rfb.html">Request for Bid</a></li>
+                <li><a href="../../magnetism/design/MagneticSurveyDesign.html">Survey Design</a></li>
+                <li><a href="../../magnetism/acquisition/acq.html">Data Acquisition</a></li>
+                <li><a href="../../magnetism/reduction/red.html">Interpretation</a></li>
+            </ul>    
+        </li>
+            
+            <li><a href="#">Resistivity
+                    <span class="drop-icon">▾</span>
+                    <label title="Toggle Drop-down" class="drop-icon" for="sm3">▾</label>
+                    </a>
+                    <input type="checkbox" id="sm3">
+                
+                <ul class="sub-menu">
+                    <li><a href="../../DCResistivityHome.htm">Notes</a></li>
+                    <li><a href="../../resistivity/observations/obs.html">Observations</a></li>
+                    <li><a href="../../resistivity/rfb/rfb.html">Request for Bid</a></li>
+                    <li><a href="../../resistivity/design/design.html">Survey Design</a></li>
+                    <li><a href="../../resistivity/acquisition/acq.html">Data Acquisition</a></li>
+                    <li><a href="../../resistivity/reduction/red.html">Interpretation</a></li>
+                </ul>    
+            </li>
+            <li><a href="#">Refr. Seismic
+                <span class="drop-icon">▾</span>
+                <label title="Toggle Drop-down" class="drop-icon" for="sm4">▾</label>
+                </a>
+                <input type="checkbox" id="sm4">
+            
+            <ul class="sub-menu">
+                <li><a href="../../RefractionSeismicHome.htm">Notes</a></li>
+                    <li><a href="../../seismology/observations/obs.html">Observations</a></li>
+                    <li><a href="../../seismology/rfb/rfb.html">Request for Bid</a></li>
+                    <li><a href="../../seismology/design/design.html">Survey Design</a></li>
+                    <li><a href="../../seismology/acquisition/acq.html">Data Acquisition</a></li>
+                    <li><a href="../../seismology/reduction/red.html">Interpretation</a></li>
+            </ul>    
+        </li>
+            <li><a href="../../MapsInfoetc_Home.htm">Maps &amp; Info</a></li>
+            <li style="border: none;"><a href="../../OtherInformationHome.htm">Other Info.</a></li>
+            </ul>
+        </nav>
+    </div>
+</section>
+
+<!-- One -->
+<section class="main">
+    <div class="container">
+            <div class="center-container">
+                <h1 style="margin: 0;">Data Interpretation - Gravity</h1>
+            </div>
+            <hr />
+
+            <div class="center-container">
+                <div class="split-side-left">
+        <h2>BACKGROUND</h2>
+        <p>
+            Geologists and engineers often perceive the interpretation of geophysical data as "geomagic" because of
+            the mathematical complexity of the underlying theory. This need not be the case if all of the partners in a
+            project (geologists, engineers, and geophysicists) concentrate on the exploration process. The last exercise
+            introduced you to the application of formal engineering design techniques to the planning of a
+            geophysical survey. In this exercise, we will study how the same kind of
+            structured decision-making processes
+            can be applied to the interpretation of geophysical data.
+        </p>
+        <p>
+            Perhaps the most common failing of data interpreters is to become committed to their first interpretation
+            too quickly. Once they have settled on their first interpretation, they tend to try to force all of the data
+            to
+            fit that interpretation. Unfortunately, because of the inherent uncertainty in geophysical data, it often is
+            possible to force a set of data to fit a number of different models. Even though the data fits their first
+            interpretation, there is no guarantee that it is the most likely interpretation. Using a well-defined,
+            structured
+            approach to the interpretive process can minimize the chance of delivering the wrong interpretation -- or
+            can at least demonstrate that the preferred interpretation is suspect. This sort of "honesty" is what leads
+            to
+            trust between client and contractor, and both gain in the end.
+        </p>
+        <h2>OBJECTIVES</h2>
+        <hr />
+                <b>There are four learning objectives:</b>
+        <ul class="square">
+            <li style="margin-bottom: 10px">Gain experience with both data presentation and modeling,</li>
+            <li style="margin-bottom: 10px">Develop an understanding for the kinds of corrections applied to gravity
+                data, with special
+            </li>
+            emphasis on the empirical corrections that require interpolation between reference points,
+            <li style="margin-bottom: 10px">Codify the steps involved in processing and interpreting geophysical data,
+            </li>
+            <li style="margin-bottom: 10px">Get exposure to the problem of matching gravity anomalies with possible
+                geologic sources.
+            </li>
+        </ul>
+        <p>
+            If you have not already done so, you first need to
+            <a href="../acquisition/GravityDataAcquisition.htm" target="_blank">generate a gravity data set using your
+                survey parameters</a>
+            and download them to your computer.
+            As you can see from the plot of the observations, they look much more complex than would be expected from
+            the anomaly produced by a simple tunnel.
+            The objective in this exercise is to attempt to enhance the gravity
+            anomaly due to the target and interpret that anomaly in terms of the location, shape, and condition of the
+            target. There are two milestones in the process of accomplishing this objective:
+        </p>
+        <ol class="roman">
+            <li style="margin-bottom: 10px"> <b>Process data to maximize signal-to-noise ratio. This will include:</b>
+                <ul class="circle">
+                    <li style="margin-bottom: 10px">Corrections for deterministic noise,</li>
+                    <li style="margin-bottom: 10px">Minimization of statistical noise,</li>
+                    <li style="margin-bottom: 10px">Development of a plausible interpretation,</li>
+                </ul>
+            <li style="margin-bottom: 10px"> <b>Validation of interpretation and estimates of model confidence. This will
+            include:</b>
+                <ul class="circle">
+                    <li style="margin-bottom: 10px"> A parametric sensitivity analysis of the plausible
+                        interpretation,
+                    </li>
+                    <li style="margin-bottom: 10px"> Determination of all possible models and selection of preferred
+                        model,
+                    </li>
+                    <li style="margin-bottom: 10px"> Validation and calculation of likelihood of preferred
+                        interpretation,
+                    </li>
+                    <li style="margin-bottom: 10px"> Identification and analysis of other anomalies, if any.</li>
+                </ul>
+            </li>
+        </ol>
+        <h2 style="margin-top: 40px;">PROCEDURE</h2>
+        <hr />
+            For this exercise, you will need the gravity observations generated from your survey, a spreadsheet, and one
+            of the symbolic math packages pointed to below. Once you have these, you can begin on the following
+            procedure:
+            <br /><br />
+        <ul class="square">
+            <li style="margin-bottom: 10px"><b>Process the data to remove or minimize all variations not deriving from the target:</b>
+                <ul class="circle">
+                    <li style="margin-bottom: 10px">Load the generated gravity observations into your spreadsheet and
+                        generate a plot of gravity versus
+                        position along the line. Notice that the data file that you have generated contains three
+                        columns of data.
+                        The first gives the location of the observations along the line (location is specified using the
+                        <a href="../../information/surveycor.html" target="_blank">client specified survey coordinates</a>).
+                        The second gives the time at which the gravity observation at that location was taken, and the
+                        third
+                        is the gravity observation in
+                        <a href="../notes/GravityNotes03Units.htm" target="_blank">mgals</a>.
+                        Notice that one position on the line has multiple gravity readings. This position should
+                        correspond
+                        to the location of your base station.
+                        If you requested multiple readings at each station in an effort to reduce reading errors, only a
+                        single reading will be listed in the file, because these multiple
+                        readings have been averaged for you.
+                    </li>
+                    <li style="margin-bottom: 10px">Using your spreadsheet and the techniques developed in the
+                        <a href="../observations/GravityObservations.htm" target="_blank">Observation Assignment</a>,
+                        <a href="../notes/GravityNotes17TemporalVariationDataReduction.htm" target="_blank">correct the
+                            data</a> for temporal variations
+                        (<a href="../notes/GravityNotes13InstrumentDrift.htm" target="_blank">drift</a> and
+                        <a href="../notes/GravityNotes14EarthTides.htm" target="_blank">tides</a>).
+                    </li>
+                    <li style="margin-bottom: 10px"> At this stage one would normally apply
+                        <a href="../notes/GravityNotes18LatitudeVariations.htm" target="_blank">latitude</a>,
+                        <a href="../notes/GravityNotes20ElevationEffects.htm" target="_blank">elevation</a>,
+                        <a href="../notes/GravityNotes22SlabEffects.htm" target="_blank">slab</a>, and
+                        topography corrections
+                        to the data. We will assume that
+                        these do not need to be applied for this survey.
+                    </li>
+                    <li style="margin-bottom: 10px">
+                        Correct data for long-wavelength spatial variations caused by deep geologic structure or distant
+                        topography.
+                        There are a number of ways you can estimate the regional gravity anomaly. Probably one of the
+                        simplest
+                        is to fit some low-order function to the data (say a straight line, or a quadratic function).
+                        Then subtract the
+                        gravity predicted by this function from the observed gravity values. Another way to estimate the
+                        regional gravity
+                        anomaly is to use gravity observations from other, more spatially dispersed, gravity surveys.
+                        Most areas within
+                        the continental US have a complete enough gravity coverage to allow this to be done. The
+                        <a href="https://www.ngdc.noaa.gov/" target="_blank">National Geophysical Data
+                            Center</a> provides gravity observations from
+                        across the US on
+                        <a href="https://www.ngdc.noaa.gov/mgg/gravity/" target="_blank">CD-ROM</a>.
+                        This data is ideally suited for estimating regional gravity anomalies.
+                        For this exercise, we will use gravity observations derived from the CD-ROM to estimate the
+                        regional gravity anomaly.
+                        <p>
+                            Gravity observations from around the city of Golden were used to construct a
+                            <a href="../../information/regional.html" target="_blank">map of the regional gravity field</a>
+                            around the survey.
+                            Using this map, estimate the shape of the regional gravity field along the profile and
+                            subtract the contribution of the
+                            regional field from your gravity observations as follows:
+                        </p>
+                        
+                        <ul class="square">
+                            <li style="margin-bottom: 10px"> Print the map or import it into a graphics program, draw
+                                grid lines on the printout or adjust the size to scale in
+                                a graphics display, and pick the value of the regional gravity at selected points along
+                                the profile.
+                            </li>
+                            <li style="margin-bottom: 10px"> For the selected points you can use your gravity stations,
+                                or you can pick fewer points and use linear interpolation
+                                or a polynomical curve fit to approximate the values of the regional gravity
+                                contribution at your gravity stations.
+                                If you do the latter, choose the interval between points so that the approximation
+                                errors are small.
+                            </li>
+                            <li style="margin-bottom: 10px">
+                                In your processing spreadsheet, subtract the regional gravity values from your corrected
+                                gravity observations.
+                            </li>
+                        </ul>
+                        <br />
+                    </li>
+                    <li style="margin-bottom: 10px">
+                        If necessary, smooth the resulting residual gravity field to minimize random variations and
+                        emphasize the anomaly due to the target.
+                    </li>
+                </ul>
+            <li style="margin-bottom: 10px"><b>Preliminary Data Presentation and Interpretation:</b>
+                <ul class="circle">
+                    <li style="margin-bottom: 10px">
+                        Plot the resulting residual gravity field versus position along the line. Are there
+                        interpretable gravity anomalies
+                        present in the profile?
+                    </li>
+                    <li style="margin-bottom: 10px">Identify geologic models that should be considered in interpreting
+                        the data.
+                        <ul class="square">
+                            <li style="margin-bottom: 10px">
+                                Evaluate whether an anomaly associated with the target of interest can be seen in the
+                                data.
+                            </li>
+                            <li style="margin-bottom: 10px">
+                                Identify all anomalies that appear to derive from local geologic features.
+                            </li>
+                            <li style="margin-bottom: 10px">
+                                Determine which geologic models could be the source of those local anomalies.
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            <li style="margin-bottom: 10px"> <b>Formal Data Interpretation:</b>
+                <ul class="circle">
+                    <li style="margin-bottom: 10px">
+                        From your spreadsheet, output a data file that contains two columns. The first should be
+                        location along the gravity
+                        profile, the second should be the residual gravity field. <i>Do not output column names as the
+                        first line in the file</i>.
+                    </li>
+                    <li style="margin-bottom: 10px">
+                        To interpret the gravity observations, click the application links below.
+
+                        <hr class="gray">
+
+                        <ul style="list-style-type: none;">
+                            <li><a href="GravityTunnel/GravityTunnel.html" target="_blank"><img src="../../images/app_start.png" alt="Gravity Tunnel Reduction"/> Reduction of a Gravity Anomaly Over a Tunnel</a></li>
+                            <li><a href="GravityVerticalShaft/GravityVerticalShaft.html" target="_blank"><img src="../../images/app_start.png" alt="Gravity Vertical Shaft Reduction"/>Reduction of a Gravity Anomaly Over a Vertical Shaft</a></li>
+                        </ul>
+
+                        <hr class="gray">
+                    </li>
+                    <li style="margin-bottom: 10px">
+                        Follow the instructions provided in the script to load and plot your residual gravity field into
+                        the script.
+                        In all cases, note that this involves modifying the script, usually by simply replacing a file
+                        name with one
+                        that contains your observations.
+                    </li>
+                    <li style="margin-bottom: 10px"> By now varying the model parameters that specify the location,
+                        depth, size, and density contrast of the tunnel,
+                        attempt to match that portion of the observed residual gravity field that you think might be due
+                        to a tunnel. To
+                        do this, remember to use the rules that describe the physics of the problem that were requested
+                        as an appendix
+                        in your <a href="../rfb/GravityRequestforBid.htm" target="_blank">survey bid</a>.
+                    </li>
+                    <li style="margin-bottom: 10px"> Once you have found a preferred model(s), estimate the
+                        uncertainties in the model parameters. Do this by
+                        systematically varying the model parameters about your preferred values and find all values that
+                        fit the observed
+                        data to within the data uncertainties.
+                    </li>
+                    <li style="margin-bottom: 10px"> Finally, are there other models that could fit the data equally as
+                        well as your preferred model that have
+                        very different parameters? If these models are geologically plausible, describe what they are
+                        and give your
+                        rationale for choosing a preferred model(s).
+                    </li>
+                </ul>
+        </ul>
+        <h2 style="margin-top: 40px;">OUTCOMES</h2>
+        <hr />
+            You will submit two reports on the basis of the work described in this
+            exercise. The first will cover those questions
+            raised in milestone <i>1</i> listed above, and the second will cover those listed in milestone <i>2</i>.
+            In this sense, the first report represents a preliminary report of work in progress to the client, the
+            second report
+            will represent the final result of your efforts.
+            Each report should be in the form of a summary report to your
+            client. The heading can be in standard memo format. Each should include:
+        <br /><br />
+        <ul class="square">
+            <li style="margin-bottom: 10px">
+                A brief review of the basis for the survey design (statement of the problem),
+            </li>
+            <li style="margin-bottom: 10px"> A summary of the data-processing and interpretation procedures (you may
+                want to refer to a flow
+                chart in the appendices), and
+            </li>
+            <li style="margin-bottom: 10px"> A clear and concise statement of your preliminary interpretation and an
+                indication of the action
+                that will be required to refine and validate that interpretation.
+            </li>
+        </ul>
+        <br />
+        
+            As usual, the body of each report must be no longer than two pages. However, it is important to provide
+            enough information (in the appendices) for the client's geophysical staff or consultant to be able to check
+            any of your work. This would include:
+        <br /><br />
+        <ul class="square">
+            <li style="margin-bottom: 10px">
+                A tabulation of the field data,
+            </li>
+            <li style="margin-bottom: 10px">
+                A description of each processing step, including formulas and outcomes,
+            </li>
+            <li style="margin-bottom: 10px">
+                For any "standard" corrections that were not done, a description of how they normally would have
+                been done and an explanation of why they were not necessary in this case,
+            </li>
+            <li style="margin-bottom: 10px">
+                A narrative discussion of how and why you chose the "possible" models for each anomaly, and
+            </li>
+            <li style="margin-bottom: 10px">
+                A description of any other anomalies that the survey turned up that could not be caused by a mine
+                tunnel.
+            </li>
+        </ul>
+        <br />
+        <p>
+            As always, remember that your reports are also sales documents; in this case, instead of selling your
+            services, it is selling your competence and the quality of your work. Also remember that your clients are
+            busy executives that probably are out of touch with the technical state of
+            the art. Your report must communicate
+            quickly and effectively and should convey a sense of competence
+            and professionalism.
+        </p>
+
+</div>
+</div>
+</div>
+</section>
+
+
+<!-- Footer -->
+<section id="footer">
+
+    <ul class="copyright">
+        <li>&copy; 2019</li><li>Design: Jason Reek, Brandon Fidler, <a href="http://html5up.net"> HTML5 UP</a></li>
+        <li>Content: Tom Boyd, Pamela Burnley</li>
+    </ul>
+</section>
+
+</body>
+</html>

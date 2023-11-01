@@ -1,0 +1,506 @@
+
+/**************************************/
+/*     Body and Page Style            */
+/**************************************/
+@import url("fontawesome-all.min.css");
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,400,400italic");
+
+body
+  {
+    margin: 0;
+
+	background-color: #ffffff;
+    /*background:url(bg01.jpg) no-repeat center center;
+    background-size:cover;*/
+    font-family: 'Quattrocento', Arial, sans-serif;
+    color: #141414;
+    text-align: left;
+    line-height: 1.4em;
+    font-size: 16px;
+  }
+
+  
+/**Main Page Link Style**/
+a
+{
+    color: #663300;
+}
+a:hover
+{
+    color: #cc3300;
+}
+a:visited
+{
+    text-decoration:underline;
+    color: #330000;
+}
+
+a:visited:hover
+{
+    text-decoration:underline;
+    color: #cc3300;
+}
+
+a:active
+{
+    text-decoration:underline;
+    color: #330000;
+}
+  
+i
+{
+    font-weight: bold;
+}
+
+h1
+  {
+    font-family: "Source Sans Pro", Helvetica, sans-serif;
+	font-size: 2.25em;
+    line-height: 1.35em;
+    font-weight: 300;
+	padding-top: 3px;
+    padding-bottom: 5px;
+	border-bottom: solid 2px #990000;
+    margin: 0 0 1em 0;
+    padding-left: 5px;
+  }
+
+h2
+  {
+    font-size: 22px;
+    margin: 0 0 10px;
+    font-weight: 300;
+    line-height: 1.2em;
+    /*text-transform: uppercase;*/
+  }
+
+ul
+  {
+    padding 10px;
+  }
+h3
+  {
+	font-size: 18px;
+    font-weight: 300;
+  }
+
+div.header
+{
+    float: left;
+    margin-top: 0px;
+    margin-bottom: 30px;
+    font: 15px Quattrocento;
+    width: 600px;
+    z-index:11;
+
+}
+
+div.mainContainer
+{
+    margin-bottom: 35px;
+    width: 1000px;
+    min-width: 1000px;
+    min-height: 800px;
+    overflow: hidden;
+}
+
+div.frontmainContainer
+{
+    margin-bottom: 35px;
+    min-width: 1000px;
+    min-height: 500px;
+    overflow: hidden;
+}
+
+
+div.main
+{
+    float: right;
+    background-color: #FFFFFF;
+    font-size: 16px;
+    font-family: 'Quattrocento', Arial, sans-serif;
+    margin-top: 35px;
+    width: 550px;
+    line-height:130%;
+    z-index:10;
+}
+
+div.noteOutline
+{
+    font-size: 14px;
+    font-family: 'Quattrocento', Arial, sans-serif;
+    margin-top: 35px;
+    width: 400px;
+    line-height:130%;
+    z-index:11;
+    border: thin #663300 solid;
+}
+
+li.setBottom
+{
+    margin-bottom: 10px;
+}
+
+li.setBottomAndTop
+{
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+
+
+
+
+/**************************************/
+/*     Navigation and Link Stuff      */
+/**************************************/
+
+div.navigation
+  {
+  margin-top: 0px;
+  width: 100%;
+  z-index:8;
+  background-color: #990000;
+  }
+
+.dropdown {
+	cursor:pointer;
+	margin-left:1px;
+	position: relative;
+    display: inline-block;
+}
+
+/**Navigation Buttons in Banner**/
+.navstyle:link {
+  display: block;
+  font-size: 12px;
+  color: #FFFFFF;
+  background-color: #990000;
+  width: 75px;
+  padding: 14px 16px;
+  text-decoration: none;
+  text-align: center;
+  margin: 0 auto;
+}
+.navstyle:visited {
+  display: block;
+  font-weight: bold;
+  font-size: 12px;
+  color: #FFFFFF;
+  background-color: #990000;
+  width: 75px;
+  padding: 14px 16px;
+  text-decoration: none;
+  text-align: center;
+  margin: auto;
+}
+.navstyle:hover {
+  display: block;
+  font-size: 12px;
+  color: #FFFFFF;
+  background-color: #bb0000;
+  width: 75px;
+  padding: 14px 16px;
+  text-decoration: none;
+  text-align: center;
+  margin: auto;
+}
+.navstyle:focus {
+  display: block;
+  color: #000000;
+  background-color: #000000;
+   width: 75px;
+  padding: 14px 16px;
+  text-decoration: none;
+  text-align: center;
+  margin: auto;
+}
+
+.navstyle:active {
+  display: block;
+  font-weight: bold;
+  color: #000000;
+  background-color: #000000;
+  width: 75px;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  margin: auto;
+}
+
+/**The Link Style Inside the Dropdown Menu**/
+.menustyle:link
+ {
+     color: #000000;
+ }
+.menustyle:visited
+{
+    color: #333333;
+}
+.menustyle:hover
+{
+    color: #000000;
+}
+
+.footerstyle:link
+{
+    color: silver;
+}
+.footerstyle:visited
+{
+    color: #f9f9f9;
+}
+.footerstyle:hover
+{
+    color: #e9e9e9;
+}
+
+/**Notes Navigation Bar**/
+ul.topnav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    /*background-color: #333;*/
+    background:rgba(15,15,15,.70);
+}
+
+ul.topnav li {float: left;}
+
+ul.topnav li a {
+    display: inline-block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 19px 16px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+ul.topnav li a:hover {background-color: #333;}
+
+ul.topnav li.icon {display: none;}
+
+
+#header_area
+{
+	width:95%;
+	margin:0 auto;
+	position:absolute;
+	left:0;
+	right:0;
+	top:0;
+	padding: 0px 0px;
+}
+.center_container
+{
+	max-width:1140px;
+	margin:0 auto;
+}
+
+/**Red spacer for banner and footer.**/
+#spacer
+{
+    margin: 0 auto;
+    width: 100%;
+    min-width: 1000px;
+    height: 15px;
+    background: #990000;
+}
+
+/**Note Banner BG**/
+#noteBG
+{
+    background:url(../../images/Banner.jpg) no-repeat center;
+    background-size:cover;
+    width: 100%;
+    min-width: 1000px;
+    min-height: 60px;
+    margin-top: 0;
+}
+
+/**Note Footer BG**/
+#noteFBG
+{
+    background:url(../../images/Footer.jpg) no-repeat center;
+    background-size:cover;
+    width: 100%;
+    min-width: 1000px;
+    min-height: 60px;
+    margin-top: 0;
+}
+
+.AdvTd
+{
+    vertical-align:top;
+    background-color: #7efc7e;
+}
+
+.AdvTh
+{
+    background-color: #7efc7e;
+}
+
+.DisTh
+{
+    background-color: #fc7e7e;
+}
+
+.DisTd
+{
+    background-color: #fc7e7e;
+    vertical-align:top;
+}
+
+
+
+
+/**************************************/
+/*     Image Settings                 */
+/**************************************/
+
+img.bordered
+{
+    border: thin #663300 solid;
+}
+
+img.center
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/**************************************/
+/*     Accordion Navigation           */
+/**************************************/
+button.accordion
+{
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-bottom: 2px solid #999999;
+    text-decoration: none;
+    display: inline-block;
+    background-color: #CFCFCF; /* For browsers that do not support gradients */
+    background-image: linear-gradient(#FFFFFF, #DFDFDF); /* Standard syntax (must be last) */
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 400px;
+    text-align: left;
+    outline: none;
+    font-size: 12px;
+    transition: 0.4s;
+}
+
+button.accordion:active
+{
+    border-bottom: 2px solid #999999;
+}
+
+button.accordion:after
+{
+    content: '\02795';
+    font-size: 14px;
+    color: #777;
+    float: right;
+    margin-left: 5px;
+}
+
+button.accordion.active:after
+{
+    content: "\2796";
+}
+
+div.panel
+{
+    background-color: #777777;
+    padding: 0px;
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.6s ease-in-out;
+    opacity: 0;
+    width: 400px;
+}
+
+div.panel.show
+{
+    opacity: 1;
+    max-height: 4000px;
+}
+
+
+/************************************************/
+/*     The Inside of the Accordion Navigation   */
+/************************************************/
+#myUL
+{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#myUL li a
+{
+    border: 1px solid #ddd;
+    margin-top: -1px; /* Prevent double borders */
+    background-color: #f6f6f6;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 12px;
+    color: black;
+    display: block
+
+}
+
+#myUL li a.header
+{
+    background-color: #e2e2e2;
+    cursor: default;
+}
+
+#myUL li a:hover:not(.header)
+{
+    background-color: #eee;
+}
+
+
+/**************************************/
+/*     Note Navigation Buttons        */
+/**************************************/
+.noteButton
+{
+    background-color: #990000; /* Crimson Red */
+    border: none;
+  
+    color: white;
+    padding: 15px 36px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    box-shadow: 0 0px 0px 0 rgba(0,0,0,0.2), 0 0px 5px 0 rgba(0,0,0,0.8);
+}
+
+.noteButtonFor:hover
+{
+    background-color: #bb0000 ;
+}
+
+.noteButtonBack
+{
+    border: #cecece;
+    background-color: ivory;
+}
+
+.noteButtonBack:hover
+{
+    border: #cecece;
+    background-color: #e9e9e9;
+}
+

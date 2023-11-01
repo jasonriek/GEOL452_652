@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang = "en">
+<head>
+    <title> Magnetism: Notes: Correcting for Main Field Variations </title>
+    <meta charset="utf-8">
+<link href="../../assets/css/main_style.css" rel="stylesheet" type="text/css"/></head></head>
+<body>
+    <div id="noteBG">
+        <div style="float: left">
+            <ul class="topnav" id="myTopnav">
+                <li><a href="../../index.html">Main Page</a></li>
+                <li><a href="../../GravityHome.html">Gravity Notes</a></li>
+                <li><a href="../../MagneticsHome.htm">Magnetism Notes</a></li>
+                <li><a href="../../DCResistivityHome.htm">DC Resistivity Notes</a></li>
+                <li><a href="../../RefractionSeismicHome.htm">Refr. Seismic Notes</a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="spacer"></div>
+
+<div class="mainContainer center_container">
+    <div class="main">
+  
+            <b style="margin-left: 500px;">pg 29</b>
+            <h1> Correcting for Main Field Variations </h1>
+        
+        <p>
+            Corrections for spatial variations in the strength of the Earth's
+            <a target="_BLANK" href="MagNotes15earth_field.html">main magnetic</a>
+            field are referred to as <i>geomagnetic corrections</i>.
+            One commonly used method of accounting for these variations is to use one
+            of the many models of the Earth's main magnetic field that are available.
+            One such set of commonly used models of the main field is referred to as
+            the
+            <a href="https://www.ngdc.noaa.gov/IAGA/vmod/igrf.html" target="_BLANK">International Geomagnetic Reference Field (IGRF)</a>.
+        </p>
+        <p>
+            The IGRF models are regularly updated to account for
+            <a target="_blank" href="MagNotes18secular.html">secular variations</a>.
+            Given the latitude and longitude of some point on the Earth's surface, the total field strength
+            of the Earth's main magnetic field can be
+            <a href="http://omniweb.gsfc.nasa.gov/vitmo/cgm_vitmo.html" target="_BLANK">calculated</a>.
+        </p>
+        <p>
+            Consider a small
+            <a target="_blank" href="MagNotes25fieldmodes.html">two-dimensional survey</a>.
+            A plan view of such a survey is shown underneath.
+            One commonly used method of applying the main field
+            correction is to linearly interpolate the computed values of the main field
+            at the corners of the survey throughout the survey region.
+            These interpolated values can then be subtracted from the field
+            observations.
+            After applying this correction, you are left with that portion of the magnetic
+            field that can not be attributed to the Earth's main magnetic field.
+            <img src="mag_images/2dinterp.jpg" class="center">
+        </p>
+        <p>
+            This two-dimensional
+            application of linear interpolation is only slightly more complex than the
+            <a href="../../gravity/notes/GravityNotes17TemporalVariationDataReduction.htm" target="_blank">
+                one-dimensional linear interpolation</a> used to
+            reduce our gravity observations.
+            Values of the Earth's main magnetic field are first determined from the IGRF for each corner
+            point of the survey (<b><i>c1, c2, c3, c4</i></b>).
+            To determine the strength of the main field at the point <b><i>p</i></b>, we first perform two
+            linear interpolations up the edges of the survey in the <b><i>y</i></b> direction to determine the values of the field
+            at the points <b><i>t1</i></b> and <b><i>t2</i></b>.
+            That is, first determine the value of the Earth's main magnetic field at the point <b><i>t1</i></b>
+            by linearly interpolating between the points <b><i>c1</i></b> and <b><i>c4</i></b>.
+            Then determine the value of the main field at the point <b><i>t2</i></b> by linearly interpolating
+            between the points <b><i>c2</i></b> and <b><i>c3</i></b>.
+            Now, linearly interpolate in the <i>x</i> direction between <b><i>t1</i></b> and <b><i>t2</i></b>.
+            The result is the two-dimensionally interpolated value of the field at the point <b><i>p</i></b>*.
+        </p>
+        <hr class="gray">
+        <p style="float: left; font-size: 12px; font-style: italic">
+            *There is no reason why I have chosen to first interpolate in the <b><i>y</i></b> direction and then
+            interpolate in the <b><i>x</i></b> direction. I could have first interpolated in the <b><i>x</i></b> direction
+            between <b><i>c1</i></b> and <b><i>c2</i></b> and then between <b><i>c3</i></b> and <b><i>c4</i></b>.
+        </p>
+        <hr/>
+
+        <br>
+        <br>
+        <p style="margin-bottom: 50px;">
+            <a href="MagNotes28othercorrect.html" class="noteButton noteButtonBack" style="color: #000000; float: left">❮❮ Previous</a>
+            <a href="MagNotes30anomalyoverview.html" class="noteButton noteButtonFor" style="color: ivory; float: right">Next ❯❯</a>
+        </p>
+    </div>
+
+    <div class="noteOutline">
+<h1 style="margin-bottom: 0;">Magnetism</h1>        <button class="accordion"><b> Introduction </b></button>
+        <div class="panel">
+            <ul id="myUL">
+                <li> <a href="MagNotes01magintro.html">Historical Overview <i style="float: right;">pg 1</i></a></li>
+                <li> <a href="MagNotes02similarities.html">Similarities Between Gravity and Magnetics<i style="float: right;">pg 2</i></a></li>
+                <li> <a href="MagNotes03differences.html">Differences Between Gravity and Magnetics<i style="float: right;">pg 3</i></a></li>
+                <li> <a href="MagNotes04monopole.html">Magnetic Monopoles<i style="float: right;">pg 4</i></a></li>
+                <li> <a href="MagNotes05fmono.html">Forces Associated with Magnetic Monopoles<i style="float: right;">pg 5</i></a></li>
+                <li> <a href="MagNotes06dipole.html">Magnetic Dipoles<i style="float: right;">pg 6</i></a></li>
+                <li> <a href="MagNotes07fieldl.html">Field Lines for a Magnetic Dipole<i style="float: right;">pg 7</i></a></li>
+                <li> <a href="MagNotes08units.html">Units Associated with Magnetic Poles<i style="float: right;">pg 8</i></a></li
+            </ul>
+        </div>
+
+        <button class="accordion"><b> Magnetization of Materials </b></button>
+        <div class="panel">
+            <ul id="myUL">
+                <li> <a href="MagNotes09induced.html">Induced Magnetization<i style="float: right;">pg 9</i></a> </li>
+                <li> <a href="MagNotes10suscept.html">Magnetic Susceptibility<i style="float: right;">pg 10</i></a> </li>
+                <li> <a href="MagNotes11typesmag.html">Mechanisms of Magnetic Induction<i style="float: right;">pg 11</i></a></li>
+                <li> <a href="MagNotes12rocksus.html">Susceptibilities of Common Rocks and Minerals<i style="float: right;">pg 12</i></a></li>
+                <li> <a href="MagNotes13remanent.html">Remanent Magnetism<i style="float: right;">pg 13</i></a></li>
+            </ul>
+        </div>
+
+        <button class="accordion"><b> The Earth's Magnetic Field </b></button>
+        <div class="panel">
+            <ul id="myUL">
+                <li> <a href="MagNotes14names.html">Magnetic Field Nomenclature<i style="float: right;">pg 14</i></a></li>
+                <li> <a href="MagNotes15earth_field.html">The Earth's Main Field<i style="float: right;">pg 15</i></a></li>
+                <li> <a href="MagNotes16mag2geo.html">Magnetics and Geology - A Simple Example<i style="float: right;">pg 16</i></a></li>
+                <li> <a href="MagNotes17temporal.html">Temporal Variations of the Earth's Main Field - Overview<i style="float: right;">pg 17</i></a></li>
+                <li> <a href="MagNotes18secular.html">Secular Variations<i style="float: right;">pg 18</i></a></li>
+                <li> <a href="MagNotes19diurnal.html">Diurnal Variations<i style="float: right;">pg 19</i></a></li>
+                <li> <a href="MagNotes20storm.html">Magnetic Storms<i style="float: right;">pg 20</i></a></li>
+            </ul>
+        </div>
+
+        <button class="accordion"><b> Magnetometers </b></button>
+        <div class="panel">
+            <ul id="myUL">
+                <li> <a href="MagNotes21instover.html" >Instrumentation Overview<i style="float: right;">pg 21</i></a></li>
+                <li> <a href="MagNotes22fluxgate.html" >Fluxgate Magnetometer<i style="float: right;">pg 22</i></a></li>
+                <li> <a href="MagNotes23proton.html">Proton Precession Magnetometer<i style="float: right;">pg 23</i></a></li>
+                <li> <a href="MagNotes24totalfield.html">Total Field Measurements<i style="float: right;">pg 24</i></a></li>
+            </ul>
+        </div>
+
+        <button class="accordion"><b> Field Procedures </b></button>
+        <div class="panel">
+            <ul id="myUL">
+                <li> <a href="MagNotes25fieldmodes.html">Modes of Acquiring Magnetic Observations<i style="float: right;">pg 25</i></a></li>
+                <li> <a href="MagNotes26cleanliness.html">Assuring High-Quality Observations - Magnetic Cleanliness<i style="float: right;">pg 26</i></a></li>
+                <li> <a href="MagNotes27tempcorrect.html">Strategies for Dealing with Temporal Variations<i style="float: right;">pg 27</i></a></li>
+                <li> <a href="MagNotes28othercorrect.html">Spatially Varying Corrections?<i style="float: right;">pg 28</i></a></li>
+                <li> <a href="MagNotes29mcorrect.html">Correcting for the Main-Field Contributions<i style="float: right;">pg 29</i></a></li>
+            </ul>
+        </div>
+
+        <button class="accordion"><b> Magnetic Anomalies Over Simple Shapes </b></button>
+        <div class="panel">
+            <ul id="myUL">
+                <li> <a href="MagNotes30anomalyoverview.html">Comparison Between Gravity and Magnetic Anomalies<i style="float: right;">pg 30</i></a></li>
+                <li> <a href="MagNotes31aexample1.html">Magnetic Anomaly: Magnetized Sphere at the North Pole<i style="float: right;">pg 31</i></a></li>
+                <li> <a href="MagNotes32aexample2.html">Magnetic Anomaly: Magnetized Sphere at the Equator<i style="float: right;">pg 32</i></a></li>
+                <li> <a href="MagNotes33aexample3.html">Magnetic Anomaly: Magnetized Sphere in the N Hemisphere<i style="float: right;">pg 33</i></a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div id="spacer"></div>
+<div id="noteFBG"></div>
+<script src="../../assets/js/notes_accord.js"></script></body>
+</html>
+

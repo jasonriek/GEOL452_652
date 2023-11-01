@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title> Gravity: Notes: Gravity Anomaly Over a Buried Point Mass</title>
+    <meta charset="utf-8">
+    <link href="../../assets/css/main_style.css" rel="stylesheet" type="text/css"/>
+<!-- --></head>
+<body>
+    <div id="noteBG">
+        <div style="float: left">
+            <ul class="topnav" id="myTopnav">
+                <li><a href="../../index.html">Main Page</a></li>
+                <li><a class="active" href="../../GravityHome.html">Gravity Notes</a></li>
+                <li><a href="../../MagneticsHome.htm">Magnetism Notes</a></li>
+                <li><a href="../../DCResistivityHome.htm">DC Resistivity Notes</a></li>
+                <li><a href="../../RefractionSeismicHome.htm">Refr. Seismic Notes</a></li>
+            </ul>
+        </div>
+    </div>
+<div id="spacer"></div>
+
+<div class="mainContainer center_container">
+    <div class="main">
+<div>            <b style="margin-left: 500px;">pg 31</b>
+        </div>
+        <h1>Gravity Anomaly Over a Buried Point Mass</h1>
+        <p>
+            <a href="GravityNotes02GravitationalAcceleration.htm" target="_blank">Previously</a> we defined the
+            gravitational acceleration
+            due to a
+            <a href="GravityNotes01GravitationalForce.htm" target="_blank">point mass</a> as
+            <br>
+        </p>
+        <p style="text-align: center">
+            <img src="grav_images/newteq.gif">
+        </p>
+        <p>
+            where <i>g</i> is the <a href="GravityNotes01GravitationalForce.htm" target="_blank">gravitational
+            constant</a>, <i>m</i> is the
+            <a href="GravityNotes01GravitationalForce.htm" target="_blank">mass</a> of the point mass, and <i>r</i> is
+            the distance between
+            the point mass and our observation point. The figure below shows the
+            gravitational acceleration we would observe over a buried point mass.
+            Notice, the acceleration is highest directly above the point mass and
+            decreases as we move away from it.
+        </p>
+        <p style="text-align: center">
+            <img src="grav_images/ptmass.jpg" class="center">
+        </p>
+        <p>
+            Computing the observed acceleration based on the equation given above
+            is easy and instructive. First, let's derive the equation used to
+            generate
+            the graph shown above. Let <i>z</i>
+            be the depth of burial of the point mass and <i>x</i> is the horizontal
+            distance between the point mass and our observation point.
+            Notice that the gravitational acceleration caused by the point mass is in the
+            direction of the point mass; that is, it's along the vector <i>r</i>. Before taking a
+            reading, gravity meters are leveled so that they only measure the vertical component
+            of gravity; that is, we only measure that portion of the gravitational
+            acceleration caused
+            by the point mass acting in a direction pointing down. The vertical component of the
+            gravitational acceleration caused by the point mass can be written in terms of the
+            angle <img src="grav_images/theta.png" width="15" height="15"> as
+        </p>
+
+        <p style="text-align: center">
+            <img src="grav_images/vnewteq1.gif" class="center">
+        </p>
+        <p>
+            Now, it is inconvenient to have to compute <i>r</i> and <img src="grav_images/theta.png" width="15"
+                                                                         height="15">
+            for various values of
+            <i>x</i> before we can compute the gravitational acceleration. Let's now rewrite the above
+            expression in a form that makes it easy to compute the gravitational acceleration as
+            a function of horizontal distance <i>x</i> rather than the distance between the point
+            mass and the observation point <i>r</i> and the angle <img src="grav_images/theta.png"
+                                                                       style="width: 15px; height: 15px;">.
+        </p>
+        <p>
+            <img src="grav_images/theta.png" style="width: 15px; height: 15px;"> can be written in terms of <i>z</i> and
+            <i>r</i> using the trigonometric relationship
+            between the <i>cosine</i> of an angle and the lengths of the hypotenuse and the adjacent
+            side of the triangle formed by the angle.
+        </p>
+        <p style="text-align: center">
+            <img src="grav_images/costrig.gif" class="center">
+        </p>
+        <p>
+            Likewise, <i>r</i> can be written in terms of <i>x</i> and <i>z</i> using the relationship
+            between the length of the hypotenuse of a triangle and the lengths of the two other sides
+            known as <i>Pythagorean</i> Theorem.
+        </p>
+        <p style="text-align: center">
+            <img src="grav_images/hypot.gif" class="center">
+        </p>
+        <p>
+            Substituting these into our expression for the vertical component of the gravitational
+            acceleration caused by a point mass, we obtain
+        </p>
+        <p style="text-align: center">
+            <img src="grav_images/vnewteq3.gif" class="center">
+        </p>
+        <p>
+            Knowing the depth of burial, <i>z</i>, of the point mass, its mass, <i>m</i>, and the
+            gravitational constant, <i>G</i>, we can compute the gravitational acceleration we
+            would observe over a point mass at various distances by simply varying <i>x</i> in the
+            above expression. An example of the shape of the gravity anomaly we would observe over
+            a single point mass is shown above.
+        </p>
+        <p>
+            Therefore, if we thought our observed gravity anomaly
+            was generated by a mass distribution within the earth that approximated a point mass,
+            we could use the above expression to generate predicted gravity anomalies for given
+            point mass depths and masses and determine the point mass depth and mass by matching
+            the observations with those predicted from our model.
+        </p>
+        <p>
+            Although a point mass doesn't appear to be a geologically plausible
+            density distribution,
+            as we will show next, this simple expression for the gravitational acceleration forms
+            the basis by which gravity anomalies over any more complicated
+            <a href="GravityNotes04GravityandGeology.htm" target="_blank">density distribution</a>
+            within the earth can be computed.
+        </p>
+        <br/>
+        <br/>
+
+
+        <p style="margin-bottom: 50px;">
+            <a href="GravityNotes30SeparationExample.htm" class="noteButton noteButtonBack"
+               style="color: #000000; float: left">❮❮ Previous</a>
+            <a href="GravityNotes32SphereGravity.htm" class="noteButton noteButtonFor"
+               style="color: ivory; float: right">Next ❯❯</a>
+
+        </p>
+
+
+    </div>
+
+    <div class="noteOutline">
+        <h1 style="margin-bottom: 0;">Gravity</h1>
+        <button class="accordion"><b> Introduction </b></button>
+        <div class="panel">
+            <ul id="myUL">
+                <li><a href="GravityNotes01GravitationalForce.htm">Gravitational Force<i style="float: right;">pg 1</i></a>
+                </li>
+                <li><a href="GravityNotes02GravitationalAcceleration.htm">Gravitational Acceleration<i
+                        style="float: right;">pg 2</i></a></li>
+                <li><a href="GravityNotes03Units.htm">Units Associated With Gravitational Acceleration<i
+                        style="float: right;">pg 3</i></a></li>
+            </ul>
+        </div>
+
+        <button class="accordion"><b> Gravity and Geology </b></button>
+        <div class="panel">
+            <ul id="myUL">
+                <li><a href="GravityNotes04GravityandGeology.htm">How is the Gravitational Acceleration, g, Related to
+                    Geology?<i style="float: right;">pg 4</i></a></li>
+                <li><a href="GravityNotes05DensityContrast.htm">The Relevant Geologic Parameter is not Density, but
+                    Density Contrast<i style="float: right;">pg 5</i></a></li>
+                <li><a href="GravityNotes06RockDensities.htm">Density Variations of Earth Materials<i
+                        style="float: right;">pg 6</i></a></li>
+                <li><a href="GravityNotes07SimpleModel.htm">A Simple Model<i style="float: right;">pg 7</i></a></li>
+            </ul>
+        </div>
+
+        <button class="accordion"><b> Measuring Gravitational Acceleration </b></button>
+        <div class="panel">
+            <ul id="myUL">
+                <li><a href="GravityNotes08MeasuringGravity.htm">How do we Measure Gravity<i style="float: right;">pg
+                    8</i></a></li>
+                <li><a href="GravityNotes09FallingBodies.htm">Falling Body Measurements<i style="float: right;">pg 9</i></a>
+                </li>
+                <li><a href="GravityNotes10PendulumMeasurements.htm">Pendulum Measurements<i style="float: right;">pg
+                    10</i></a></li>
+                <li><a href="GravityNotes11MassandSpringMeasurements.htm">Mass and Spring Measurements<i
+                        style="float: right;">pg 11</i></a></li
+            </ul>
+        </div>
+
+        <button class="accordion"><b> Factors that Affect the Gravitational Acceleration </b></button>
+        <div class="panel">
+            <ul id="myUL">
+                <li><a href="GravityNotes12SourcesofNoise.htm">Overview<i style="float: right;">pg 12</i></a></li>
+                <li style="text-align: center"><a href="#" class="header"><i>-Temporal Based Variations-</i></a></li>
+                <li><a href="GravityNotes13InstrumentDrift.htm">Instrument Drift<i style="float: right;">pg 13</i></a>
+                </li>
+                <li><a href="GravityNotes14EarthTides.htm">Tides<i style="float: right;">pg 14</i></a></li>
+                <li><a href="GravityNotes15TemporalVariationCorrectionStrategy.htm">A Correction Strategy for Instrument
+                    Drift and Tides<i style="float: right;">pg 15</i></a></li>
+                <li><a href="GravityNotes16TemporalVariationFieldProcedure.htm">Tidal and Drift Corrections: A Field
+                    Procedure<i style="float: right;">pg 16</i></a></li>
+                <li><a href="GravityNotes17TemporalVariationDataReduction.htm">Tidal and Drift Corrections: Data
+                    Reduction<i style="float: right;">pg 17</i></a></li>
+                <li style="text-align: center"><a href="#" class="header"><i>-Spatial Based Variations-</i></a></li>
+                <li><a href="GravityNotes18LatitudeVariations.htm">Latitude Dependent Changes in Gravitational
+                    Acceleration<i style="float: right;">pg 18</i></a></li>
+                <li><a href="GravityNotes19LatitudeVariationCorrections.htm">Correcting for Latitude Dependent Changes<i
+                        style="float: right;">pg 19</i></a></li>
+                <li><a href="GravityNotes20ElevationEffects.htm">Vari. in Gravitational Acceleration Due to Changes in
+                    Elevation<i style="float: right;">pg 20</i></a></li>
+                <li><a href="GravityNotes21ElevationCorrections.htm">Accounting for Elevation Vari.: The Free-Air
+                    Correction<i style="float: right;">pg 21</i></a></li>
+                <li><a href="GravityNotes22SlabEffects.htm">Variations in Gravity Due to Excess Mass<i
+                        style="float: right;">pg 22</i></a></li>
+                <li><a href="GravityNotes23SlabCorrections.htm">Correcting for Excess Mass: The Bouguer Slab
+                    Correction<i style="float: right;">pg 23</i></a></li>
+                <li><a href="GravityNotes24TopographicEffects.htm">Vari. in Gravity Due to Nearby Topography<i
+                        style="float: right;">pg 24</i></a></li>
+                <li><a href="GravityNotes25TopographyCorrections.htm">Terrain Corrections<i style="float: right;">pg
+                    25</i></a></li>
+                <li><a href="GravityNotes26CorrectionSummary.htm">Summary of Gravity Types<i style="float: right;">pg
+                    26</i></a></li>
+            </ul>
+        </div>
+
+        <button class="accordion"><b> Isolating Gravity Anomalies of Interest </b></button>
+        <div class="panel">
+            <ul id="myUL">
+                <li><a href="GravityNotes27LocalvsRegional.htm">Local and Regional Gravity Anomalies<i
+                        style="float: right;">pg 27</i></a></li>
+                <li><a href="GravityNotes28GeologicSources.htm">Sources of the Local and Regional Gravity Anomalies<i
+                        style="float: right;">pg 28</i></a></li>
+                <li><a href="GravityNotes29SeparationStrategy.htm">Separating Local and Regional Gravity Anomalies<i
+                        style="float: right;">pg 29</i></a></li>
+                <li><a href="GravityNotes30SeparationExample.htm">Local/Regional Gravity Anomaly Separation Example<i
+                        style="float: right;">pg 30</i></a></li>
+            </ul>
+        </div>
+
+        <button class="accordion"><b> Gravity Anomalies Over Bodies With Simple Shapes </b></button>
+        <div class="panel">
+            <ul id="myUL">
+                <li><a href="GravityNotes31PointMassGravity.htm">Gravity Anomaly Over a Buried Point Mass<i
+                        style="float: right;">pg 31</i></a></li>
+                <li><a href="GravityNotes32SphereGravity.htm">Gravity Anomaly Over a Buried Sphere<i
+                        style="float: right;">pg 32</i></a></li>
+                <li><a href="GravityNotes33ModelIndeterminancy.htm">Model Indeterminancy<i style="float: right;">pg
+                    33</i></a></li>
+                <li><a href="GravityNotes34ComplexCalculations.htm">Gravity Calculations over Bodies with more Complex
+                    Shapes<i style="float: right;">pg 34</i></a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div id="spacer"></div>
+<div id="noteFBG"></div>
+
+<script src="../../assets/js/notes_accord.js"></script>
+
+</body>
+
+</html>
+

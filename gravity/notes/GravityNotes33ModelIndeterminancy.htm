@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title> Gravity: Notes: Model Indeterminancy </title>
+    <meta charset="utf-8">
+    <link href="../../assets/css/main_style.css" rel="stylesheet" type="text/css"/>
+<!-- --></head>
+<body>
+    <div id="noteBG">
+        <div style="float: left">
+            <ul class="topnav" id="myTopnav">
+                <li><a href="../../index.html">Main Page</a></li>
+                <li><a class="active" href="../../GravityHome.html">Gravity Notes</a></li>
+                <li><a href="../../MagneticsHome.htm">Magnetism Notes</a></li>
+                <li><a href="../../DCResistivityHome.htm">DC Resistivity Notes</a></li>
+                <li><a href="../../RefractionSeismicHome.htm">Refr. Seismic Notes</a></li>
+            </ul>
+        </div>
+    </div>
+<div id="spacer"></div>
+
+<div class="mainContainer center_container">
+    <div class="main">
+<div>            <b style="margin-left: 500px;">pg 33</b>
+        </div>
+        <h1>Model Indeterminancy</h1>
+        <p>
+            We have now derived the gravitational attraction associated with a simple spherical body. The
+            vertical component of this attraction <a href="GravityNotes32SphereGravity.htm" target="_blank">was
+            shown</a> to be equal to:
+        </p>
+        <p style="text-align: center">
+            <img src="grav_images/vosphereeq.gif">
+        </p>
+        <p>
+            Notice that our expression for the gravitational acceleration over a sphere contains a term
+            that describes the physical parameters of the spherical body; its radius, <i>R</i>, and its
+            density contrast, <img src="grav_images/densityContrast.png">, in the form
+        </p>
+        <p style="text-align: center">
+            <img src="grav_images/spterms.gif">
+        </p>
+        <p>
+        <i>R</i> and <img src="grav_images/densityContrast.png"> are two of the parameters
+        describing the sphere that we would like to
+        be able to determine from our gravity observations (the third is the depth to the center
+        of the sphere <i>z</i>). That is, we would like to compute
+        predicted gravitational accelerations given estimates of <i>R</i> and
+        <img src="grav_images/densityContrast.png">, compare
+        these to those that were observed, and then vary <i>R</i> and <img src="grav_images/densityContrast.png"> until
+        the
+        predicted acceleration matches the observed acceleration.
+        </p>
+        <p>
+            This sounds simple enough, but there is a significant problem: there is an infinite number
+            of combinations of <i>R</i> and <img src="grav_images/densityContrast.png"> that produce
+            exactly the same gravitational
+            acceleration! For example, let's assume that we have found values for
+            <i>R</i> and <img src="grav_images/densityContrast.png">
+            that fit our observations such that
+        </p>
+        <p>
+            <img src="grav_images/cspterms.gif" class="center">
+        </p>
+        <p>
+            Any other combination of values for <i>R</i> and <img src="grav_images/densityContrast.png"> will also fit
+            the observations as
+            long as <i>R</i> cubed times <img src="grav_images/densityContrast.png"> equals 31.25.
+            Examples of the gravity observations produced
+            by four of these solutions are shown below.
+        </p>
+        <p>
+            <img src="grav_images/sspheres.gif" class="center">
+        </p>
+        <p>
+            Our inability to uniquely resolve parameters describing a model of the earth from geophysical
+            observations is not unique to the gravity method but is present in all geophysical methods.
+            This is referred to using a variety of expressions: <i>Model Interminancy, Model Equivalence,</i>
+            and <i> Nonuniqueness</i> to name a few. No matter what it is called, it always means the same
+            thing; a particular geophysical method can not uniquely define the geologic structure underlying
+            the survey.
+            Another way of thinking about this problem is to realize that a model of the geologic structure
+            can uniquely define the gravitational field over the structure. The gravitational field, however,
+            can not uniquely define the geologic structure that produced it.
+        </p>
+        <p>
+            If this is the case, how do we determine which model is correct? To do this we must incorporate
+            additional observations on which to base our interpretation. These additional observations
+            presumably will limit the range of acceptable models we should consider when interpreting our
+            gravity observations. These observations could include geologic observations or
+            observations from different types of geophysical surveys.
+        </p>
+        <br/>
+        <br/>
+
+        <p style="margin-bottom: 50px;">
+            <a href="GravityNotes32SphereGravity.htm" class="noteButton noteButtonBack"
+               style="color: #000000; float: left">❮❮ Previous</a>
+            <a href="GravityNotes34ComplexCalculations.htm" class="noteButton noteButtonFor"
+               style="color: ivory; float: right">Next ❯❯</a>
+
+        </p>
+
+
+    </div>
+
+    <div class="noteOutline">
+        <h1 style="margin-bottom: 0;">Gravity</h1>
+        <button class="accordion"><b> Introduction </b></button>
+        <div class="panel">
+            <ul id="myUL">
+                <li><a href="GravityNotes01GravitationalForce.htm">Gravitational Force<i style="float: right;">pg 1</i></a>
+                </li>
+                <li><a href="GravityNotes02GravitationalAcceleration.htm">Gravitational Acceleration<i
+                        style="float: right;">pg 2</i></a></li>
+                <li><a href="GravityNotes03Units.htm">Units Associated With Gravitational Acceleration<i
+                        style="float: right;">pg 3</i></a></li>
+            </ul>
+        </div>
+
+        <button class="accordion"><b> Gravity and Geology </b></button>
+        <div class="panel">
+            <ul id="myUL">
+                <li><a href="GravityNotes04GravityandGeology.htm">How is the Gravitational Acceleration, g, Related to
+                    Geology?<i style="float: right;">pg 4</i></a></li>
+                <li><a href="GravityNotes05DensityContrast.htm">The Relevant Geologic Parameter is not Density, but
+                    Density Contrast<i style="float: right;">pg 5</i></a></li>
+                <li><a href="GravityNotes06RockDensities.htm">Density Variations of Earth Materials<i
+                        style="float: right;">pg 6</i></a></li>
+                <li><a href="GravityNotes07SimpleModel.htm">A Simple Model<i style="float: right;">pg 7</i></a></li>
+            </ul>
+        </div>
+
+        <button class="accordion"><b> Measuring Gravitational Acceleration </b></button>
+        <div class="panel">
+            <ul id="myUL">
+                <li><a href="GravityNotes08MeasuringGravity.htm">How do we Measure Gravity<i style="float: right;">pg
+                    8</i></a></li>
+                <li><a href="GravityNotes09FallingBodies.htm">Falling Body Measurements<i style="float: right;">pg 9</i></a>
+                </li>
+                <li><a href="GravityNotes10PendulumMeasurements.htm">Pendulum Measurements<i style="float: right;">pg
+                    10</i></a></li>
+                <li><a href="GravityNotes11MassandSpringMeasurements.htm">Mass and Spring Measurements<i
+                        style="float: right;">pg 11</i></a></li
+            </ul>
+        </div>
+
+        <button class="accordion"><b> Factors that Affect the Gravitational Acceleration </b></button>
+        <div class="panel">
+            <ul id="myUL">
+                <li><a href="GravityNotes12SourcesofNoise.htm">Overview<i style="float: right;">pg 12</i></a></li>
+                <li style="text-align: center"><a href="#" class="header"><i>-Temporal Based Variations-</i></a></li>
+                <li><a href="GravityNotes13InstrumentDrift.htm">Instrument Drift<i style="float: right;">pg 13</i></a>
+                </li>
+                <li><a href="GravityNotes14EarthTides.htm">Tides<i style="float: right;">pg 14</i></a></li>
+                <li><a href="GravityNotes15TemporalVariationCorrectionStrategy.htm">A Correction Strategy for Instrument
+                    Drift and Tides<i style="float: right;">pg 15</i></a></li>
+                <li><a href="GravityNotes16TemporalVariationFieldProcedure.htm">Tidal and Drift Corrections: A Field
+                    Procedure<i style="float: right;">pg 16</i></a></li>
+                <li><a href="GravityNotes17TemporalVariationDataReduction.htm">Tidal and Drift Corrections: Data
+                    Reduction<i style="float: right;">pg 17</i></a></li>
+                <li style="text-align: center"><a href="#" class="header"><i>-Spatial Based Variations-</i></a></li>
+                <li><a href="GravityNotes18LatitudeVariations.htm">Latitude Dependent Changes in Gravitational
+                    Acceleration<i style="float: right;">pg 18</i></a></li>
+                <li><a href="GravityNotes19LatitudeVariationCorrections.htm">Correcting for Latitude Dependent Changes<i
+                        style="float: right;">pg 19</i></a></li>
+                <li><a href="GravityNotes20ElevationEffects.htm">Vari. in Gravitational Acceleration Due to Changes in
+                    Elevation<i style="float: right;">pg 20</i></a></li>
+                <li><a href="GravityNotes21ElevationCorrections.htm">Accounting for Elevation Vari.: The Free-Air
+                    Correction<i style="float: right;">pg 21</i></a></li>
+                <li><a href="GravityNotes22SlabEffects.htm">Variations in Gravity Due to Excess Mass<i
+                        style="float: right;">pg 22</i></a></li>
+                <li><a href="GravityNotes23SlabCorrections.htm">Correcting for Excess Mass: The Bouguer Slab
+                    Correction<i style="float: right;">pg 23</i></a></li>
+                <li><a href="GravityNotes24TopographicEffects.htm">Vari. in Gravity Due to Nearby Topography<i
+                        style="float: right;">pg 24</i></a></li>
+                <li><a href="GravityNotes25TopographyCorrections.htm">Terrain Corrections<i style="float: right;">pg
+                    25</i></a></li>
+                <li><a href="GravityNotes26CorrectionSummary.htm">Summary of Gravity Types<i style="float: right;">pg
+                    26</i></a></li>
+            </ul>
+        </div>
+
+        <button class="accordion"><b> Isolating Gravity Anomalies of Interest </b></button>
+        <div class="panel">
+            <ul id="myUL">
+                <li><a href="GravityNotes27LocalvsRegional.htm">Local and Regional Gravity Anomalies<i
+                        style="float: right;">pg 27</i></a></li>
+                <li><a href="GravityNotes28GeologicSources.htm">Sources of the Local and Regional Gravity Anomalies<i
+                        style="float: right;">pg 28</i></a></li>
+                <li><a href="GravityNotes29SeparationStrategy.htm">Separating Local and Regional Gravity Anomalies<i
+                        style="float: right;">pg 29</i></a></li>
+                <li><a href="GravityNotes30SeparationExample.htm">Local/Regional Gravity Anomaly Separation Example<i
+                        style="float: right;">pg 30</i></a></li>
+            </ul>
+        </div>
+
+        <button class="accordion"><b> Gravity Anomalies Over Bodies With Simple Shapes </b></button>
+        <div class="panel">
+            <ul id="myUL">
+                <li><a href="GravityNotes31PointMassGravity.htm">Gravity Anomaly Over a Buried Point Mass<i
+                        style="float: right;">pg 31</i></a></li>
+                <li><a href="GravityNotes32SphereGravity.htm">Gravity Anomaly Over a Buried Sphere<i
+                        style="float: right;">pg 32</i></a></li>
+                <li><a href="GravityNotes33ModelIndeterminancy.htm">Model Indeterminancy<i style="float: right;">pg
+                    33</i></a></li>
+                <li><a href="GravityNotes34ComplexCalculations.htm">Gravity Calculations over Bodies with more Complex
+                    Shapes<i style="float: right;">pg 34</i></a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div id="spacer"></div>
+<div id="noteFBG"></div>
+
+<script src="../../assets/js/notes_accord.js"></script>
+
+</body>
+
+</html>

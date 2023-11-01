@@ -1,0 +1,11 @@
+<%@ page language="java" contentType="text/dat" %>
+<%
+        //Grab request parameters
+        String lspace = request.getParameter("lspace");
+        String sspace=request.getParameter("sspace");
+        String nread=request.getParameter("nread");
+        String xbase=request.getParameter("xbase");
+        String ybase=request.getParameter("ybase");
+%>
+XLoc(m)		YLoc(m)		Field(nT)	Time (m)	Base(nT)
+<jsp:include page="/servlet/GetMagnetic?type=data&lspace=<%=lspace%>&sspace=<%=sspace%>&nread=<%=nread%>&xbase=<%=xbase%>&ybase=<%=ybase%>" flush="true" />

@@ -1,0 +1,76 @@
+<h2>Estimating Dips and Depths From Refraction Observations</h2>
+<p>
+    Although we could derive exact expressions from which to compute the depths
+    and dips of multiple dipping layers from first arrival observations, for our
+    purposes, all we really need to be able to do is to estimate these parameters
+    from the field records. The procedure for estimating these parameters
+    described on this page is only valid if the layers do not have excessive
+    dips.
+<p>
+    Like the <a target="_BLANK" href="notes_template.jsp?url=SEIS%2FNOTES%2Fcmodtt.html&page=Refraction%3A Notes%3A Times from Multiple Layers">multiple horizontal layer case</a>, multiple
+    dipping layers will also produce head waves that can be observed on the
+    surface of the Earth from which subsurface Earth structure can be determined.
+    The same <a target="_BLANK" href="notes_template.jsp?url=SEIS%2FNOTES%2Fhidden.html&page=Refraction%3A Notes%3A Hidden Layers">caveats</a> hold in this case concerning those
+    structures that can not be resolved from first arrival observations.
+<p>
+<center>
+    <img src="SEIS/NOTES/mdip.gif">
+</center>
+<p>
+    So, in general, Earth structures like the one shown above produce travel-time
+    curves like those shown below that can be used to estimate the depths and
+    dips of each layer. <a target="_BLANK" href="notes_template.jsp?url=SEIS%2FNOTES%2Fgfield.html&page=Refraction%3A Notes%3A Field Procedure">Again</a>, to identify the presence
+    of dipping layers, you must acquire the data by shooting in two directions.
+    Notice that in this example, the dip effect on the observed travel-times
+    is quite subtle. Each layer in this model dips at a half degree.
+<p>
+<center>
+    <img src="SEIS/NOTES/mdiptt.gif">
+</center>
+<p>
+    If the dips are small, then we can estimate the structure under each source
+    by assuming the dips are zero and by using the <a target="_BLANK" href="notes_template.jsp?url=SEIS%2FNOTES%2Fcmodtt.html&page=Refraction%3A Notes%3A Times from Multiple Layers">
+    expressions</a> we have already derived. After doing this for each source,
+    we can then estimate the dip of each layer. The general flow for such a
+    procedure would include the following:
+<p>
+    <ul>
+        <li>Determine the slope of each line segment in the observed travel-time
+            curves for both source locations,
+<p>
+    <li>The slopes of the nearest offset portions of the two travel-time curves
+        should be equal to each other with a value of <i>1/V1</i>,
+<p>
+    <li>For the travel-time segments representing the refracted arrival, average
+        the slopes of the refracted arrival traveling up dip with that of the arrival
+        traveling down dip on each refractor. This requires that you identify on
+        the travel-time curves those portions of the curve originating from the
+        same boundary. In this case, you would average the slopes of the two red line
+        segments (<i>1/V2a</i> and <i>1/V2b</i>) and the slopes
+        of the two purple line segments (<i>1/V3a</i> and <i>1/V3b</i>).
+        Use the <i>absolute
+            value</i> of the slope in this calcuation,
+<p>
+    <li>Compute your estimate for <i>V2</i> and <i>V3</i> by taking the
+        reciprocal of the averages generated in the preceding step,
+<p>
+    <li>Using these velocities, the zero intercept times at each source
+        (<i>t01a</i> and <i>t02a</i> for the source to the left and <i>t01b</i> and
+        <i>t02b</i> for the source to the right) and
+        the <a target="_BLANK" href="notes_template.jsp?url=SEIS%2FNOTES%2Fcmodtt.html&page=Refraction%3A Notes%3A Times from Multiple Layers">equations</a> given previously estimate the
+        depth to each layer underneath each source, and
+<p>
+    <li>From these depths and knowing the separation between the two sources,
+        estimate the dip on each layer.
+        </ul>
+<p>
+    Remember this procedure will give you estimates of the depth to each layer
+    and the dip on the layer. The modeling codes used in the exercise will
+    provide more rigorous estimates that do not depend on the small dip assumption
+    made here.
+<div class="butnavbot">
+    <a href="notes_template.jsp?url=SEIS%2FNOTES%2Fgfield.html&page=Refraction%3A Notes%3A Field Procedure"><img src=images/backwardbut.gif border=0></a>
+</div>
+<div class="butnavtop">
+    <a href="notes_template.jsp?url=SEIS%2FNOTES%2Fgfield.html&page=Refraction%3A Notes%3A Field Procedure"><img src=images/backwardbut.gif border=0></a>
+</div>

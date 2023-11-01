@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<title>Resistivity: Notes: Electrode Spacings and Apparent Resistivity Plots </title>
+	<meta charset="utf-8">
+	<link href="../../assets/css/main_style.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+    <div id="noteBG">
+        <span></span>    <div style="float: left">
+                <ul class="topnav" id="myTopnav">
+                    <li><a href="../../index.html">Main Page</a></li>
+                    <li><a class="active" href="../../GravityHome.html">Gravity Notes</a></li>            
+                    <li><a href="../../MagneticsHome.htm">Magnetism Notes</a></li>
+                    <li><a href="../../DCResistivityHome.htm">DC Resistivity Notes</a></li>
+                    <li><a href="../../RefractionSeismicHome.htm">Refr. Seismic Notes</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="spacer"></div>
+
+<div class="mainContainer center_container">
+	<div class="main">
+
+			<b style="margin-left: 500px;">pg 20</b>
+			<h1> Electrode Spacings and Apparent Resistivity Plots </h1>
+
+	
+		<p>
+			You may have noticed on the  <a target="_BLANK" href="ResistivityNotes015Layered_02.html">previously shown</a> plots of apparent resistivity
+			that the data were plotted on <i>log-log</i> plots rather than the more traditional linear-linear plots.
+			You should also notice that the electrode distances shown on these plots are evenly spaced in <i>log distance</i>
+			rather than being evenly spaced in linear distance.
+			Why have we chosen to acquire and display the data in this fashion?
+		</p>
+		<p>
+			Consider performing a <a target="_BLANK" href="ResistivityNotes19Sounding.html">Schlumberger sounding</a> over the geologic model shown below.
+		</p>
+		<br/>
+		<p>
+
+			<img src="res_images/rmod1.gif" class="center">
+		</p>
+		<br/>
+		<p>
+			Let's do our Schlumberger sounding by varying current electrode spacing, <a target="_BLANK" href="ResistivityNotes19Sounding.html"><i>AB/2</i></a>,
+			from 1 to 250 meters at 1 meter increments.
+			Shown below is a plot of the resulting apparent resistivity versus electrode spacing.
+		</p>
+		<p>
+			We know that for small electrode spacings the apparent resistivity should approximate the resistivity
+			of the top layer.
+			As the electrode spacing increases, the apparent resistivity should approach the resistivity of the halfspace.
+			These are the features that are shown in the plot.
+			They are not, however, emphasized in this plot.
+		</p>
+		<br/>
+		<p>
+
+			<img src="res_images/linplot.gif" class="center">
+		</p>
+		<br/>
+		<p>
+			Most of the interesting features of this apparent resistivity curve occur at electrode spacings smaller than
+			50 meters.
+			When looking at this apparent resistivity curve, because the plot includes so much data at electrode spacings
+			larger than 50 meters, it de-emphasizes the important data at the smaller electrode spacings.
+			One way to help bring out the information content at both the smaller and larger electrode spacings is to plot
+			the same data on a log scale rather than a linear scale.
+			A log-log plot with the same data is shown below.
+			Notice how the smaller electrode spacings now occupy more of the plot, thus making it easier to extract
+			important information about how the apparent resistivity varies with electrode spacing.
+		</p>
+		<br/>
+		<p>
+
+			<img src="res_images/logplot2.gif" class="center">
+		</p>
+		<br/>
+		<p>
+			Although this plot is better, there is still one problem related to how the data were acquired.
+			Notice that there are only a few readings made at the small electrode spacings that are approximately equal to
+			500 ohm-m, and there are many at the larger electrode spacings that are approximately equal to 50 ohm-m.
+			We would like more readings at the smaller electrode spacings so that we can be assured that the apparent
+			resistivities plotted are representative of the near-surface resistivity.
+			This could be done at the cost of taking fewer readings at the larger electrode spacings.
+			By reallocating the electrode spacings that we will use, we will not only acquire observations that are more
+			relevant, but we could also speed up our field
+			acquisition by eliminating those readings that do not contain new information.
+		</p>
+		<p>
+			For electrical soundings, electrode spacings commonly are chosen so that they are evenly spaced in log distance
+			rather than being evenly spaced in linear distance to address the problem described above.
+			Shown below is a plot of log apparent resistivity versus log electrode spacing, where the distance interval
+			is now chosen to be evenly spaced in log distance rather than linear distance.
+			Now there are approximately as many samples showing apparent resistivities of 500 ohm-m as there are
+			of 50 ohm-m.
+			In addition, the transition between these two extremes is well-sampled.
+		</p>
+		<br/>
+		<p>
+
+			<img src="res_images/logplot.gif" class="center" />
+		</p>
+		<br/>
+		<p>
+			In the example shown above, we acquired the data such that there are 9 soundings for every
+			decade (power of 10) in distance beginning at  0.25 meters.
+			Thus, soundings with current electrode separations, <i>AB/2</i>, of 0.25, 0.5, 0.75, 1.0, 1.25, 1.5, 1.75, 2.0, 2.25,
+			5.0, 7.5, 10.0, 12.5, 15.0, 17.5, 20.0, 22.5,
+			50.0, 75.0, 100.0, 125.0, 150.0, 175.0, 200.0, and 250.0 meters were taken.
+		</p>
+		<p>
+			This example clearly shows that using a log-distance scheme to acquire electrical data provides information
+			at the densities required over all distance ranges.
+			For most surveys, acquiring 9 readings per decade of distance is not necessary.
+			The most common electrode spacing used is one that employs 6 soundings for every decade in distance.
+			For this example, using six points per decade would yield electrode spacings of
+			0.25, 3.67, 5.39, 7.91, 1.16, 1.70,
+			2.5, 3.67, 5.39, 7.91, 11.6, 17.0,
+			25.0, 36.7, 53.9, 79.1, 116.0, 170.0, 250.0.
+		</p>
+		<br/>
+		
+		<div style="margin-bottom: 50px;">
+			<a href="ResistivityNotes19Sounding.html" class="noteButton noteButtonBack"
+			   style="color: #000000; float: left">❮❮ Previous</a>
+			<a href="ResistivityNotes21ASounding.html" class="noteButton noteButtonFor"
+			   style="color: ivory; float: right">Next ❯❯</a>
+		</div>
+	</div>
+
+	<div class="noteOutline">
+<h1 style="margin-bottom: 0;">Resistivity</h1>		<button class="accordion"><b> Introduction </b></button>
+		<div class="panel">
+			<ul id="myUL">
+				<li><a href="ResistivityNotes01Apintro.html">Active and Passive Geophysical Methods<i style="float: right;">pg 1</i></a></li>
+				<li><a href="ResistivityNotes02Apintro2.html">Advantages and Disadvantages of Each Method<i style="float: right;">pg 2</i></a></li>
+				<li><a href="ResistivityNotes03Overview.html">Electrical Methods Overview<i style="float: right;">pg 3</i></a></li>
+			</ul>
+		</div>
+
+		<button class="accordion"><b> Resistivity Basics </b></button>
+		<div class="panel">
+			<ul id="myUL">
+				<li><a href="ResistivityNotes04Ohm.html"> Current Flow and Ohm's Law <i style="float: right;">pg 4</i></a></li>
+				<li><a href="ResistivityNotes05Resistivity.html"> The Fund. Electrical Property is Resistivity, NOT
+					Resistance <i style="float: right;">pg 5</i></a></li>
+				<li><a href="ResistivityNotes06Rockres.html"> Resistivities for Common Earth Materials<i style="float: right;">pg 6</i></a></li>
+				<li><a href="ResistivityNotes07CD.html"> Current Density and Electric Field<i style="float: right;">pg 7</i></a></li>
+				<li><a href="ResistivityNotes08FirstEstRes.html"> A First Estimate of Resistivity<i style="float: right;">pg 8</i></a></li>
+				<li><a href="ResistivityNotes09TwoCel.html"> Current Flow From Two Closely Spaced Electrodes<i style="float: right;">pg 9</i></a></li>
+				<li><a href="ResistivityNotes10SecEstRes.html"> A Practical Way of Measuring Resistivity <i style="float: right;">pg 10</i></a></li>
+			</ul>
+		</div>
+
+		<button class="accordion"><b> Resistivity Surveys and Geology </b></button>
+		<div class="panel">
+			<ul id="myUL">
+				<li><a href="ResistivityNotes11noise.html"> Sources of Noise <i style="float: right;">pg 11</i></a></li>
+				<li><a href="ResistivityNotes12Depth.html"> Depth of Current Penetration V.S. Current ElectrodeSpacing <i style="float: right;">pg 12</i></a></li>
+				<li><a href="ResistivityNotes13Layered_01.html"> Current Flow in Layered Media <i style="float: right;">pg 13</i></a></li>
+				<li><a href="ResistivityNotes14ArLayered.html"> Variation in Apparent Resistivity: Layered Versus Homogeneous Media <i style="float: right;">pg 14</i></a></li>
+				<li><a href="ResistivityNotes015Layered_02.html"> Current Flow in Layered Media Versus Electrode Spacing <i style="float: right;">pg 15</i></a></li>
+				<li><a href="ResistivityNotes16Layered_03.html"> A Second Example of Current Flow in Layered Media<i style="float: right;">pg 16</i></a></li>
+			</ul>
+		</div>
+
+		<button class="accordion"><b> Resistivity Equipment and Field Procedures </b></button>
+		<div class="panel">
+			<ul id="myUL">
+				<li><a href="ResistivityNotes17Equipment.html"> Equipment <i style="float: right;">pg 17</i></a></li>
+				<li><a href="ResistivityNotes18FieldOverview.html"> Survey Types Overview: Soundings and Profiles <i style="float: right;">pg 18</i></a></li>
+				<li><a href="ResistivityNotes19Sounding.html"> Soundings: Wenner and Schlumberger <i style="float: right;">pg 19</i></a></li>
+				<li><a href="ResistivityNotes20Distance.html"> Electrode Spacings and Apparent Resistivity Plots <i style="float: right;">pg 20</i></a></li>
+				<li><a href="ResistivityNotes21ASounding.html"> Advantages and Disadvantages of Each Survey Type <i style="float: right;">pg 21</i></a></li>
+				<li><a href="ResistivityNotes22Profile.html"> Profiles <i style="float: right;">pg 22</i></a></li>
+			</ul>
+		</div>
+
+		<button class="accordion"><b> Interpretation of Resistivity Measurements </b></button>
+		<div class="panel">
+			<ul id="myUL">
+				<li><a href="ResistivityNotes23OneLayer_01.html">Proton Precession Magnetometer<i style="float: right;">pg 23</i></a></li>
+				<li><a href="ResistivityNotes24OneLayer_02.html">Total Field Measurements<i style="float: right;">pg 24</i></a></li>
+				<li><a href="ResistivityNotes25MLayer1.html">Proton Precession Magnetometer<i style="float: right;">pg 25</i></a></li>
+				<li><a href="ResistivityNotes26MLayer_02.html">Total Field Measurements<i style="float: right;">pg 26</i></a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<div id="spacer"></div>
+<div id="noteFBG"></div>
+<script src="../../assets/js/notes_accord.js"></script></body></body>
+</html>

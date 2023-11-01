@@ -1,0 +1,183 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <title>DC Resistivity: Data Reduction and Interpretation</title>
+    <meta charset="utf-8">
+    <link href="../../main_style.css" rel="stylesheet" type="text/css">
+    <style>
+        li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+<nav include="../RESheader.html"></nav>
+<div class="mainContainer center_container" style="width: 1300px">
+    <article class="main" style="width: 1000px">
+        <header>
+            <div class="header" style="width: 1000px">
+                <h1>DC Resistivity: Data Reduction and Interpretation</h1>
+            </div>
+        </header>
+
+        <h3>BACKGROUND</h3>
+        <p>
+            This will be your first exposure to the interpretation of data from a survey where
+            the source can be controlled to focus on a specific objective.
+            In such surveys, the design of the survey is especially important because many (if
+            not most) non-geologic sources of error can be eliminated by use of proper instrumentation
+            and careful field procedures.
+            The accuracy of controlled source data is affected mostly by geologic noise and depends on
+            questions such as whether the geology satisfies the theoretical assumptions upon which
+            the interpretative process depends.
+        </p>
+        <p>
+            In this exercise, the process will be similar to that used in the previous interpretive
+            exercises.
+            Once again, the emphasis is on codifying the process, gaining a conceptual understanding
+            of the physics, and identifying sources of error.
+        </p>
+        <h3>OBJECTIVES</h3>
+        <p>
+            There are four learning objectives:
+        </p>
+        <ul>
+            <li>
+                Continue to refine your understanding of the interpretative process and the role of
+                modeling, validation, and sensitivity analysis,
+            </li>
+            <li>
+                Develop a conceptual understanding of the physical parameters in a resistivity survey
+                and how they are related to the data,
+            </li>
+            <li>
+                Gain experience in manual inversion of data in the case where the solution must be
+                built from the surface down, and
+            </li>
+            <li>
+                Codify the sources of ambiguity and create rules for the interaction of model
+                parameters when inverting resistivity data.
+            </li>
+        </ul>
+        <p>
+            To continue with this exercise, you first need to
+            <a href="../ACQUISITION/acq.html" target="_blank">generate a resistivity data set using your survey parameters</a>
+            and download them to your computer.
+        </p>
+
+        <h3>PROCEDURE</h3>
+        <p>
+            Unlike the gravity and magnetics observations we have collected, the observations derived from
+            this controlled source experiment require no additional processing before interpretation.
+            We can, therefore, proceed directly to the interpretation process.
+        </p>
+        <ul>
+            <li>
+                With your resistivity observations in hand, download the appropriate interpretation program (below).
+                The data file you received should contain two columns.
+                The first column contains the potential electrode spacing for Schlumberger soundings or the electrode
+                spacing for Wenner soundings, in meters. The second column contains the apparent resistivity computed
+                from the voltage, current, and array geometry specified in the survey design or by instrumentation.
+                <hr class="gray">
+
+                <table style="margin: 10px 10px; padding: 10px 10px;">
+                    <tr>
+                        <th colspan="2" style="background-color: #a6c9e2; color: whitesmoke;">Download</th>
+                    </tr>
+                    <tr>
+                        <td><a href="ResistivityReduction.zip"><img src="../../MISC/install/downloadPic.png"></a></td>
+                        <td><a href="ResistivityReduction.zip">ResistivityReduction.zip</a> <i style="font-weight: normal; font-size: 10px;"> ~348 kilobytes</i></td>
+                    </tr>
+                </table>
+                <p style="background-color: yellow">
+                    <b>*For instructions on how to install and use the survey java applet <a href="../../install.html" target="_blank">click here</a>.</b>
+                </p>
+                <hr class="gray">
+            </li>
+            <li>
+                Follow the instructions provided in the script to load and plot your resistivity observations.
+                In all cases, note that
+                this involves modifying the script, usually by simply replacing a file name with one that contains your
+                observations.
+                Because we have saved information concerning each sounding in separate data files, you will have to load
+                and interpret each separately.
+            </li>
+            <li>
+                You may now begin to model the observed apparent resistivity curves. The form of the models you will
+                use
+                are identical to those you used in designing the resistivity survey; they consist of layered models, two
+                layers
+                over a halfspace maximum. Thus, you need to adjust layer thicknesses and resistivities to attempt to
+                match the observed resistivity soundings.
+            </li>
+            <li>
+                Once you have found a preferred model(s), estimate the uncertainties in the model parameters. Do this
+                by systematically varying the model parameters about your preferred values and find all values that fit the
+                observed data to within the data uncertainties.
+            </li>
+            <li>
+                Finally, are there other models that could fit the data equally as well as your preferred model that
+                have very different parameters? If these models are geologically plausible, describe what they are and give
+                your rationale for choosing a preferred model(s).
+            </li>
+        </ul>
+        <h3>OUTCOMES</h3>
+        <p>
+            The final report should be in the form of a summary report to your
+            client. The heading can be in standard memo format. The summary report should include the following:
+        <ul>
+            <li> A brief review of the basis for the survey design (statement of the problem),
+            <li> A summary of the data acquisition and interpretation procedures (you may want to refer to a flow
+                chart in the appendices), and
+            <li> A clear and concise statement of your interpretation and an indication of the action
+                that will be required to refine and validate that interpretation.
+        </ul>
+        <p>
+            As usual, the body of the report must be no longer than two pages. However, it is important to provide
+            enough information (in the appendices) for the client's geophysical staff or consultant to be able to check
+            any of your work. This would include:
+        <ul>
+            <li>A tabulation of the field data,
+            <li>A description of the acquisition parameters used, and
+            <li>A narrative discussion of how and why you chose the "possible" models for each anomaly.
+        </ul>
+        <p>
+            As always, remember that the your report is also a sales document; in this case, instead of selling your
+            services, it is selling your competence and the quality of your work. Also remember that your clients are
+            busy executives that probably are out of touch with the technical state of the art. It must communicate
+            quickly and effectively, but it also should convey a sense of competence and professionalism.
+        </p>
+
+    </article>
+</div>
+
+<!--padding-->
+
+<div id="spacer"></div>
+<div class="footer_home"><br>
+    <div class="footer" style=" background:rgba(15,15,15,.70); color: ivory; width: 100%; margin-top: 0px">
+        <footer style="width: 650px; margin-right: auto; margin-left: auto">
+            <p style="text-align: center">
+                This site last updated: December 14th, 2016
+
+                <a href="mailto:reek@unlv.nevada.edu" class="footerstyle"> Jason M. Reek</a> 2015 - 2016
+                <a href="mailto:tboyd@mines.edu" class="footerstyle">Thomas M. Boyd</a>, 1996 - 2002
+                <br>
+                All rights reserved.
+
+                All files included in this site are not distributed as public
+                domain software, but are freely available under the following
+                <a href="../../license.html" class="footerstyle">license</a>.
+                <br>
+                Copyright (c)
+                <br>
+            </p>
+
+        </footer>
+    </div>
+</div>
+
+<script src="../../include.js"></script>
+
+</body>
+</html>

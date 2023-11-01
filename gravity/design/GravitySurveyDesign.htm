@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Gravity: Survey Design</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link href="../../assets/css/main.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<!-- Header -->
+<section id="header">
+		
+    <div class="icon major"><img class="logo" src="../../images/logo.png" alt="UNLV Geoscience">
+                    <h1 style="color: #FFFFFF;">GEOL 452/652 - Geophysics<br></h1>
+    <br>
+        
+    </div>
+    <div class="menu-container">
+        <nav id="menu">
+            <label for="tm" id="toggle-menu">Navigation <span class="drop-icon">▾</span></label>
+            <input type="checkbox" id="tm">
+            <ul class="main-menu cf">
+            
+            <li><a href="#">Introduction
+                <span class="drop-icon">▾</span>
+                <label title="Toggle Drop-down" class="drop-icon" for="sm0">▾</label>
+                </a>
+                <input type="checkbox" id="sm0">
+                <ul class="sub-menu">
+                    <li><a href="../../index.html">Home</a></li>
+                    <li><a href="../../Introduction_Philosophy.html">Philosophy</a></li>
+                    <li><a href="../../Introduction_Organization.html">Organization</a></li>
+                    <li><a href="../../Introduction_ModuleLayout.html">Module Layout</a></li>
+                    <li><a href="../../Introduction_CourseObjectives.html">Course Objectives</a></li>
+                    <li><a href="../../Introduction_TLE.html">TLE Reprint</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Gravity
+                <span class="drop-icon">▾</span>
+                <label title="Toggle Drop-down" class="drop-icon" for="sm1">▾</label>
+                </a>
+                <input type="checkbox" id="sm1">
+                <ul class="sub-menu">
+                    <li><a href="../../GravityHome.html">Notes</a></li>
+                    <li><a href="../observations/GravityObservations.htm">Observations</a></li>
+                    <li><a href="../rfb/GravityRequestforBid.htm">Request for Bid</a></li>
+                    <li><a href="GravitySurveyDesign.htm">Survey Design</a></li>
+                    <li><a href="../acquisition/GravityDataAcquisition.htm">Data Acquisition</a></li>
+                    <li><a href="../reduction/GravityDataInterpretation.htm">Interpretation</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Magnetism
+                <span class="drop-icon">▾</span>
+                <label title="Toggle Drop-down" class="drop-icon" for="sm2">▾</label>
+                </a>
+                <input type="checkbox" id="sm2">
+            
+            <ul class="sub-menu">
+                <li><a href="../../MagneticsHome.htm">Notes</a></li>
+                <li><a href="../../magnetism/observations/obs.html">Observations</a></li>
+                <li><a href="../../magnetism/rfb/rfb.html">Request for Bid</a></li>
+                <li><a href="../../magnetism/design/MagneticSurveyDesign.html">Survey Design</a></li>
+                <li><a href="../../magnetism/acquisition/acq.html">Data Acquisition</a></li>
+                <li><a href="../../magnetism/reduction/red.html">Interpretation</a></li>
+            </ul>    
+        </li>
+            
+            <li><a href="#">Resistivity
+                    <span class="drop-icon">▾</span>
+                    <label title="Toggle Drop-down" class="drop-icon" for="sm3">▾</label>
+                    </a>
+                    <input type="checkbox" id="sm3">
+                
+                <ul class="sub-menu">
+                    <li><a href="../../DCResistivityHome.htm">Notes</a></li>
+                    <li><a href="../../resistivity/observations/obs.html">Observations</a></li>
+                    <li><a href="../../resistivity/rfb/rfb.html">Request for Bid</a></li>
+                    <li><a href="../../resistivity/design/design.html">Survey Design</a></li>
+                    <li><a href="../../resistivity/acquisition/acq.html">Data Acquisition</a></li>
+                    <li><a href="../../resistivity/reduction/red.html">Interpretation</a></li>
+                </ul>    
+            </li>
+            <li><a href="#">Refr. Seismic
+                <span class="drop-icon">▾</span>
+                <label title="Toggle Drop-down" class="drop-icon" for="sm4">▾</label>
+                </a>
+                <input type="checkbox" id="sm4">
+            
+            <ul class="sub-menu">
+                <li><a href="../../RefractionSeismicHome.htm">Notes</a></li>
+                    <li><a href="../../seismology/observations/obs.html">Observations</a></li>
+                    <li><a href="../../seismology/rfb/rfb.html">Request for Bid</a></li>
+                    <li><a href="../../seismology/design/design.html">Survey Design</a></li>
+                    <li><a href="../../seismology/acquisition/acq.html">Data Acquisition</a></li>
+                    <li><a href="../../seismology/reduction/red.html">Interpretation</a></li>
+            </ul>    
+        </li>
+            <li><a href="../../MapsInfoetc_Home.htm">Maps &amp; Info</a></li>
+            <li style="border: none;"><a href="../../OtherInformationHome.htm">Other Info.</a></li>
+            </ul>
+        </nav>
+    </div>
+</section>
+
+<!-- One -->
+<section class="main">
+    <div class="container">
+            <div class="center-container">
+                <h1 style="margin: 0;"> Survey Design - Gravity </h1>
+            </div>
+            <hr />
+
+            <div class="center-container">
+                <div class="split-side-left">
+                   
+                <p>
+                    A gravity survey is based on the premise that a target is limited in space and has a different
+                    density from the surrounding geology. The problem is to remove all of the other sources of
+                    gravity variations, or noise
+                    (<a href="../notes/GravityNotes14EarthTides.htm">tides</a>,
+                    <a href="../notes/GravityNotes13InstrumentDrift.htm">instrument drift</a>,
+                    <a href="../notes/GravityNotes27LocalvsRegional.htm">regional gravity contributions</a>, etc.), so that you
+                    can interpret the anomaly in terms of the geological and geophysical parameters of the localized target.
+                </p>
+                <p>
+                    A common mistake made by geologists and engineers -- and even many geophysicists -- is
+                    assuming that a gravity survey will work in any case where the target has an anomalous density.
+                    Geophysicists compound this mistake by choosing survey parameters such as station spacing
+                    based on intuition (they call it experience). Often the particular combination of size, depth, and
+                    density contrast produces a gravity anomaly smaller than the resolution of the survey. In other
+                    cases, the noise level masks the anomaly. A systematic approach to planning the survey and
+                    validating the design will overcome many of these failures.
+                </p>
+                <p>
+                    Planning a gravity survey is done by reversing the interpretive process. We predict the noise
+                    from sources not of interest in the survey, estimate the standard deviation of the random (operator and
+                    instrument) noise, calculate the shape of the signal (the theoretical anomaly produced by the
+                    assumed source), then decide whether the noise can be reduced to the point where the signal will
+                    be interpretable. If the answer is affirmative, then we determine the survey parameters that will
+                    produce the best compromise between cost and data quality.
+                </p>
+
+                <h2 class="major">OBJECTIVES</h2>
+
+                <hr />
+                <p><strong>There are four learning objectives for this project:</strong></p>
+
+                <ul class="square">
+                    <li style="margin-bottom: 10px;">
+                        Becoming familiar with numerical modeling,
+                    </li>
+                    <li style="margin-bottom: 10px;">
+                        Developing a conceptual understanding of the shape of the gravity anomaly associated
+                        with a particular geologic target and the sources of noise that mask that anomaly,
+
+                    </li>
+                    <li style="margin-bottom: 10px;">
+                        Learning to codify decision-making processes and quantify conclusions,
+                    </li>
+                    <li style="margin-bottom: 10px;">
+                        Reinforcing the fact that economics is a part of all engineering practices.
+                    </li>
+                </ul>
+                <br />
+                <p>
+                    <b>
+                    Given the <a href="../rfb/GravityRequestforBid.htm">Request for Bid</a>, the
+                    objective is to verify that
+                    <a href="../notes/GravityNotes04GravityandGeology.htm">gravity is the appropriate technique</a> to use, then
+                    design a survey that is
+                    likely to produce the best possible data at the lowest possible cost. There are two milestones in
+                    the process of accomplishing this objective:
+                    </b>
+                </p>
+                
+                <ul class="square">
+                    <li style="margin-bottom: 10px;">
+                        Reaching a conclusion on survey parameters (for our use in creating synthetic data), and
+                    </li>
+                    <li style="margin-bottom: 10px;">
+                        Submitting a bid that takes into account both economic and technical factors.
+                    </li>
+                </ul>
+                <p>
+                <h2>PROCEDURE</h2>
+                <hr />
+                <p>
+                    <b>Using information provided in the Request for Bid:</b>
+                    <ul class="square">
+                        <li style="margin-bottom: 10px;">
+                            Create a range of likely
+                            <a href="../../information/geology.html">geologic models</a> and assign geophysical parameters:
+                            depth of tunnel, radius of tunnel, and the tunnel's
+                            <a href="../notes/GravityNotes05DensityContrast.htm">density contrast</a>, and
+                        </li>
+                        <li style="margin-bottom: 10px;">
+                            Use one of the gravity survey programs to produce a series of plots of the
+                            gravity anomaly associated with that range of geological models.
+
+                            <hr />
+
+                            <ul style="list-style-type: none;">
+                                <li><a href="GravityTunnel/GravityTunnel.html" target="_blank"><img src="../../images/app_start.png" alt="Gravity Tunnel"/> Gravity Anomaly Over a Tunnel</a></li>
+                                <li><a href="GravityVerticalShaft/GravityVerticalShaft.html" target="_blank"><img src="../../images/app_start.png" alt="Gravity Vertical Shaft"/> Gravity Anomaly Over a Vertical Shaft</a></li>
+                            </ul>
+                            <hr />
+                            </li>
+
+                <li style="margin-bottom: 10px;">
+                    <b>
+                    Develop a detailed plan for a survey that can be expected to acquire data sufficient for
+                    interpretation of the actual geological target. Some technical issues to consider include:</b>
+                    <ul class="circle">
+                        <li style="margin-bottom: 10px; margin-top: 10px;">Amplitude of the gravity anomaly,</li>
+                        <li style="margin-bottom: 10px;">Width of the gravity anomaly,</li>
+                        <li style="margin-bottom: 10px;">Orientation of the gravity anomaly,</li>
+                        <li style="margin-bottom: 10px;">Standard deviation of the random noise (Experienced gravity crews
+                            can obtain observations with
+                            an error of between 0.01 and 0.02 mgals, far smaller than the errors observed in the data
+                            collected
+                            by
+                            the novice crews described in the previous exercise),
+                        </li>
+                        <li style="margin-bottom: 10px;">Elevation precision required,</li>
+                        <li style="margin-bottom: 10px;">Elimination of temporally and spatially coherent noise,</li>
+                        <li style="margin-bottom: 10px;">Frequency of reoccupation of a base station.</li>
+                    </ul>
+                </li>
+                <li style="margin-bottom: 10px;"><b>Estimate the cost of the survey as designed above, then consider whether
+                    the survey
+                    design can be modified to reduce cost without causing significant degradation of data
+                    quality. Economic factors governing the survey include:</b>
+                    <ul class="circle">
+                        <li style="margin-bottom: 10px; margin-top: 10px;">It takes 5 minutes to take a reading,</li>
+                        <li style="margin-bottom: 10px;">It takes 15 minutes to return to the base station and take a
+                            reading,
+                        </li>
+                        <li style="margin-bottom: 10px;">Mobilization and demobilization will require 1/2 day each,</li>
+                        <li style="margin-bottom: 10px;">
+                            Total person-hours required for processing, interpretation and report preparation is the
+                            same as total person-hours in the field,
+                        </li>
+                        <li style="margin-bottom: 10px;">Field hands make $10/hour, and two are required at all times in the
+                            field,
+                        </li>
+                        <li style="margin-bottom: 10px;">Field hands will only work 8 hours per day,</li>
+                        <li style="margin-bottom: 10px;">Processors, interpreters and report writers make $20/hour,</li>
+                        <li style="margin-bottom: 10px;">
+                            Subsistence and travel expenses are $100/person/8-hour day while doing the field
+                            work,
+                        </li>
+                        <li style="margin-bottom: 10px;">The gravity meter is depreciated at the rate of 1%/day (original
+                            cost = $20,000),
+                        </li>
+                        <li style="margin-bottom: 10px;">Vehicle depreciation is $50/day,</li>
+                        <li style="margin-bottom: 10px;">Fringe benefits for employees are 25% of salary,</li>
+                        <li style="margin-bottom: 10px;">Overhead is 100% of total direct cost excluding equipment
+                            depreciation,
+                        </li>
+                        <li style="margin-bottom: 10px;">Profit is ---your choice---.</li>
+                    </ul>
+                </li>
+                </ul>
+
+                <h2 style="margin-top: 40px;">OUTCOMES</h2>
+                <hr />
+                <p style="margin-bottom: 100px;">
+                    The final report should be in the form of a bid. The heading
+                    can be in standard memo format. The bid must include survey-design parameters, a summary of
+                    the decision-making process that led to that design (including an estimate of the likelihood that
+                    the survey will work), and a firm statement of total cost. The report must be no longer
+                    than two pages. Details (flow-chart of the survey design process,
+                    tabulation of survey-
+                    design parameters, breakdown of costs, etc.), however, can be included as appendices.
+                    Be sure to look at the <a href="../rfb/GravityRequestforBid.htm">Request for Bid</a> so that you include
+                    everything
+                    in your bid that the client has requested.
+                    Remember that the
+                    bid is a sales document; it should communicate quickly and effectively and should focus on those
+                    issues that will be of most interest to the client.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Footer -->
+<section id="footer">
+
+    <ul class="copyright">
+        <li>&copy; 2019</li><li>Design: Jason Reek, Brandon Fidler, <a href="http://html5up.net"> HTML5 UP</a></li>
+        <li>Content: Tom Boyd, Pamela Burnley</li>
+    </ul>
+</section>
+
+</body>
+</html>

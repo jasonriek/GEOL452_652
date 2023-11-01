@@ -1,0 +1,11 @@
+<%@ page language="java" contentType="text/dat" %>
+<%
+        //Grab request parameters
+        String loc = request.getParameter("loc");
+        String spacing=request.getParameter("spacing");
+        String nread=request.getParameter("nread");
+        String base=request.getParameter("base");
+        String bfreq=request.getParameter("bfreq");
+%>
+Location(m)  Gravity(mgal)  Time(min)
+<jsp:include page="/servlet/GetGravity?type=data&loc=<%=loc%>&spacing=<%=spacing%>&nread=<%=nread%>&base=<%=base%>&bfreq=<%=bfreq%>" flush="true" />

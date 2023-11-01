@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:color="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="appletFormat.css">
+    <title>Gravity Sphere</title>
+</head>
+
+<body>
+    <!--Control modules go here-->
+    <header style="text-align: center;">
+        <span style="color: #ffffff;"><strong>Gravity Anomaly Modeling - Sphere</strong></span>
+    </header>
+    <div class="row">
+        <!-- Control Modules -->
+        <div class="leftColumn" >
+                <div class="module_style_controls">
+                    <div class="slideGridContainer">
+                            <strong>Add your gravity reduction data:</strong>
+                        <div class="slideGridItem">
+                            
+                            <table>
+                                <tr>
+                                    <td><input type="file" id="file_input" style="padding-bottom: 10px;"></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <strong>Use Arrow Keys to Control</strong> 
+                            <div class="slideGridItem">
+                                <strong>Density Contrast, Rho (g/cm^3): </strong>
+                                <table>
+                                    <tr>
+                                        <td><button id="left_rho_button" class="ArrowButtons" onclick="rho_LeftButton();" onmousedown="inter=setInterval(rho_LeftButton, 100);" onmouseup="clearInterval(inter);" onmouseout="clearInterval(inter);">&#8249</button></td>
+                                        <td><label for="rho_slider"></label><input type="range" class="slider" id="rho_slider"></td>
+                                        <td><button id="right_rho_button" class="ArrowButtons" onclick="rho_RightButton();" onmousedown="inter=setInterval(rho_RightButton, 100);" onmouseup="clearInterval(inter);" onmouseout="clearInterval(inter);">&#8250</button></td>
+                                    </tr>
+                                </table>
+    
+                            </div>
+                        <div class="slideGridItem">
+                            <strong>Bias:</strong>
+                            <table>
+                                <tr>
+                                    <td><button id="left_bias_button" class="ArrowButtons" onclick="bias_LeftButton();" onmousedown="inter=setInterval(bias_LeftButton, 100);" onmouseup="clearInterval(inter);" onmouseout="clearInterval(inter);">&#8249</button></td>
+                                    <td><label for="bias_slider"></label><input type="range" min="1" max="102" value="1" class="slider" id="bias_slider"></td>
+                                    <td><button id="right_bias_button" class="ArrowButtons" onclick="bias_RightButton();" onmousedown="inter=setInterval(bias_RightButton, 100);" onmouseup="clearInterval(inter);" onmouseout="clearInterval(inter);">&#8250</button></td>
+                                </tr>
+                            </table>
+                        </div>
+                     
+                        <!-- Radius Control Panel -->
+                        <div class="slideGridItem" style="padding-right: 10px;">
+                            <canvas id="anomaly_controller" class="anomaly_control" width="240px" height="240px"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Gravity Tunnel Applet Painted Here -->
+            <div class="rightColumn">
+                <div id = "module_style_canvas">
+                    <canvas class="SphereCanvas" id="GravitySphere"></canvas>
+                    <!-- Anomaly Slider -->
+                    <div class="slideGridItem">
+                        <strong>Anomaly X Position</strong>
+                        <table>
+                            <tr>
+                                <td><button id="left_anom_slider_button" class="ArrowButtons" style="margin-left: 4px;" onclick="moveAnomLeft();" onmousedown="inter=setInterval(moveAnomLeft, 100);" onmouseup="clearInterval(inter);" onmouseout="clearInterval(inter);">&#8249</button></td>
+                                <td><label for="MoveAnom"></label><input type="range" min="-250" max="250" value="0" class="anomaly_slider" id="MoveAnom"></td>
+                                <td><button id="right_anom_slider_button" class="ArrowButtons" onclick="moveAnomRight();" onmousedown="inter=setInterval(moveAnomRight, 100);" onmouseup="clearInterval(inter);" onmouseout="clearInterval(inter);">&#8250</button></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <!-- Gravity Vertical Shaft Labels -->
+                    <table id="stats">
+                        <tr>
+                            <td><span id="x_location_label"><strong>X Location:</strong></span></td><td><span id="x_location_val"></span></td>
+                        </tr>
+                        <tr>
+                            <td><span id="depth_label"><strong>Depth:</strong></span></td><td><span id="depth_val"></span></td>
+                        </tr>
+                        <tr>
+                            <td><span id="radius_label"><strong>Radius:</strong></span></td><td><span id="radius_val"></span></td>
+                        </tr>
+                        <tr>
+                            <td><span id="contrast_label"><strong>Contrast:</strong></span></td><td><span id="contrast_val"></span></td>
+                        </tr>
+                        <tr>
+                            <td><span id="bias_label"><strong>Bias:</strong></span></td><td><span id="bias_val"></span></td>
+                        </tr>
+                     
+
+                    </table>
+                </div>
+            </div>
+        </div>
+    <article id="module_style_text_area">
+        <h2>Gravity Anomaly Modeling - Cylinder</h2>
+        <p>
+        This JavaScript script allows the user to display a gravity dataset, and then vary geological parameters in order to model the dimensions and physical properties of a possible cylinder of more or less 
+        dense material that may have produced the anomaly observed in the data. 
+        </p>
+        <p>
+        You can vary the depth and x-coordinate of the cylinder, its radius, and the density contrast between the surrounding earth and the cylinder. If the data are biased above the y = 0 axis, use the bias control to shift the theoretical curve up or down. The position of the cylinder is changed by dragging the cylinder slider with the mouse or touch. All other parameters are changed via the slider bars and arrow controls in the left panel. 
+        Click <a href="TestData.csv">here</a> for test data. 
+    </p>
+
+    </article>
+<script type="text/javascript" src="../../../assets/js/Shapes.js"></script>
+<script type="text/javascript" src="GravitySphere.js"></script>
+<script type="text/javascript" src="GravitySphereControls.js"></script>
+</body>
+
+</html>

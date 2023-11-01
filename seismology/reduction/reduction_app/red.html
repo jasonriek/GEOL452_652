@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=yes"/>
+    <meta charset="UTF-8" />
+    <!-- <link rel="stylesheet" href="normalize.css" /> -->
+    <link rel="stylesheet" href="appletFormat.css" />
+    <title>Seismology Reduction Survey</title>
+  </head>
+  <body>
+    <div id="wrapper">
+      <div id="title">
+        <h1>Seismology Reduction Survey</h1>
+      </div>
+      <div id="traceCanvas">
+        <canvas id="Canvas_Trace" width="500px" height="500px"></canvas>
+      </div>
+      <div id="layerCanvas">
+        <p>
+          • To change <strong>source location</strong>  click and drag the desired source left and
+          right. <br />
+          • To change <strong>layer depth</strong>  click and drag desired layer up and down <br />
+          • To change <strong>layer dip</strong>  click and drag far right side of layer line and
+          move up and down
+        </p>
+        <canvas id="Canvas_Layer" width="600px" height="300px"></canvas>
+      </div>
+      <div id="outputTable">
+        <table id="stats">
+          <!-- row 1 -->
+          <tr>
+            <td>
+              <span id="V1_label"><strong>V1:</strong></span>
+            </td>
+            <td class="dataNumbers"><span id="v1_val"></span></td>
+          </tr>
+          <!-- row 2 -->
+          <tr>
+            <td>
+              <span id="V2_label"><strong>V2:</strong></span>
+            </td>
+            <td class="dataNumbers"><span id="v2_val"></span></td>
+          </tr>
+          <!-- row 3 -->
+          <tr>
+            <td>
+              <span id="V3_label"><strong>V3:</strong></span>
+            </td>
+            <td class="dataNumbers"><span id="v3_val"></span></td>
+          </tr>
+          <!-- row 4 -->
+          <tr>
+            <td>
+              <span id="Layer1_label"
+                ><strong>Layer 1 depth below source:</strong></span
+              >
+            </td>
+            <td class="dataNumbers"><span id="Layer1_val"></span></td>
+          </tr>
+          <!-- row 5 -->
+          <tr>
+            <td>
+              <span id="Layer2_label"
+                ><strong>Layer 2 depth below source:</strong></span
+              >
+            </td>
+            <td class="dataNumbers"><span id="Layer2_val"></span></td>
+          </tr>
+          <!-- row 6 -->
+          <tr>
+            <td>
+              <span id="dip_label"><strong>Dip of top Layer:</strong></span>
+            </td>
+            <td class="dataNumbers"><span id="dip_val"></span></td>
+          </tr>
+          <!-- row 7 -->
+          <tr>
+            <td>
+              <span id="dip_mid_label"
+                ><strong>Dip of middle layer:</strong></span
+              >
+            </td>
+            <td class="dataNumbers"><span id="dip_mid_val"></span></td>
+          </tr>
+          <!-- row 8 -->
+          <tr>
+            <td>
+              <span id="bias_label"><strong>Time Bias:</strong></span>
+            </td>
+            <td class="dataNumbers"><span id="bias_val"></span></td>
+          </tr>
+          <!-- row 9 -->
+          <tr>
+            <td>
+              <span id="sourceLoc_label"
+                ><strong>Source Locations:</strong></span
+              >
+            </td>
+            <td class="dataNumbers"><span id="sourceLoc_val"></span></td>
+          </tr>
+        </table>
+      </div>
+
+      <div id="controls">
+        <div id="sourceSelect">
+          <tr>
+            <td>
+              <label for="NumofSources"> <strong>Number of Sources</strong> </label>
+              <select
+                class="NumofSources"
+                name="NumofSources"
+                onchange="SourcesSelectBox(this.value)"
+              >
+                <option name="1_Sources" value="1">1</option>
+                <option name="2_Sources" value="2">2</option>
+                <option name="3_Sources" value="3">3</option>
+                <option name="4_Sources" value="4">4</option>
+                <option name="5_Sources" value="5">5</option>
+              </select>
+            </td>
+          </tr>
+        </div>
+        <div id="sliderGridContainer">
+          <div class="slideGridItem V1Bar">
+            <strong>Velocity Top</strong>
+            <table>
+              <tr>
+                <td>
+                  <button
+                    class="ArrowButtons"
+                    onclick="v1_LeftButton();"
+                    onmousedown="inter=setInterval(v1_LeftButton, 100);"
+                    onmouseup="clearInterval(inter);"
+                    onmouseout="clearInterval(inter);"
+                  >&#8249</button>
+                </td>
+                <td>
+                  <label for="VelocityTop"></label
+                  ><input
+                    type="range"
+                    class="slider"
+                    id="VelocityTop"
+                    oninput="v1_sliderMover(this.value)"
+                  />
+                </td>
+                <td>
+                  <button
+                    class="ArrowButtons"
+                    onclick="v1_RightButton();"
+                    onmousedown="inter=setInterval(v1_RightButton, 100);"
+                    onmouseup="clearInterval(inter);"
+                    onmouseout="clearInterval(inter);"
+                  >&#8250</button>
+                </td>
+              </tr>
+            </table>
+          </div>
+          <div class="slideGridItem V2Bar">
+            <strong>Velocity Middle</strong>
+            <table>
+              <tr>
+                <td>
+                  <button
+                    class="ArrowButtons"
+                    onclick="v2_LeftButton()"
+                    onmousedown="inter=setInterval(v2_LeftButton, 100);"
+                    onmouseup="clearInterval(inter);"
+                    onmouseout="clearInterval(inter);"
+                  >&#8249</button>
+                </td>
+                <td>
+                  <label for="VelocityMiddle"></label
+                  ><input
+                    type="range"
+                    class="slider"
+                    id="VelocityMiddle"
+                    oninput="v2_sliderMover(this.value)"
+                  />
+                </td>
+                <td>
+                  <button
+                    class="ArrowButtons"
+                    onclick="v2_RightButton();"
+                    onmousedown="inter=setInterval(v2_RightButton, 100);"
+                    onmouseup="clearInterval(inter);"
+                    onmouseout="clearInterval(inter);"
+                  >&#8250</button>
+                </td>
+              </tr>
+            </table>
+          </div>
+          <div class="slideGridItem V3Bar">
+            <strong>Velocity Bottom</strong>
+            <table>
+              <tr>
+                <td>
+                  <button
+                    class="ArrowButtons"
+                    onclick="v3_LeftButton();"
+                    onmousedown="inter=setInterval(v3_LeftButton, 100);"
+                    onmouseup="clearInterval(inter);"
+                    onmouseout="clearInterval(inter);"
+                  >&#8249</button>
+                </td>
+                <td>
+                  <label for="VelocityBottom"></label
+                  ><input
+                    type="range"
+                    class="slider"
+                    id="VelocityBottom"
+                    oninput="v3_sliderMover(this.value)"
+                  />
+                </td>
+                <td>
+                  <button
+                    class="ArrowButtons"
+                    onclick="v3_RightButton();"
+                    onmousedown="inter=setInterval(v3_RightButton, 100);"
+                    onmouseup="clearInterval(inter);"
+                    onmouseout="clearInterval(inter);"
+                  >&#8250</button>
+                </td>
+              </tr>
+            </table>
+          </div>
+          <div class="slideGridItem Bias">
+            <strong>Time Bias</strong>
+            <table>
+              <tr>
+                <td>
+                  <button
+                    class="ArrowButtons"
+                    onclick="bias_LeftButton();"
+                    onmousedown="inter=setInterval(bias_LeftButton, 100);"
+                    onmouseup="clearInterval(inter);"
+                    onmouseout="clearInterval(inter);"
+                  >&#8249</button>
+                </td>
+                <td>
+                  <label for="Bias"></label
+                  ><input
+                    type="range"
+                    class="slider"
+                    id="Bias"
+                    oninput="bias_sliderMover(this.value)"
+                  />
+                </td>
+                <td>
+                  <button
+                    class="ArrowButtons"
+                    onclick="bias_RightButton();"
+                    onmousedown="inter=setInterval(bias_RightButton, 100);"
+                    onmouseup="clearInterval(inter);"
+                    onmouseout="clearInterval(inter);"
+                  >&#8250</button>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        
+      </div>
+
+      <div id="inputFrame">
+        <p class="textInstructions">
+          Use this form to submit your seismic time picks for importation into
+          the refraction modeling applet. Each line should contain one <strong>time</strong> 
+          observation and include the <strong>location</strong> of the observation and the value
+          of the observation, <strong>in that order</strong> . Data may be entered in any order.
+          That is you do not have to enter data with locations increasing or
+          decreasing. You may enter multiple time for a given location. This
+          allows you to enter data from mulitple shots collected along the same
+          line. <br /><br />
+          After pasting your data into text field select the
+          <strong>submit</strong> button to update the seismic data shown in the
+          applet's main window. You may resubmit new data sets at any time. Use
+          the <strong>clear</strong> button to delete all of the data in the
+          text field.
+        </p>
+        <textarea
+          class="dataInput"
+          id="textarea"
+          placeholder="enter pairs of time and location"
+          cols="4"
+          rows="20"
+        ></textarea>
+        <div id="dataButtons">
+          <button onclick="fileInputFunc()" class="submitButton">
+            Submit
+          </button>
+          <button onclick="clearTextArea()" class="clearButton">Clear</button>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <script src="./lib/ModelFrame.js"></script>
+  <script src="./lib/SeisModel.js"></script>
+  <script src="./lib/SliderControls.js"></script>
+  <script src="./lib/dataTable.js"></script>
+  <script src="./lib/InputFrame.js"></script>
+  <script src="./lib/start.js"></script>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="appletFormat.css">
+    <title>Magneteic Buried Dike Reduction</title>
+</head>
+
+<body>
+    <!--Control modules go here-->
+    <header style="text-align: center;">
+        <span style="color: #ffffff;"><strong>Magneteic Buried Dike Reduction</strong></span>
+    </header>
+    <div class="row">
+        <!-- Control Modules -->
+        <div class="leftColumn" >
+            <div class="module_style_controls">
+                <strong>Add your magnetic reduction data (.csv):</strong>
+                      
+                <input type="file" id="file_input" style="padding-bottom: 10px;">
+                <br />
+                <strong>Model Parameters:</strong> 
+           
+                <!-- Magnetic Dike Control Panel -->
+                <canvas class="dike_control" id="controller_canvas" width="335px" height="400px"></canvas>
+
+                Susceptability (K):
+                <input type="range" min="1" max="100" value="50" class="slider" id="k_slider">
+                Bias (nT):
+                <input type="range" min="1" max="100" value="50" class="slider" id="bias_slider">
+                <div style="margin-top: 15px;">
+                Line (y location):
+                <select id="y_location_cbox">
+                    <option value="-250.0">-250.0 meters</option>
+                    <option value="0.0">0.0 meters</option>
+                    <option value="250.0">250.0 meters</option>
+                  </select>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Magnetic Buried Dike Canvas Painted Here -->
+        <div class="rightColumn">
+            <div id = "module_style_canvas">
+                <canvas class="magCanvas" id="MagneticBuriedDikeCanvas"></canvas>
+    
+                <table id="stats">
+                    <tr>
+                        <td><span id="k_label"><strong>Susceptability (K)</strong></span></td><td><span id="k_val"></span></td>
+                    </tr>
+                    <tr>
+                        <td><span id="width_label"><strong>Width:</strong></span></td><td><span id="width_val"></span></td>
+                    </tr>
+                    <tr>
+                        <td><span id="center_label"><strong>Center Location:</strong></span></td><td><span id="center_val"></span></td>
+                    </tr>
+                    <tr>
+                        <td><span id="depth_label"><strong>Depth:</strong></span></td><td><span id="depth_val"></span></td>
+                    </tr>
+                    <tr>
+                        <td><span id="trend_label"><strong>Trend:</strong></span></td><td><span id="trend_val"></span></td>
+                    </tr>
+                    <tr>
+                        <td><span id="bias_label"><strong>Bias:</strong></span></td><td><span id="bias_val"></span></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div id="module_style_text_area">
+
+        <h2>Magnetic Modeling - Buried Dike</h2>
+        <p>
+            This JavaScript applicatuib allows the user to display a 2D magnetic dataset, and then vary geological parameters in order to model the physical properties of the earth that may have produced the observed data.  
+        </p>
+        <p>
+            You can vary the depth and width of the dike by clicking and dragging the edges of the dike shown on the bottom cross section. You can vary the horizontal location of the dike by clicking and dragging the dike horizontally on the map view plot shown near the top of the frame. The orientation of the dike can be changed by clicking and dragging the line within the azimuth circle on red orientation tool shown on the right of the frame. Susceptibility and your choice of lines to model are controlled with the slider bar and the drop-down menu shown on the bottom of the frame. The observed (filled circles) and the computed velocities (line) are displayed on this page. 
+        </p>
+  
+    </div>
+
+<script type="text/javascript" src="../../assets/js/Shapes.js"></script>
+<script type="text/javascript" src="MagneticBuriedDike.js"></script>
+<script type="text/javascript" src="MagneticBuriedDikeControls.js"></script>
+</body>
+
+</html>

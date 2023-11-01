@@ -1,0 +1,338 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <title>DC Resistivity - Survey Design</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link href="../../assets/css/main.css" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+     <!-- Header -->
+     <section id="header">
+		
+        <div class="icon major"><img class="logo" src="../../images/logo.png" alt="UNLV Geoscience">
+                        <h1 style="color: #FFFFFF;">GEOL 452/652 - Geophysics<br></h1>
+        <br>
+            
+        </div>
+        <div class="menu-container">
+            <nav id="menu">
+                <label for="tm" id="toggle-menu">Navigation <span class="drop-icon">▾</span></label>
+                <input type="checkbox" id="tm">
+                <ul class="main-menu cf">
+                
+                <li><a href="#">Introduction
+                    <span class="drop-icon">▾</span>
+                    <label title="Toggle Drop-down" class="drop-icon" for="sm0">▾</label>
+                    </a>
+                    <input type="checkbox" id="sm0">
+                    <ul class="sub-menu">
+                        <li><a href="../../index.html">Home</a></li>
+                        <li><a href="../../Introduction_Philosophy.html">Philosophy</a></li>
+                        <li><a href="../../Introduction_Organization.html">Organization</a></li>
+                        <li><a href="../../Introduction_ModuleLayout.html">Module Layout</a></li>
+                        <li><a href="../../Introduction_CourseObjectives.html">Course Objectives</a></li>
+                        <li><a href="../../Introduction_TLE.html">TLE Reprint</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Gravity
+                    <span class="drop-icon">▾</span>
+                    <label title="Toggle Drop-down" class="drop-icon" for="sm1">▾</label>
+                    </a>
+                    <input type="checkbox" id="sm1">
+                    <ul class="sub-menu">
+                        <li><a href="../../GravityHome.html">Notes</a></li>
+                        <li><a href="../../gravity/observations/GravityObservations.htm">Observations</a></li>
+                        <li><a href="../../gravity/rfb/GravityRequestforBid.htm">Request for Bid</a></li>
+                        <li><a href="../../gravity/design/GravitySurveyDesign.htm">Survey Design</a></li>
+                        <li><a href="../../gravity/acquisition/GravityDataAcquisition.htm">Data Acquisition</a></li>
+                        <li><a href="../../gravity/reduction/GravityDataInterpretation.htm">Interpretation</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Magnetism
+                    <span class="drop-icon">▾</span>
+                    <label title="Toggle Drop-down" class="drop-icon" for="sm8">▾</label>
+                    </a>
+                    <input type="checkbox" id="sm8">
+                
+                <ul class="sub-menu">
+                    <li><a href="../../MagneticsHome.htm">Notes</a></li>
+                    <li><a href="../../magnetism/observations/obs.html">Observations</a></li>
+                    <li><a href="../../magnetism/rfb/rfb.html">Request for Bid</a></li>
+                    <li><a href="../../magnetism/design/MagneticSurveyDesign.html">Survey Design</a></li>
+                    <li><a href="../../magnetism/acquisition/acq.html">Data Acquisition</a></li>
+                    <li><a href="../../magnetism/acquisition/red.html">Interpretation</a></li>
+                </ul>    
+            </li>
+                
+                <li><a href="#">Resistivity
+                        <span class="drop-icon">▾</span>
+                        <label title="Toggle Drop-down" class="drop-icon" for="sm8">▾</label>
+                        </a>
+                        <input type="checkbox" id="sm8">
+                    
+                    <ul class="sub-menu">
+                        <li><a href="../../DCResistivityHome.htm">Notes</a></li>
+                        <li><a href="../observations/obs.html">Observations</a></li>
+                        <li><a href="../rfb/rfb.html">Request for Bid</a></li>
+                        <li><a href="design.html">Survey Design</a></li>
+                        <li><a href="../acquisition/acq.html">Data Acquisition</a></li>
+                        <li><a href="../reduction/red.html">Interpretation</a></li>
+                    </ul>    
+                </li>
+                <li><a href="#">Refr. Seismic
+                    <span class="drop-icon">▾</span>
+                    <label title="Toggle Drop-down" class="drop-icon" for="sm8">▾</label>
+                    </a>
+                    <input type="checkbox" id="sm8">
+                
+                <ul class="sub-menu">
+                    <li><a href="../../RefractionSeismicHome.htm">Notes</a></li>
+                        <li><a href="../../seismology/observations/obs.html">Observations</a></li>
+                        <li><a href="../../seismology/rfb/rfb.html">Request for Bid</a></li>
+                        <li><a href="../../seismology/design/design.html">Survey Design</a></li>
+                        <li><a href="../../seismology/acquisition/acq.html">Data Acquisition</a></li>
+                        <li><a href="../../seismology/reduction/red.html">Interpretation</a></li>
+                </ul>    
+            </li>
+                <li><a href="../../MapsInfoetc_Home.htm">Maps &amp; Info</a></li>
+                <li style="border: none;"><a href="../../OtherInformationHome.htm">Other Info.</a></li>
+                </ul>
+            </nav>
+        </div>
+    </section>
+
+        <section class="main">
+        <div class="container">
+                <div class="center-container">
+                    
+                    <h1 style="margin: 0;">Survey Design - Resistivity</h1>
+                </div>
+                <hr />
+    
+                <div class="center-container">
+                    <div class="split-side-left">
+            <h2>BACKGROUND</h2>
+        </header>
+        <p>
+            Unlike the gravity and magnetic surveys we have already conducted, this will be your first
+            experience with a <i>controlled source</i> experiment. Until now, you have been mapping
+            anomalous variations in the earth's natural fields. For this survey, you will create the electrical
+            field (control the source). This approach has both advantages (better control over signal and
+            noise) and disadvantages (including cost and complexity).
+        </p>
+        <p>
+            Resistivity also differs from gravity and magnetics surveys in that the phenomenon being measured
+            (resistivity) is primarily controlled by the water content rather than by the characteristics of
+            the rock itself. This makes it difficult to design surveys for areas where you have no prior
+            information about ground water conditions. This survey is a good illustration of that problem. You
+            already have some understanding of the subsurface geology based on both the geologic setting
+            relative to the Front Range and on your previous surveys, but you have no way of knowing, however,
+            whether ground water even exists at the site, much less any evidence for the depth to or gradient
+            of the water table. For that reason, ground water projects often start with reconnaissance
+            surveys to provide enough information to determine whether more expensive, detailed surveys are
+            warranted and to design those surveys more intelligently. This exercise represents one such
+            reconnaissance survey, and it will be followed with a request to design another survey if the
+            results of this are favorable.
+        </p>
+
+        <h2>OBJECTIVES</h2>
+        <p>
+            There are five learning objectives for this project:
+        </p>
+        <ul class="square">
+            <li>Gain additional experience in developing predicted geologic models and estimating
+                geophysical parameters,
+            </li>
+            <li>Continue to practice and refine your structured decision making and survey design skills,</li>
+            <li>Develop an understanding of the use of controlled source geophysical methods and how
+                they differ from natural source methods,
+            </li>
+            <li>
+                Gain a feel for the source, magnitude, and character of each of the principle forms of
+                noise that affect a resistivity survey, and
+            </li>
+            <li>
+                Improve your ability to select optimum survey parameters based on a comparison of expected
+                signal strength and noise characteristics.
+            </li>
+        </ul>
+        <br />
+        <h2>PROCEDURE</h2>
+        <p>
+            You are to submit a bid for a reconnaissance resistivity survey to determine whether the igneous
+            dike described by previous surveys might be interrupting groundwater flow and creating a subsurface
+            <i>pool</i> of water on the up-gradient side as described in the
+            <a href="../rfb/rfb.html" target="_blank">Request for Bid</a>.
+            You will follow much the same procedure that you used in designing the gravity and magnetic surveys
+            (estimate amplitude and frequency of signal and noise, design a survey to enhance the signal and
+            minimize the noise at the lowest overall cost, and estimate the cost of the survey). The steps
+            to be followed should include the following:
+        </p>
+        <ul class="square">
+            <li>
+                Assuming the dike is acting as a subsurface dam, predict a likely range of depths to water
+                table for several locations on each side of the dike. Given your general knowledge of the geologic
+                structure at the base of the mountains, estimate possible depths to bedrock. Determine the range
+                of resistivities that might be found in the alluvium above water table, alluvium below water
+                table, and bedrock,
+            </li>
+            <li>
+                Tabulate the sources of noise that will affect the resistivity survey and estimate the amplitude
+                of each of these noise sources,
+            </li>
+            <li>
+                Discuss techniques that can be used to minimize the noise from each source, and
+            </li>
+            <li>
+                Using one of the resistivity modeling packages pointed to below, produce synthetic apparent
+                resistivity
+                curves for the range of depths and resistivities expected. For this survey, you can use one of
+                either
+                two types of DC resistivity array geometries typically used: Schlumberger or Wenner. Each has its
+                own advantages and disadvantages. Choose one array type, and do all of your modeling with that
+                type of array. In the USA, Schlumberger arrays are the most common type of array used for problems
+                of this type.
+                <hr class="gray">
+                <ul>
+                    <li><a href="ResSoundOverLayeredStructs.html" target="_blank"><img src="../../images/app_start.png" alt="ResSoundOverLayeredStructs"/>Resistivity Soundings Over Layered Structures</a></li>
+                </ul>
+                <hr class="gray">
+            </li>
+
+            <li>Develop a detailed plan for a survey that can be expected to acquire data sufficient for
+                interpretation. Some technical issues to consider include:
+                <ul class="circle">
+                    <li style="margin-top: 10px;">
+                        Choice of Wenner or Schlumberger array configurations,
+                    </li>
+                    <li>
+                        Midpoint locations and line orientations for the survey and the range of resistivity curves
+                        that are
+                        likely
+                        to be produced at each location. You may collect as many soundings at different locations
+                        and with
+                        different
+                        orientations as you likes,.
+                    </li>
+                    <li>
+                        Shortest and longest electrode spacing and the number of electrode spacings at which to
+                        acquire data per decade in electrode offset. Remember, when planning your survey, the client
+                        has not obtained permission for you to operate off of his property. Thus, your surveys must
+                        be confined to the site under consideration,
+                    </li>
+                    <li>
+                        Standard deviation of the random noise and the need for multiple readings.
+                        Resistivity meters typically used for near-surface exploration are capable of producing
+                        about 0.5 amps
+                        of current and reading voltages to about 0.01 volts, and
+                    </li>
+                    <li>
+                        Likelihood of reduction or elimination of noise.
+                    </li>
+                </ul>
+            <li>
+                Estimate the cost of the survey you have designed. The economic factors governing the survey
+                include:
+                <ul class="circle">
+                    <li style="margin-top: 10px;">Field operations require three crew members,</li>
+                    <li>It takes 30 minutes to lay out the wires and tapes for each sounding,</li>
+                    <li>For Schlumberger soundings,
+                        it takes 3 minutes to set out the electrodes and 5 seconds to make a single voltage
+                        measurement,
+                    </li>
+                    <li>
+                        For Wenner soundings,
+                        it takes 6 minutes to set out the electrodes and 5 seconds to make a single voltage
+                        measurement,
+                    </li>
+                    <li>Mobilization and demobilization will require 1/2 day each,</li>
+                    <li>
+                        Total person-hours required for processing, interpretation, and report preparation is the
+                        same as total person-hours in the field,
+                    </li>
+                    <li>
+                        Field hands make $10/hour, and three are required at all times in the field with the survey
+                        instrument,
+                    </li>
+                    <li>
+                        Field hands will only work 8 hours per day,
+                    </li>
+                    <li>
+                        Processors, interpreters, and report writers make $20/hour,
+                    </li>
+                    <li>
+                        Subsistence and travel expenses are $100/person/8-hour day while doing the field
+                        work,
+                    </li>
+                    <li>
+                        The resistivity equipment depreciates at the rate of 1%/day (original cost = $10,000),
+                    </li>
+                    <li>
+                        Vehicle depreciation is $50/day,
+                    </li>
+                    <li>
+                        Fringe benefits for employees are 25% of salary,
+                    </li>
+                    <li>
+                        Overhead is 100% of total direct cost excluding equipment depreciation, and
+                    </li>
+                    <li>
+                        Profit is ---your choice---.
+                    </li>
+                </ul>
+            </li>
+            <li>
+                To proceed to the data acquisition portion of this exercise, you must have the following
+                survey parameters defined.
+                <ul class="circle">
+                    <li style="margin-top: 10px;">Electrode configuration type</li>
+                    <li>Number of soundings to be performed</li>
+                    <li>Location of the center point of each sounding using the
+                        <a target="_blank" href="../../information/surveycor.html">standard survey coordinates</a>
+                    </li>
+                    <li>Orientation of each sounding: east-west or north-south</li>
+                    <li>Minimum electrode spacing, in meters, to be used (AB/2 for Schlumberger, A for Wenner)</li>
+                    <li>Number of decades in electrode spacing over which to move the current electrodes</li>
+                    <li>Number of electrode locations at which to acquire data per decade of electrode spacing</li>
+                </ul>
+            </li>
+            <li>
+                Discuss the differences, advantages, and disadvantages of using a controlled source for
+                geophysical data as compared to natural sources.
+            </li>
+        </ul>
+        <p>
+        <h2>OUTCOMES</h2>
+        <p>
+            The final report should be in the form of a bid. The heading
+            can be in standard memo format. The bid must include survey design parameters, a summary of
+            the decision-making process that led to that design (including an estimate of the likelihood that
+            the survey will work), a brief discussion of the advantages and disadvantages of a controlled
+            source experiment, and a firm statement of total cost. The report must be no longer
+            than two pages, but details (flow-chart of the survey design process, tabulation of survey
+            design parameters, breakdown of costs, etc.) can be included as appendices.
+            Be sure to look at the <a
+                href="../rfb/rfb.html" target="_blank">Request for Bid</a> to ensure that you have
+            included in your bid everything that the client has requested.
+            Remember that the
+            bid is a sales document; it should communicate quickly and effectively and should focus on those
+            issues that will be of most interest to the client.
+        </p>
+    </div>
+</div>
+</div>
+</section>
+
+<!-- Footer -->
+<section id="footer">
+
+<ul class="copyright">
+<li>&copy; 2019</li><li>Design: Jason Reek, Brandon Fidler </li>
+<li>Content: Tom Boyd, Pamela Burnley</li>
+</ul>
+</section>
+
+</body>
+</html>

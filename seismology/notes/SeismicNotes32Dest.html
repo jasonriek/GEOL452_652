@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Seismology: Notes: Estimating Dips and Depths From Refraction Observations </title>
+    <meta charset="utf-8">
+<link href="../../assets/css/main_style.css" rel="stylesheet" type="text/css"/></head>
+<body>
+    <div id="noteBG">
+        <div style="float: left">
+                <ul class="topnav" id="myTopnav">
+        <li><a href="../../index.html">Main Page</a></li>\n
+                    <li><a href="../../GravityHome.html">Gravity Notes</a></li>            
+                    <li><a href="../../MagneticsHome.htm">Magnetism Notes</a></li>
+                    <li><a href="../../DCResistivityHome.htm">DC Resistivity Notes</a></li>
+                    <li><a href="../../RefractionSeismicHome.htm">Refr. Seismic Notes</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="spacer"></div>
+
+<div class="mainContainer center_container">
+    <div class="main">
+<div>            <b style="margin-left: 500px;">pg 32</b>
+<h1>Estimating Dips and Depths From Refraction Observations</h1>        </div>
+     
+        <p>
+            Although we could derive exact expressions from which to compute the depths
+            and dips of multiple dipping layers from first arrival observations, for our
+            purposes, all we really need to be able to do is to estimate these parameters
+            from the field records. The procedure for estimating these parameters
+            described on this page is only valid if the layers do not have excessive
+            dips.
+        </p>
+        <p>
+            Like the <a target="_BLANK" href="SeismicNotes27CModTt.html">multiple horizontal layer case</a>, multiple
+            dipping layers will also produce head waves that can be observed on the
+            surface of the Earth from which subsurface Earth structure can be determined.
+            The same <a target="_BLANK" href="SeismicNotes28Hidden.html">caveats</a> hold in this case concerning those
+            structures that can not be resolved from first arrival observations.
+        </p>
+        <p>
+            <img src="seis_images/mdip.gif" class="center">
+        </p>
+        <p>
+            So, in general, Earth structures like the one shown above produce travel-time
+            curves like those shown below that can be used to estimate the depths and
+            dips of each layer. <a target="_BLANK" href="SeismicNotes31GField.html">Again</a>, to identify the presence
+            of dipping layers, you must acquire the data by shooting in two directions.
+            Notice that in this example, the dip effect on the observed travel-times
+            is quite subtle. Each layer in this model dips at a half degree.
+        </p>
+        <p>
+            <img src="seis_images/mdiptt.gif" class="center">
+        </p>
+        <p>
+            If the dips are small, then we can estimate the structure under each source
+            by assuming the dips are zero and by using the <a target="_BLANK" href="SeismicNotes27CModTt.html">
+            expressions</a> we have already derived. After doing this for each source,
+            we can then estimate the dip of each layer. The general flow for such a
+            procedure would include the following:
+        </p>
+        <p>
+            <ul>
+                <li>Determine the slope of each line segment in the observed travel-time
+                    curves for both source locations,</li>
+             </ul>
+        </p>
+        <p>
+            <ul>
+                 <li>The slopes of the nearest offset portions of the two travel-time curves
+                should be equal to each other with a value of <i>1/V<sub>1</sub></i>,</li>
+            </ul>
+        </p>
+        <p>
+            <ul>
+                 <li>For the travel-time segments representing the refracted arrival, average
+                the slopes of the refracted arrival traveling up dip with that of the arrival
+                traveling down dip on each refractor. This requires that you identify on
+                the travel-time curves those portions of the curve originating from the
+                same boundary. In this case, you would average the slopes of the two red line
+                segments (<i>1/V<sub>2a</sub></i> and <i>1/V<sub>2b</sub></i>) and the slopes
+                of the two purple line segments (<i>1/V<sub>3a</sub></i> and <i>1/V<sub>3b</sub></i>).
+                Use the <i>absolute
+                 value</i> of the slope in this calcuation,</li>
+             </ul>
+        </p>
+        <p>
+            <ul>
+                 <li>Compute your estimate for <i>V<sub>2</sub></i> and <i>V<sub>3</sub></i> by taking the
+                reciprocal of the averages generated in the preceding step,</li>
+            </ul>
+        </p>
+        <p>
+            <ul>
+                 <li>Using these velocities, the zero intercept times at each source
+                (<i>t<sub>01a</sub></i> and <i>t<sub>02a</sub></i> for the source to the left and <i>t<sub>01b</sub></i> and
+                <i>t<sub>02b</sub></i> for the source to the right) and
+                the <a target="_BLANK" href="SeismicNotes27CModTt.html">equations</a> given previously estimate the
+                depth to each layer underneath each source, and</li>
+            </ul>
+        </p>
+        <p>
+            <ul>
+                 <li>From these depths and knowing the separation between the two sources,
+                 estimate the dip on each layer.</li>
+            </ul>
+        </p>
+        <p>
+            Remember this procedure will give you estimates of the depth to each layer
+            and the dip on the layer. The modeling codes used in the exercise will
+            provide more rigorous estimates that do not depend on the small dip assumption
+            made here.
+        </p>
+        <br />
+
+
+        <div style="margin-bottom: 50px;">
+            <a href="SeismicNotes31GField.html" class="noteButton noteButtonBack"
+               style="color: #000000; float: left">❮❮ Previous</a>
+            <a href="../../GravityHome.html" class="noteButton noteButtonFor" style="color: ivory; float: right;">Gravity ❯❯</a>
+        </div>
+    </div>
+
+
+    <div class="noteOutline">
+<h1 style="margin-bottom: 0;">Seismology</h1>        <button class="accordion"><b> Introduction </b></button>
+        <div class="panel">
+            <ul id="myUL">
+                <li><a href="SeismicNotes01SIntro.html"> Seismic Methods: Refraction and Reflection <i
+                        style="float: right;">pg 1</i></a></li>
+                <li><a href="SeismicNotes02SAdv.html">Adv. and Disadv. of Seismic Methods V.S. Other Methods<i
+                        style="float: right;">pg 2</i></a></li>
+                <li><a href="SeismicNotes03SAdv2.html">Adv. and Disadv. of Refraction and Reflection Methods<i
+                        style="float: right;">pg 3</i></a></li>
+                <li><a href="SeismicNotes04Waves.html">Elastic Waves<i style="float: right;">pg 4</i></a></li>
+                <li><a href="SeismicNotes05SWaves.html">Types of Seismic Waves<i style="float: right;">pg 5</i></a></li>
+                <li><a href="SeismicNotes06RayPath.html">Wave Propagation: Wavefronts and Raypaths<i
+                        style="float: right;">pg 6</i></a></li>
+
+            </ul>
+        </div>
+
+        <button class="accordion"><b> Seismology and Geology </b></button>
+        <div class="panel">
+            <ul id="myUL">
+                <li><a href="SeismicNotes07Bound.html">Wave Interaction with Boundaries<i style="float: right;">pg 7</i></a>
+                </li>
+                <li><a href="SeismicNotes08Snell.html">Snell's Law<i style="float: right;">pg 8</i></a></li>
+                <li><a href="SeismicNotes09EVel.html">Velocities and Rock Properties<i style="float: right;">pg
+                    9</i></a></li>
+                <li><a href="SeismicNotes10RVel.html">Seismic Velocities of Common Earth Materials<i
+                        style="float: right;">pg 10</i></a></li>
+            </ul>
+        </div>
+
+        <button class="accordion"><b> Refraction Basics </b></button>
+        <div class="panel">
+            <ul id="myUL">
+                <li><a href="SeismicNotes11Simp1.html">Simple Earth Model: Low-Velocity Layer Over a Halfspace<i
+                        style="float: right;">pg 11</i></a></li>
+                <li><a href="SeismicNotes12Head.html">Head Waves<i style="float: right;">pg 12</i></a></li>
+                <li><a href="SeismicNotes13Seismogram.html">Records of Ground Motion<i style="float: right;">pg
+                    13</i></a></li>
+                <li><a href="SeismicNotes14TtSimp_01.html">Travel-time Curves for a Simple Earth Model<i
+                        style="float: right;">pg 14</i></a></li>
+                <li><a href="SeismicNotes015FirArr.html">First Arrivals<i style="float: right;">pg 15</i></a></li>
+                <li><a href="SeismicNotes16SSimp_01.html">Determining Earth Structure from Travel Times<i
+                        style="float: right;">pg 16</i></a></li>
+                <li><a href="SeismicNotes17Deriv_01.html">Derivation of Travel Time Equations<i style="float: right;">pg
+                    17</i></a></li>
+                <li><a href="SeismicNotes18Simp_02.html">High-Velocity Layer Over a Halfspace: Reprise<i
+                        style="float: right;">pg 18</i></a></li>
+            </ul>
+        </div>
+
+        <button class="accordion"><b> Refraction Seismic Equipment and Field Procedures </b></button>
+        <div class="panel">
+            <ul id="myUL">
+                <li><a href="SeismicNotes19EOverview.html">Equipment Overview<i style="float: right;">pg 19</i></a></li>
+                <li><a href="SeismicNotes20Source.html">Types of Seismic Sources<i style="float: right;">pg 20</i></a>
+                </li>
+                <li><a href="SeismicNotes21Geophone.html">Seismometers or Geophones<i style="float: right;">pg
+                    21</i></a></li>
+                <li><a href="SeismicNotes22Field_01.html">Rec. Ground Displacement at Several Offsets
+                    Simultaneously<i style="float: right;">pg 22</i></a></li>
+                <li><a href="SeismicNotes23Record.html">Recording Systems<i style="float: right;">pg 23</i></a></li>
+                <li><a href="SeismicNotes24First.html">Sources of Noise<i style="float: right;">pg 24</i></a></li>
+            </ul>
+        </div>
+
+        <button class="accordion"><b> Interpretation of Seismic Observations </b></button>
+        <div class="panel">
+            <ul id="myUL">
+                <li><a href="SeismicNotes25Noise.html">Picking Times of Arrivals<i style="float: right;">pg 25</i></a>
+                </li>
+                <li><a href="SeismicNotes26CMod.html">Wave Propagation with Multiple Horizontal Layers<i
+                        style="float: right;">pg 26</i></a></li>
+                <li><a href="SeismicNotes27CModTt.html">Travel Time Curves from Multiple Horizontal<i
+                        style="float: right;">pg 27</i></a></li>
+                <li><a href="SeismicNotes28Hidden.html">Hidden Layers<i style="float: right;">pg 28</i></a></li>
+                <li><a href="SeismicNotes29Dip_01.html">Head Waves from a Dipping Layer: Shooting Down Dip<i
+                        style="float: right;">pg 29</i></a></li>
+                <li><a href="SeismicNotes30Dip_02.html">Head Waves from a Dipping Layer: Shooting Up Dip<i
+                        style="float: right;">pg 30</i></a></li>
+                <li><a href="SeismicNotes31GField.html">A Field Procedure for Recognizing Dipping Beds<i
+                        style="float: right;">pg 31</i></a></li>
+                <li><a href="SeismicNotes32Dest.html">Estimating Dips and Depths from Travel<i style="float: right;">pg
+                    32</i></a></li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+
+<div id="spacer"></div>
+<div id="noteFBG"></div>
+<script src="../../assets/js/notes_accord.js"></script></body>
+</html>

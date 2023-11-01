@@ -1,0 +1,396 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <title>Magnetism - Observational Errors and Limitations</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link href="../../assets/css/main.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+    <!-- Header -->
+<section id="header">
+		
+    <div class="icon major"><img class="logo" src="../../images/logo.png" alt="UNLV Geoscience">
+                    <h1 style="color: #FFFFFF;">GEOL 452/652 - Geophysics<br></h1>
+    <br>
+        
+    </div>
+    <div class="menu-container">
+        <nav id="menu">
+            <label for="tm" id="toggle-menu">Navigation <span class="drop-icon">▾</span></label>
+            <input type="checkbox" id="tm">
+            <ul class="main-menu cf">
+            
+            <li><a href="#">Introduction
+                <span class="drop-icon">▾</span>
+                <label title="Toggle Drop-down" class="drop-icon" for="sm0">▾</label>
+                </a>
+                <input type="checkbox" id="sm0">
+                <ul class="sub-menu">
+                    <li><a href="../../index.html">Home</a></li>
+                    <li><a href="../../Introduction_Philosophy.html">Philosophy</a></li>
+                    <li><a href="../../Introduction_Organization.html">Organization</a></li>
+                    <li><a href="../../Introduction_ModuleLayout.html">Module Layout</a></li>
+                    <li><a href="../../Introduction_CourseObjectives.html">Course Objectives</a></li>
+                    <li><a href="../../Introduction_TLE.html">TLE Reprint</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Gravity
+                <span class="drop-icon">▾</span>
+                <label title="Toggle Drop-down" class="drop-icon" for="sm1">▾</label>
+                </a>
+                <input type="checkbox" id="sm1">
+                <ul class="sub-menu">
+                    <li><a href="../../GravityHome.html">Notes</a></li>
+                    <li><a href="../../gravity/observations/GravityObservations.htm">Observations</a></li>
+                    <li><a href="../../gravity/rfb/GravityRequestforBid.htm">Request for Bid</a></li>
+                    <li><a href="../../gravity/design/GravitySurveyDesign.htm">Survey Design</a></li>
+                    <li><a href="../../gravity/acquisition/GravityDataAcquisition.htm">Data Acquisition</a></li>
+                    <li><a href="../../gravity/reduction/GravityDataInterpretation.htm">Interpretation</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Magnetism
+                <span class="drop-icon">▾</span>
+                <label title="Toggle Drop-down" class="drop-icon" for="sm2">▾</label>
+                </a>
+                <input type="checkbox" id="sm2">
+            
+            <ul class="sub-menu">
+                <li><a href="../../MagneticsHome.htm">Notes</a></li>
+                <li><a href="obs.html">Observations</a></li>
+                <li><a href="../rfb/rfb.html">Request for Bid</a></li>
+                <li><a href="../design/MagneticSurveyDesign.html">Survey Design</a></li>
+                <li><a href="../acquisition/acq.html">Data Acquisition</a></li>
+                <li><a href="../reduction/red.html">Interpretation</a></li>
+            </ul>    
+        </li>
+            
+            <li><a href="#">Resistivity
+                    <span class="drop-icon">▾</span>
+                    <label title="Toggle Drop-down" class="drop-icon" for="sm3">▾</label>
+                    </a>
+                    <input type="checkbox" id="sm3">
+                
+                <ul class="sub-menu">
+                    <li><a href="../../DCResistivityHome.htm">Notes</a></li>
+                    <li><a href="../../resistivity/observations/obs.html">Observations</a></li>
+                    <li><a href="../../resistivity/rfb/rfb.html">Request for Bid</a></li>
+                    <li><a href="../../resistivity/design/design.html">Survey Design</a></li>
+                    <li><a href="../../resistivity/acquisition/acq.html">Data Acquisition</a></li>
+                    <li><a href="../../resistivity/reduction/red.html">Interpretation</a></li>
+                </ul>    
+            </li>
+            <li><a href="#">Refr. Seismic
+                <span class="drop-icon">▾</span>
+                <label title="Toggle Drop-down" class="drop-icon" for="sm4">▾</label>
+                </a>
+                <input type="checkbox" id="sm4">
+            
+            <ul class="sub-menu">
+                <li><a href="../../RefractionSeismicHome.htm">Notes</a></li>
+                    <li><a href="../../seismology/observations/obs.html">Observations</a></li>
+                    <li><a href="../../seismology/rfb/rfb.html">Request for Bid</a></li>
+                    <li><a href="../../seismology/design/design.html">Survey Design</a></li>
+                    <li><a href="../../seismology/acquisition/acq.html">Data Acquisition</a></li>
+                    <li><a href="../../seismology/reduction/red.html">Interpretation</a></li>
+            </ul>    
+        </li>
+            <li><a href="../../MapsInfoetc_Home.htm">Maps &amp; Info</a></li>
+            <li style="border: none;"><a href="../../OtherInformationHome.htm">Other Info.</a></li>
+            </ul>
+        </nav>
+    </div>
+</section>
+
+
+<!-- One -->
+<section class="main">
+    <div class="container">
+            <div class="center-container">
+                <h1 style="margin: 0;">Observational Errors and Limitations - Magnetic</h1>
+            </div>
+            <hr />
+
+            <div class="center-container">
+                <div class="split-side-left">
+        <h2>Introduction and Statement of Problem</h2>
+        <p>
+            As is the case in designing a gravity survey, in
+            designing a magnetic survey for a particular application, there are several design
+            parameters that must be chosen or known: magnetic station spacing, location of the
+            base station, and the level of
+            reading error inherent to the basic observations.
+        </p>
+        <p>
+            Unlike gravimeters, modern magnetometers do not rely on an operator to read or
+            interpolate a dial reading and are relatively insensitive to instrument orientation.
+            Rather, the measured magnetic field strength is displayed
+            digitally or is directly recorded on a field computer. The proton-precession magnetometer typically
+            used in exploration surveys has an inherent reading accuracy of about 0.1 nT. For
+            high resolution work, instruments with a reading accuracy of 0.01 nT are available.
+        </p>
+        <p>
+            Although the absolute accuracy of the magnetometers is well within the range needed for
+            typical exploration work, magnetic surveys can be plagued by a variety of temporally and
+            spatially varying noises. For example, man-made structures can generate significant magnetic
+            fields that are obviously not related to subsurface geology. These structures can include
+            power lines, bridges, fences, buildings, cars, etc. If possible, magnetic surveys should
+            be conducted away from these features. In addition, the magnetometer operator can produce
+            a measurable magnetic field. As such, the operator can not wear any magnetic material: belt buckles,
+            wire-rimmed glasses, watches, etc.
+            If the proper precautions are taken, and the site well-chosen, the accuracy of magnetic field
+            observations can be reduced to about 1 nT.
+        </p>
+      
+            <img src="magtime.gif" class="center text"/>
+       
+        <p>
+            Like gravity measurements, magnetic measurements are time variable. That is, repeated observations
+            made at a given site vary with time.
+            The time variations of importance in exploration surveys are due mostly to external,
+            solar-controlled phenomena.
+            These variations tend to show a diurnal period, like the tidal variations affecting our gravity
+            observations, with an amplitude of about 25 nT.
+            Unlike the tidal variations, however, variations in the strength of the magnetic field can
+            oscillate rapidly and unpredictably.
+            An example of the magnetic field variations observed in Boulder, Colorado is shown
+            above. This example illustrates the field variations that can be expected on a relatively
+            noisy day.
+            Large, external magnetic distrubances, known as magnetic storms, can cause even more erratic
+            variations and in some instances interrupt radio, television, and satellite communications.
+            During times of magnetic storms, all exploration magnetic surveys should be terminated.
+            <a href="ftp://sunone.geolab.emr.ca/pub/forecast/forecast.txt">Magnetic storm forecasts</a>
+            are available. These forecasts are updated 15 minutes past the hour, every hour.
+        </p>
+
+        <p>
+            In this exercise we will focus on examining the temporal variations of the magnetic field and on
+            developing strategies for dealing with this variation.
+        </p>
+        <p>
+            The most obvious way of estimating and eliminating these temporal variations is to incorporate
+            a base station strategy similar to that employed in
+            <a href="../../gravity/notes/GravityNotes16TemporalVariationFieldProcedure.htm">gravity surveying</a>:
+            establish a
+            base station,
+            periodically reoccupy the base station, remove the time-varying component of the
+            magnetic field by linearly interpolating between base station reoccupation intervals.
+            In using this strategy, time reoccupation interval will be critically important to successfully
+            removing the time varying component of the magnetic field. Unlike the time varying component
+            of the gravity field, however, the magnetic field can vary rapidly with time, thereby necessitating
+            the use of relatively short reoccupation time intervals.
+        </p>
+        <p>
+            Let's estimate the optimum reoccupation time interval we would have to use to successfully
+            remove the time variable component of the magnetic field.
+            Given the necessary reoccupation interval, does it seem reasonable to use this strategy
+            of noise elimination, or should we consider a different approach?
+        </p>
+
+        <h2> Procedure </h2>
+
+        <ul class="square">
+            <li style="margin-bottom: 10px;">Base Station Reoccupation Requirements - To complete this portion of the
+                exercise you will need to
+                download magnetic data to your computer, import it into a spreadsheet, display the input data using the
+                spreadsheet's display functions, perform a series of linear interpolations of the data, compute residual
+                estimates between the estimated and actual tidal values, and derive an estimate of the optimal base
+                station
+                reoccupation interval.
+            </li>
+        </ul>
+        <br />
+        <p>
+            <b>To complete this portion of the exercise perform the following tasks:</b>
+        </p>
+
+        <ul class="square">
+            <li style="margin-bottom: 10px;">
+                <a href="2daysmag.dat">Download the magnetic data set to your machine</a> <b style="background-color: lightgoldenrodyellow;">(once redirected, right click the page and select "Save as.." to download the csv file)</b>.
+                The first column in the data set is the minute at which the observation was made, and the second column
+                is the
+                absolute magnetic field intensity reading in nT. The first line in the data set is a column label line.
+                Columns are tab
+                separated.
+                Clicking on the highlighted area will create a file with the name <i>2daysmag.dat</i> on your machine.
+            </li>
+            <li style="margin-bottom: 10px;">
+                Import <i>2daysmag.dat</i> into your favorite spreadsheet.
+            </li>
+            <li style="margin-bottom: 10px;">
+                Using the graphical features of your spreadsheet, plot the observed magnetic field strength versus time.
+                Your plot should resemble the one displayed above.
+            </li>
+            <li style="margin-bottom: 10px;">
+                Now, determine the effectiveness of a variety of base station reoccupation intervals ranging from 2
+                hours
+                to 10 minutes.
+                <ul>
+                    <li style="margin-bottom: 10px;">
+                        Plot the RMS of the residuals versus base station reoccupation interval. This value
+                        should decrease with decreasing reoccupation interval.
+                    </li>
+
+                    <li style="margin-bottom: 10px;">
+                        Discuss the results.
+                        In this discussion remember that magnetometers are relatively inexpensive (~$7,500). Therefore,
+                        if your
+                        required reoccupation interval is short, it may be more cost effective to use two magnetometers:
+                        one
+                        for recording your survey observations, and one to continuously record the time-variable
+                        component of
+                        the
+                        gravity field at the base station.
+                        <ul class="circle">
+                            <li>
+                                Using the spreadsheet's mathematical functions, create a third column of data that
+                                linearly interpolates
+                                the observations between base station reoccupation times. Instead of computing all of
+                                the interpolated
+                                values between the end points, we will only determine the interpolated value at the
+                                midpoint.
+                                Usually the interpolation error is greatest at this point.
+                                Construct a linear interpolant for the reoccupation interval desired and compute the
+                                linearly interpolated value of the magnetic field midway between the interpolation
+                                endpoints.
+                                Move the end points down one row in the spreadsheet and compute another value.
+                                Continue through the entire spreadsheet by pasting this formula down all of column
+                                three.
+                                These values now represent the time variable component of the magnetic field
+                                you would have predicted midway between base station observations recorded at your
+                                reoccupation
+                                interval.
+                                This process will approximate the procedure done in the <a
+                                    href="../../gravity/observations/GravityObservations.htm">gravity</a>
+                                assignment, but should be much faster to perform.
+                            </li>
+                            <li style="margin-bottom: 10px;">
+                                Test how good your predictions are by subtracting the values given in column 3 with the
+                                observed
+                                magnetic
+                                field values given in column 2. Only subtract those values for which you could compute
+                                interpolated
+                                magnetic observations.
+                                You will not be able to compute interpolated values at the beginning or at the end of
+                                the spreadsheet
+                                using
+                                the procedure described above. If your reoccupation interval is appropriate, these
+                                residuals should all
+                                be small.
+                            </li>
+                            <li style="margin-bottom: 10px;">
+                                Plot column 4, the residuals, versus time.
+                            </li>
+                            <li style="margin-bottom: 10px;">
+                                To quantify the size of the residual, compute their <I>Root Mean Square</I> value.
+                                To compute the root mean square (RMS) residual, do the following: sum the squares of the
+                                residuals,
+                                divide
+                                by the number of residuals used
+                                in the sum (do not include the end points used to do the linear interpolation that have
+                                zero residual),
+                                and
+                                take the square root of the result.
+                            </li>
+                            <li style="margin-bottom: 10px;">
+                                Repeat these steps for a variety of base station reoccupation intervals.
+                                You need to perform this computation over the entire data set. Choose time lengths and
+                                intervals that
+                                are representative of the data.
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="circle">
+                    <li style="margin-bottom: 10px;">
+                        <b>Reading and Operator Errors -</b>
+                        Like the previous exercise, you will need to
+                        download a magnetic data set to your computer, import it into a spreadsheet, display the input
+                        data
+                        using
+                        the
+                        spreadsheet's display functions, and compute <i>Standard Deviations</i> of the readings.
+                        Most spreadsheets have predefined functions that will compute the standard deviation
+                        of a set of readings for you.
+                        Unlike RMS, which essentially gives you an average magnitude of a set of
+                        readings, standard deviation quantifies the spread of readings about some
+                        average. The units on the number given as the standard deviation is the same
+                        as the units on the numbers used in computing the standard deviation.
+                        <ul class="square">
+                            <li style="margin-bottom: 10px; margin-top: 10px;">First, <a href="minesmag.csv">download
+                                the magnetic data</a> <b style="background-color: lightgoldenrodyellow;">(once redirected, right click the page and select "Save as.." to download the csv file)</b> collected
+                                at
+                                mines by GP311 students.
+                                This data set is a <i>csv</i> file that can be loaded into your favorite
+                                spreadsheet.
+                                Its format is, however, more complex than what we've used in the past.
+                                Columns in the data set are <i>tab</i> delimited. Choose this option when you load it
+                                in.
+                            </li>
+
+                            <li style="margin-bottom: 10px;">The first block of data represents repeated magnetic
+                                readings at a base
+                                station and several other stations.
+                                The operator name, reading location, reading time, and value of the magnetic field (nT)
+                                are listed
+                                for six
+                                passes
+                                along the line. Plot each magnetic profile (the value of the magnetic field at each
+                                reading
+                                location) one on
+                                top of the other.
+                            </li>
+
+                            <li style="margin-bottom: 10px;">
+                                At each reading location, or station, estimate the standard deviation
+                                of the magnetic observations. Average these standard deviations together to estimate the
+                                reading
+                                error
+                                associated with magnetic
+                                observations.
+                            </li>
+
+                            <li style="margin-bottom: 10px;">
+                                Given this reading error, are there any recognizable magnetic anomalies along the
+                                profile?
+                            </li>
+                            <li style="margin-bottom: 10px;">
+                                The second block of data represents repeated magnetic observations at two different
+                                locations.
+                                When collecting these observations, the orientation of the magnetometer was varied and
+                                the attitude
+                                of the
+                                magnetometer was varied from vertical. Analyze these observations and assess the errors
+                                associated
+                                with
+                                instrument orientation.
+                            </li>
+                            <li style="margin-bottom: 10px;">
+                                Summarize these results and specify what you think the inherent uncertainty in magnetic
+                                observations
+                                is
+                                based on these data.
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+</div>
+</section>
+
+
+<!-- Footer -->
+<section id="footer">
+
+    <ul class="copyright">
+        <li>&copy; 2019</li><li>Design: Jason Reek, Brandon Fidler, <a href="http://html5up.net"> HTML5 UP</a></li>
+        <li>Content: Tom Boyd, Pamela Burnley</li>
+    </ul>
+</section>
+
+</body>
+</html>

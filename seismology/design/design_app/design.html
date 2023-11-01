@@ -1,0 +1,474 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="appletFormat.css" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Seismic</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <p style="text-align: center; color: #ffffff;">
+        <strong>Refraction Seismic over Layered Structures</strong>
+      </p>
+      <!--Control modules go here-->
+      <div class="gridContainer">
+        <div class="gridItem">
+          <div class="slideContainer">
+            <div class="col-3" id="module_style_controls">
+              <div class="slideGridContainer">
+                <div class="slideGridItem">
+                  <strong>Vel. Top: v1</strong>
+                  <table>
+                    <tr>
+                      <td>
+                        <button
+                          class="ArrowButtons"
+                          onclick="v1_LeftButton();"
+                          onmousedown="inter=setInterval(v1_LeftButton, 100);"
+                          onmouseup="clearInterval(inter);"
+                          onmouseout="clearInterval(inter);"
+                        >&#8249</button>
+                      </td>
+                      <td>
+                        <label for="VelocityTop"></label
+                        ><input type="range" class="slider" id="VelocityTop" />
+                      </td>
+                      <td>
+                        <button
+                          class="ArrowButtons"
+                          onclick="v1_RightButton();"
+                          onmousedown="inter=setInterval(v1_RightButton, 100);"
+                          onmouseup="clearInterval(inter);"
+                          onmouseout="clearInterval(inter);"
+                        >&#8250</button>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+                <div class="slideGridItem">
+                  <strong>Vel. Middle: v2</strong>
+                  <table>
+                    <tr>
+                      <td>
+                        <button
+                          class="ArrowButtons"
+                          onclick="v2_LeftButton();"
+                          onmousedown="inter=setInterval(v2_LeftButton, 100);"
+                          onmouseup="clearInterval(inter);"
+                          onmouseout="clearInterval(inter);"
+                        >&#8249</button>
+                      </td>
+                      <td>
+                        <label for="VelocityMiddle"></label
+                        ><input
+                          type="range"
+                          min="1"
+                          max="66"
+                          value="1"
+                          class="slider"
+                          id="VelocityMiddle"
+                        />
+                      </td>
+                      <td>
+                        <button
+                          class="ArrowButtons"
+                          onclick="v2_RightButton();"
+                          onmousedown="inter=setInterval(v2_RightButton, 100);"
+                          onmouseup="clearInterval(inter);"
+                          onmouseout="clearInterval(inter);"
+                        >&#8250</button>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+                <div class="slideGridItem">
+                  <strong>Vel. Bottom: v3</strong>
+                  <table>
+                    <tr>
+                      <td>
+                        <button
+                          class="ArrowButtons"
+                          onclick="v3_LeftButton();"
+                          onmousedown="inter=setInterval(v3_LeftButton, 100);"
+                          onmouseup="clearInterval(inter);"
+                          onmouseout="clearInterval(inter);"
+                        >&#8249</button>
+                      </td>
+                      <td>
+                        <label for="VelocityBottom"></label
+                        ><input
+                          type="range"
+                          class="slider"
+                          id="VelocityBottom"
+                        />
+                      </td>
+                      <td>
+                        <button
+                          class="ArrowButtons"
+                          onclick="v3_RightButton();"
+                          onmousedown="inter=setInterval(v3_RightButton, 100);"
+                          onmouseup="clearInterval(inter);"
+                          onmouseout="clearInterval(inter);"
+                        >&#8250</button>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+                <div class="slideGridItem">
+                  <strong>Number of Geophones: N</strong>
+                  <table>
+                    <tr>
+                      <td>
+                        <button
+                          class="ArrowButtons"
+                          onclick="nx_LeftButton();"
+                          onmousedown="inter=setInterval(nx_LeftButton, 100);"
+                          onmouseup="clearInterval(inter);"
+                          onmouseout="clearInterval(inter);"
+                        >&#8249</button>
+                      </td>
+                      <td>
+                        <label for="SourceStack"></label
+                        ><input
+                          type="range"
+                          min="-90"
+                          max="90"
+                          value="52"
+                          class="slider"
+                          id="SourceStack"
+                        />
+                      </td>
+                      <td>
+                        <button
+                          class="ArrowButtons"
+                          onclick="nx_RightButton();"
+                          onmousedown="inter=setInterval(nx_RightButton, 100);"
+                          onmouseup="clearInterval(inter);"
+                          onmouseout="clearInterval(inter);"
+                        >&#8250</button>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+                <div class="slideGridItem">
+                  <strong>Source Stack: Ndata</strong>
+                  <table>
+                    <tr>
+                      <td>
+                        <button
+                          class="ArrowButtons"
+                          onclick="ndata_LeftButton();"
+                          onmousedown="inter=setInterval(ndata_LeftButton, 100);"
+                          onmouseup="clearInterval(inter);"
+                          onmouseout="clearInterval(inter);"
+                        >&#8249</button>
+                      </td>
+                      <td>
+                        <label for="NumOfGeophones"></label
+                        ><input
+                          type="range"
+                          class="slider"
+                          id="NumOfGeophones"
+                        />
+                      </td>
+                      <td>
+                        <button
+                          class="ArrowButtons"
+                          onclick="ndata_RightButton();"
+                          onmousedown="inter=setInterval(ndata_RightButton, 100);"
+                          onmouseup="clearInterval(inter);"
+                          onmouseout="clearInterval(inter);"
+                        >&#8250</button>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+
+                <div class="slideGridItem">
+                  <strong>Spacing: DX</strong>
+                  <table>
+                    <tr>
+                      <td>
+                        <button
+                          class="ArrowButtons"
+                          onclick="dx_LeftButton();"
+                          onmousedown="inter=setInterval(dx_LeftButton, 100);"
+                          onmouseup="clearInterval(inter);"
+                          onmouseout="clearInterval(inter);"
+                        >&#8249</button>
+                      </td>
+                      <td>
+                        <label for="Spacing"></label
+                        ><input type="range" class="slider" id="Spacing" />
+                      </td>
+                      <td>
+                        <button
+                          class="ArrowButtons"
+                          onclick="dx_RightButton();"
+                          onmousedown="inter=setInterval(dx_RightButton, 100);"
+                          onmouseup="clearInterval(inter);"
+                          onmouseout="clearInterval(inter);"
+                        >&#8250</button>
+                      </td>
+                    </tr>
+                  </table>
+
+                  <strong>Choose Layer</strong> <br />
+                  <input
+                    type="radio"
+                    name="LayerType"
+                    value="Layer1"
+                    id="Layer1"
+                    checked="checked"
+                  />
+                  Layer 1 <br />
+                  <input
+                    type="radio"
+                    name="LayerType"
+                    value="Layer2"
+                    id="Layer2"
+                  />
+                  Layer 2 <br />
+                  <canvas id="depthSlope_controller" class="anomaly_control" width="200px" height="180px">
+                
+                
+                <div style="padding-top: 5px; z-index: 1;">
+                  
+                    
+                </div>
+                
+              </div>
+                  <!-- enter text here -->
+              <p style= "font-size:larger;">*Select the top graph for full view.</p>
+            </div>
+          </div>
+
+          <div class="gridItem">
+            <div class="col-6" id="module_style_canvas">
+              <canvas class="Layer_Canvas" id="LayerCanvas" onclick="openModal(), PSeismsAction()" ></canvas>
+              <canvas class="Trace_Canvas" id="TraceCanvas"></canvas>
+              <!-- Gravity Vertical Shaft Labels -->
+              <!-- start of The Modal -->
+      <div id="myModal" class="modal" >
+      
+        <!-- Modal content -->
+        
+        <div class="modal-content modal-background">
+          <div>
+            <button onclick="TraceTypeAction(), PSeismsAction()" id="plotValueButtonid">
+              Press to change
+            </button>
+            <span id="plotValueid"></span>
+          <div>
+            <strong>Source Type:</strong> <br />
+            <input onclick="MyBoxesAdjustment(), PSeismsAction();" type="radio" name="sourceType" value="Hammer" id="hammer" />
+            Hammer <br />
+            <input onclick="MyBoxesAdjustment(), PSeismsAction();" type="radio" name="sourceType" value="Shotgun" id="shotgun" />
+            Shotgun <br />
+            <input onclick="MyBoxesAdjustment(), PSeismsAction();" type="radio" name="sourceType" value="Dynamite" id="dynamite" checked="checked" />
+            Dynamite <br />
+          </div>
+        
+<span class="close"></span>
+</div>
+          
+          
+          <div class="scrollmenu">
+            <canvas id="ModalCanvas"></canvas>
+          </div>
+        </div>
+      
+      </div>
+
+          
+        
+            <!-- end of modal -->
+              <div class="slideGridItem">
+                <strong>Source</strong>
+                <table>
+                  <tr>
+                    <td>
+                      <button
+                        class="ArrowButtons_anomaly"
+                        style="margin-left: 6px;"
+                        onclick="source_LeftButton();"
+                        onmousedown="inter=setInterval(source_LeftButton, 100);"
+                        onmouseup="clearInterval(inter);"
+                        onmouseout="clearInterval(inter);"
+                      >&#8249</button>
+                    </td>
+                    <td>
+                      <label for="MoveSource"></label
+                      ><input
+                        type="range"
+                        min="100"
+                        max="650"
+                        value="200"
+                        class="anomaly_slider"
+                        id="MoveSource"
+                      />
+                    </td>
+                    <td>
+                      <button
+                        class="ArrowButtons_anomaly"
+                        onclick="source_RightButton();"
+                        onmousedown="inter=setInterval(source_RightButton, 100);"
+                        onmouseup="clearInterval(inter);"
+                        onmouseout="clearInterval(inter);"
+                      >&#8250</button>
+                    </td>
+                  </tr>
+                </table>
+
+                 <strong>Geophone Spread</strong>
+                <table>
+                  <tr>
+                    <td>
+                      <button
+                        class="ArrowButtons_anomaly"
+                        style="margin-left: 6px;"
+                        onclick="geophone_LeftButton();"
+                        onmousedown="inter=setInterval(geophone_LeftButton, 100);"
+                        onmouseup="clearInterval(inter);"
+                        onmouseout="clearInterval(inter);"
+                      >&#8249</button>
+                    </td>
+                    <td>
+                      <label for="MoveGeophone"></label
+                      ><input
+                        type="range"
+                        class="anomaly_slider"
+                        id="MoveGeophone"
+                      />
+                    </td>
+                    <td>
+                      <button
+                        class="ArrowButtons_anomaly"
+                        onclick="geophone_RightButton();"
+                        onmousedown="inter=setInterval(geophone_RightButton, 100);"
+                        onmouseup="clearInterval(inter);"
+                        onmouseout="clearInterval(inter);"
+                      >&#8250</button>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+
+              <table id="stats">
+                <!-- row 1 -->
+                <tr>
+                  <td>
+                    <span id="V1_label"><strong>V1:</strong></span>
+                  </td>
+                  <td><span id="v1_val"></span></td>
+
+                  <td>
+                    <span id="sourceLoc_label"
+                      ><strong>Source Location:</strong></span
+                    >
+                  </td>
+                  <td><span id="sourceLoc_val"></span></td>
+                </tr>
+                <!-- row 2 -->
+                <tr>
+                  <td>
+                    <span id="V2_label"><strong>V2:</strong></span>
+                  </td>
+                  <td><span id="v2_val"></span></td>
+
+                  <td>
+                    <span id="firstGeoLoc_label"
+                      ><strong>First geophone location:</strong></span
+                    >
+                  </td>
+                  <td><span id="firstGeoLoc_val"></span></td>
+                </tr>
+                <!-- row 3 -->
+                <tr>
+                  <td>
+                    <span id="V3_label"><strong>V3:</strong></span>
+                  </td>
+                  <td><span id="v3_val"></span></td>
+
+                  <td>
+                    <span id="Gap_label"><strong>Gap:</strong></span>
+                  </td>
+                  <td><span id="Gap_val"></span></td>
+                </tr>
+                <!-- row 4 -->
+                <tr>
+                  <td>
+                    <span id="Layer1_label"
+                      ><strong>Layer 1 depth below source:</strong></span
+                    >
+                  </td>
+                  <td><span id="Layer1_val"></span></td>
+
+                  <td>
+                    <span id="lastGeoLoc_label"
+                      ><strong>Last geophone location:</strong></span
+                    >
+                  </td>
+                  <td><span id="lastGeoLoc_val"></span></td>
+                </tr>
+                <!-- row 5 -->
+                <tr>
+                  <td>
+                    <span id="Layer2_label"
+                      ><strong>Layer 2 depth below source:</strong></span
+                    >
+                  </td>
+                  <td><span id="Layer2_val"></span></td>
+
+                  <td>
+                    <span id="geoSpacing_label"
+                      ><strong>Geophone Spacing:</strong></span
+                    >
+                  </td>
+                  <td><span id="geoSpacing_val"></span></td>
+                </tr>
+                <!-- row 6 -->
+                <tr>
+                  <td>
+                    <span id="dip_label"
+                      ><strong>Dip of top Layer:</strong></span
+                    >
+                  </td>
+                  <td><span id="dip_val"></span></td>
+                  <td>
+                    <span id="numOfGeo_label"
+                      ><strong>Number of Geophones:</strong></span
+                    >
+                  </td>
+                  <td><span id="numOfGeo_val"></span></td>
+                </tr>
+                <!-- row 7 -->
+                <tr>
+                  <td>
+                    <span id="dip_mid_label"
+                      ><strong>Dip of middle layer:</strong></span
+                    >
+                  </td>
+                  <td><span id="dip_mid_val"></span></td>
+
+                  <td>
+                    <span id="sourcesToStack_label"
+                      ><strong>Sources to Stack:</strong></span
+                    >
+                  </td>
+                  <td><span id="sourcesToStack_val"></span></td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+
+    <script src="lib/ModelFrame.js"></script>
+    <script src="lib/RefractionOverlay.js"></script>
+    <script src="lib/TraceModal.js"></script>
+    <script src="lib/controller.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="appletFormat.css">
+    <title>Gravity Tunnel Reduction</title>
+
+</head>
+
+<body>
+    <header style="text-align: center;">
+        <span style="color: #ffffff;"><strong>Gravity Anomaly Over a Tunnel Reduction</strong></span>
+    </header>
+    <div class="row">
+        <!-- Control Modules -->
+        <div class="leftColumn" >
+            <div id="module_style_controls">
+                <div class="slideGridContainer">
+                    <div class="slideGridItem">
+                        <strong>Add your gravity data (.csv file) here:</strong>
+                        <table>
+                            <tr>
+                                <td><input type="file" id="file_input" style="padding-bottom: 10px;"></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <strong>Model Parameters:</strong> 
+                    <div class="slideGridItem">
+                        <strong>Density Contrast, Rho (g/cm^3):</strong>
+                        <table>
+                            <tr>
+                                <td><button class="ArrowButtons" onclick="rho_LeftButton();" onmousedown="inter=setInterval(rho_LeftButton, 100);" onmouseup="clearInterval(inter);" onmouseout="clearInterval(inter);">&#8249</button></td>
+                                <td><label for="densityContrast"></label><input type="range" min="1" max="66" value="1" class="slider" id="densityContrast"></td>
+                                <td><button class="ArrowButtons" onclick="rho_RightButton();" onmousedown="inter=setInterval(rho_RightButton, 100);" onmouseup="clearInterval(inter);" onmouseout="clearInterval(inter);">&#8250</button></td>
+                            </tr>
+                        </table>
+                    </div>
+                   
+                    <div class="slideGridItem">
+                        <strong>Add Bias (mgal):</strong>
+                        <table>
+                            <tr>
+                                <td><button class="ArrowButtons" onclick="bias_LeftButton();" onmousedown="inter=setInterval(bias_LeftButton, 100);" onmouseup="clearInterval(inter);" onmouseout="clearInterval(inter);">&#8249</button></td>
+                                <td><label for="bias"></label><input type="range" min="1" max="102" value="1" class="slider" id="bias"></td>
+                                <td><button class="ArrowButtons" onclick="bias_RightButton();" onmousedown="inter=setInterval(bias_RightButton, 100);" onmouseup="clearInterval(inter);" onmouseout="clearInterval(inter);">&#8250</button></td>
+                            </tr>
+                        </table>
+
+                    </div>
+
+                    <!-- Radius Control Panel -->
+                    <canvas class="gtRadSample radius_control" width="240px" height="240px"></canvas>
+
+                    <!-- rescale button -->
+                    <div class="slideGridItem" style="margin-left: 150px;"><button onclick="rescale();">Rescale Plot</button></div>
+
+                </div>
+            </div>
+        </div>
+        <!-- Gravity Tunnel Applet Painted Here -->
+        <div class="rightColumn">
+            <div id="module_style_canvas">
+                <canvas class="gtCanvas" id="GravityTunnelCanvas"></canvas>
+                <!-- Anomaly Slider -->
+                <div class="slideGridItem">
+                        <strong>Anomaly X Position</strong>
+                        <table>
+                            <tr>
+                                <td><button class="ArrowButtons" style="margin-left: 6px;" onclick="moveAnomLeft();" onmousedown="inter=setInterval(moveAnomLeft, 100);" onmouseup="clearInterval(inter);" onmouseout="clearInterval(inter);">&#8249</button></td>
+                                <td><label for="moveAnom"></label><input type="range" min="-200" max="200" value="0" class="anomaly_slider" id="MoveAnom"></td>
+                                <td><button class="ArrowButtons" onclick="moveAnomRight();" onmousedown="inter=setInterval(moveAnomRight, 100);" onmouseup="clearInterval(inter);" onmouseout="clearInterval(inter);">&#8250</button></td>
+                            </tr>
+                        </table>
+                    </div>
+                <!-- Gravity Vertical Shaft Labels -->
+                
+                <table id="stats">
+                    <tr>
+                        <td><span id="x_label"><strong>X Location:</strong></span></td><td><span id="x_val"></span></td>
+                    </tr>
+                    <tr>
+                        <td><span id="depth_label"><strong>Depth:</strong></span></td><td><span id="depth_val"></span></td>
+                    </tr>
+                    <tr>
+                        <td><span id="radius_label"><strong>Radius:</strong></span></td><td><span id="radius_val"></span></td>
+                    </tr>
+                    <tr>
+                        <td><span id="contrast_label"><strong>Contrast:</strong></span></td><td><span id="contrast_val"></span></td>
+                    </tr>
+                    <tr>
+                        <td><span id="bias_label"><strong>Bias:</strong></span></td><td><span id="bias_val"></span></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <article id="module_style_text_area">
+        <h2>Gravity Anomaly Modeling Code - Tunnel</h2>
+        <p>
+            This JavaScript application allows the user to display a gravity dataset and then vary geological parameters in order to model the dimensions and physical properties of the tunnel that may have produced the anomaly observed in the data. 
+        </p>
+        <p>
+            The first thing you will need to do is enter your data by clicking the "Choose File" button. Once you have located your data spreadsheet, click "Open" button in the dialog. The first value should be location, the second gravity value. The data should now appear as a series of blue circles. 
+        </p>
+        <p> 
+            You should also see a red line. The red line is the predicted gravity computed from the model shown in the green cross section. Your job is to try and find models (the red line) that match the data (the blue circles) as best you can. You can vary the depth and x-coordinate of the tunnel, it's radius, and the density contrast between the surrounding earth and the tunnel. Depth and location are varied by dragging the tunnel shown in the cross section with the mouse. All other parameters are changed using the slider bars shown in the Model Parameters panel left of the plot graphic. If the data are biased above the y = 0 axis, use the bias control to shift the theoretical curve up or down.  
+        </p>
+		<p>For data (.csv) to test out this application <a href="../test_tunnel.csv">click here</a>.</p>
+        
+    </article>
+    <!-- [if IE]>
+    <style>
+        .radius_control
+        {
+            margin-left: 10px;
+        }
+    </style>
+    <![Endif]-->
+    <script type="text/javascript" src="../../../assets/js/Shapes.js"></script>
+    <script type="text/javascript" src="GravityTunnel.js"></script>
+    <script type="text/javascript" src="GravityControls.js"></script>
+
+</body>
+
+</html>

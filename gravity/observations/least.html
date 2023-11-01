@@ -1,0 +1,178 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Gravity - Least Squares Best Fit Straight Line to a Set of Observations</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link href="../../assets/css/main.css" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+
+<!-- Header -->
+<section id="header">
+		
+    <div class="icon major"><img class="logo" src="../../images/logo.png" alt="UNLV Geoscience">
+                    <h1 style="color: #FFFFFF;">GEOL 442X - Introduction to Geophysics<br></h1>
+    <br>
+        
+    </div>
+    <div class="menu-container">
+        <nav id="menu">
+            <label for="tm" id="toggle-menu">Navigation <span class="drop-icon">▾</span></label>
+            <input type="checkbox" id="tm">
+            <ul class="main-menu cf">
+            
+            <li><a href="#">Introduction
+                <span class="drop-icon">▾</span>
+                <label title="Toggle Drop-down" class="drop-icon" for="sm0">▾</label>
+                </a>
+                <input type="checkbox" id="sm0">
+                <ul class="sub-menu">
+                    <li><a href="../../index.html">Home</a></li>
+                    <li><a href="../../Introduction_Philosophy.html">Philosophy</a></li>
+                    <li><a href="../../Introduction_Organization.html">Organization</a></li>
+                    <li><a href="../../Introduction_ModuleLayout.html">Module Layout</a></li>
+                    <li><a href="../../Introduction_CourseObjectives.html">Course Objectives</a></li>
+                    <li><a href="../../Introduction_TLE.html">TLE Reprint</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Gravity
+                <span class="drop-icon">▾</span>
+                <label title="Toggle Drop-down" class="drop-icon" for="sm1">▾</label>
+                </a>
+                <input type="checkbox" id="sm1">
+                <ul class="sub-menu">
+                    <li><a href="../../GravityHome.html">Notes</a></li>
+                    <li><a href="GravityObservations.htm">Observations</a></li>
+                    <li><a href="../rfb/GravityRequestforBid.htm">Request for Bid</a></li>
+                    <li><a href="../design/GravitySurveyDesign.htm">Survey Design</a></li>
+                    <li><a href="../acquisition/GravityDataAcquisition.htm">Data Acquisition</a></li>
+                    <li><a href="../reduction/GravityDataInterpretation.htm">Interpretation</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Magnetism
+                <span class="drop-icon">▾</span>
+                <label title="Toggle Drop-down" class="drop-icon" for="sm8">▾</label>
+                </a>
+                <input type="checkbox" id="sm8">
+            
+            <ul class="sub-menu">
+                <li><a href="../../MagneticsHome.htm">Notes</a></li>
+                <li><a href="../../magnetism/observations/obs.html">Observations</a></li>
+                <li><a href="../../magnetism/rfb/rfb.html">Request for Bid</a></li>
+                <li><a href="../../magnetism/design/MagneticSurveyDesign.html">Survey Design</a></li>
+                <li><a href="../../magnetism/acquisition/acq.html">Data Acquisition</a></li>
+                <li><a href="../../magnetism/reduction/red.html">Interpretation</a></li>
+            </ul>    
+        </li>
+            
+            <li><a href="#">Resistivity
+                    <span class="drop-icon">▾</span>
+                    <label title="Toggle Drop-down" class="drop-icon" for="sm8">▾</label>
+                    </a>
+                    <input type="checkbox" id="sm8">
+                
+                <ul class="sub-menu">
+                    <li><a href="../../DCResistivityHome.htm">Notes</a></li>
+                    <li><a href="../../resistivity/observations/obs.html">Observations</a></li>
+                    <li><a href="../../resistivity/rfb/rfb.html">Request for Bid</a></li>
+                    <li><a href="../../resistivity/design/design.html">Survey Design</a></li>
+                    <li><a href="../../resistivity/acquisition/acq.html">Data Acquisition</a></li>
+                    <li><a href="../../resistivity/reduction/red.html">Interpretation</a></li>
+                </ul>    
+            </li>
+            <li><a href="#">Refr. Seismic
+                <span class="drop-icon">▾</span>
+                <label title="Toggle Drop-down" class="drop-icon" for="sm8">▾</label>
+                </a>
+                <input type="checkbox" id="sm8">
+            
+            <ul class="sub-menu">
+                <li><a href="../../RefractionSeismicHome.htm">Notes</a></li>
+                    <li><a href="../../seismology/observations/obs.html">Observations</a></li>
+                    <li><a href="../../seismology/rfb/rfb.html">Request for Bid</a></li>
+                    <li><a href="../../seismology/design/design.html">Survey Design</a></li>
+                    <li><a href="../../seismology/acquisition/acq.html">Data Acquisition</a></li>
+                    <li><a href="../../seismology/reduction/red.html">Interpretation</a></li>
+            </ul>    
+        </li>
+            <li><a href="../../MapsInfoetc_Home.htm">Maps &amp; Info</a></li>
+            <li style="border: none;"><a href="../../OtherInformationHome.htm">Other Info.</a></li>
+            </ul>
+        </nav>
+    </div>
+</section>
+
+<!-- One -->
+<section class="main">
+    <div class="container">
+            <div class="center-container">
+                <h1 style="margin: 0;">Least Squares Best Fit Straight Line to a Set of Observations</h1>
+            </div>
+            <hr />
+
+            <div class="center-container">
+                <div class="split-side-left">
+              
+
+<p>
+    Finding Least-squares estimates to the best fitting straight line to a set of observations
+    is a commonly used data analysis technique. The specifics and pitfalls of this methodology can
+    be found in many elementary statics and inversion textbooks. In this discussion, I will only
+    provide you with the relevant formulii for computing the least-squares estimate. You
+    are encouraged to explore the questions concerning its use and general applicability through
+    other sources.
+</p>
+<p>
+    To compute the <i>best fitting</i> straight line to our set of gravity observations
+    we will use a criteria known as the <i>least squares</i> criteria.
+    This criteria simply defines, in a quantitative way, what we mean by <i>best fitting</i>.
+    Although we will not describe any other criteria, you should be aware of the fact that
+    the least-squares criteria is one of many possible definitions for <i>best fitting</i>.
+    In using this criteria, we will find the straight line that minimizes the squared sum
+    of differences between the predicted and observed gravity at any time.
+</p>
+<p>
+    For our problem, the form of the straight line we will use to estimate the observations is
+    <i>pg = m t + b</i>, where <i>pg</i> is the predicted gravity at time <i>t</i>, <i>m</i> is the
+    slope of the line and <i>b</i> is the intercept of the line (i.e., <i>b</i> is the value
+    of the predicted gravity at <i>t=0</i>).
+</p>
+    Given a series of gravity observations, <i>og</i>, each made at some time <i>ot</i>, then it
+    can be shown that <i>m</i> and <i>b</i> are given as:
+<p>
+    <br />
+    <img src="least.gif" class="center">
+
+<p>
+</p>
+<p>
+    Once you have computed your best fit line, you can estimate how well it actually fits the
+    observations by computing the standard deviation of the observations about the best-fit
+    line (this is also commonly referred to as the square root of the mean-squared error).
+    This estimate of the error is computed by taking the square root, of the sum of differences
+    between the observed and the predicted gravity squared divided by the number of observations minus one.
+</p>
+
+
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Footer -->
+<section id="footer">
+
+    <ul class="copyright">
+        <li>&copy; 2019</li><li>Design: Jason Reek, Brandon Fidler, <a href="http://html5up.net"> HTML5 UP</a></li>
+        <li>Content: Tom Boyd, Pamela Burnley</li>
+    </ul>
+</section>
+
+</body>
+</html>
+

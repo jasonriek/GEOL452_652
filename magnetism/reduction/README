@@ -1,0 +1,10 @@
+NOTES for regional corrections
+
+	Regional generated from USGS model USCON95 from the following parameters
+
+	39.7667,-105.237 -> 54400 nT
+	39.7667,-105.222 -> 54402 nT
+	39.7621,-105.237 -> 54397 nT
+	39.7621,-105.222 -> 54399 nT
+
+		All field intensity values computed at an elevation of 5800 ft

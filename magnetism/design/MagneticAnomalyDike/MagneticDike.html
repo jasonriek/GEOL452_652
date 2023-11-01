@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="appletFormat.css">
+    <title>Magnetic Dike</title>
+</head>
+
+<body> <!--when the page loads up it will create the format and initialize variables-->
+
+<div class="container">
+    <p style="text-align: center; color: #ffffff;"><strong>Magnetic Dike Anomaly</strong></p>
+    <!--Control modules go here-->
+    <div class="gridContainer">
+        <div class="gridItem">
+            <div class="slideContainer">
+                <div class="col-3" id="module_style_controls">
+                    <div class="slideGridContainer">
+                        <div class="slideGridItem">
+                            <strong>Station Spacing (m):</strong>
+                            <table>
+                                <tr>
+                                    <td><button class="ArrowButtons" onclick="dxf_LeftButton();" onmousedown="inter=setInterval(dxf_LeftButton, 100);" onmouseup="clearInterval(inter);" onmouseout="clearInterval(inter);">&#8249</button></td>
+                                    <td><label for="station_spacing"></label><input type="range" class="slider" id="station_spacing"></td>
+                                    <td><button class="ArrowButtons" onclick="dxf_RightButton();" onmousedown="inter=setInterval(dxf_RightButton, 100);" onmouseup="clearInterval(inter);" onmouseout="clearInterval(inter);">&#8250</button></td>
+                                </tr>
+                            </table>
+
+                        </div>
+                        <div class="slideGridItem">
+                            <strong>Susceptability (SI) <em><font size="-4">(10^3 factor not included)</font><em>:</strong>
+                            <table>
+                                <tr>
+                                    <td><button class="ArrowButtons" onclick="k_LeftButton();" onmousedown="inter=setInterval(k_LeftButton, 10);" onmouseup="clearInterval(inter);" onmouseout="clearInterval(inter);">&#8249</button></td>
+                                    <td><label for="Susceptability"></label><input type="range" class="slider" id="Susceptability"></td>
+                                    <td><button class="ArrowButtons" onclick="k_RightButton();" onmousedown="inter=setInterval(k_RightButton, 10);" onmouseup="clearInterval(inter);" onmouseout="clearInterval(inter);">&#8250</button></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="slideGridItem">
+                            <strong>Dike Trend (degrees):</strong>
+                            <table>
+                                <tr>
+                                    <td><button class="ArrowButtons" onclick="b_LeftButton();" onmousedown="inter=setInterval(b_LeftButton, 100);" onmouseup="clearInterval(inter);" onmouseout="clearInterval(inter);">&#8249</button></td>
+                                    <td><label for="dike_trend"></label><input type="range" class="slider" id="dike_trend"></td>
+                                    <td><button class="ArrowButtons" onclick="b_RightButton();" onmousedown="inter=setInterval(b_RightButton, 100);" onmouseup="clearInterval(inter);" onmouseout="clearInterval(inter);">&#8250</button></td>
+                                </tr>
+                            </table>
+
+                        </div>
+                        <div class="slideGridItem">
+                            <strong>Std. Deviation of Observations (nT):</strong>
+                            <table>
+                                <tr>
+                                    <td><button class="ArrowButtons" onclick="std_LeftButton();" onmousedown="inter=setInterval(std_LeftButton, 100);" onmouseup="clearInterval(inter);" onmouseout="clearInterval(inter);">&#8249</button></td>
+                                    <td><label for="stdDev"></label><input type="range" min="1" max="12" value="1" class="slider" id="stdDev"></td>
+                                    <td><button class="ArrowButtons" onclick="std_RightButton();" onmousedown="inter=setInterval(std_RightButton, 100);" onmouseup="clearInterval(inter);" onmouseout="clearInterval(inter);">&#8250</button></td>
+                                </tr>
+                            </table>
+
+                        </div>
+                        <div class="slideGridItem">
+                            <strong>Number of Readings at Each Station:</strong>
+                            <table>
+                                <tr>
+                                    <td><button class="ArrowButtons" onclick="n_of_obs_LeftButton();" onmousedown="inter=setInterval(n_of_obs_LeftButton, 100);" onmouseup="clearInterval(inter);" onmouseout="clearInterval(inter);">&#8249</button></td>
+                                    <td><label for="nOfObservations"></label><input type="range" min="1" max="21" value="1" class="slider" id="nOfObservations"></td>
+                                    <td><button class="ArrowButtons"onclick="n_of_obs_RightButton();" onmousedown="inter=setInterval(n_of_obs_RightButton, 100);" onmouseup="clearInterval(inter);" onmouseout="clearInterval(inter);">&#8250</button></td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <div class="slideGridItem">
+                            <strong>Inclination of main field (degrees):</strong>
+                            <table>
+                                <tr>
+                                    <td><button class="ArrowButtons" onclick="inc_LeftButton();" onmousedown="inter=setInterval(inc_LeftButton, 100);" onmouseup="clearInterval(inter);" onmouseout="clearInterval(inter);">&#8249</button></td>
+                                    <td><label for="incline_trend"></label><input type="range" min ="-90" max="90" value ="52" class="slider" id="incline_trend"></td>
+                                    <td><button class="ArrowButtons" onclick="inc_RightButton();" onmousedown="inter=setInterval(inc_RightButton, 100);" onmouseup="clearInterval(inter);" onmouseout="clearInterval(inter);">&#8250</button></td>
+                                </tr>
+                            </table>
+
+                        </div>
+
+                        <div class="slideGridItem">
+                            <strong>Length Profile(m):</strong>
+                            <table>
+                                <tr>
+                                    <td><button class="ArrowButtons" onclick="len_LeftButton();" onmousedown="inter=setInterval(len_LeftButton, 100);" onmouseup="clearInterval(inter);" onmouseout="clearInterval(inter);">&#8249</button></td>
+                                    <td><label for="profile_length"></label><input type="range" min ="-90" max="90" value ="52" class="slider" id="profile_length"></td>
+                                    <td><button class="ArrowButtons" onclick="len_RightButton();" onmousedown="inter=setInterval(len_RightButton, 100);" onmouseup="clearInterval(inter);" onmouseout="clearInterval(inter);">&#8250</button></td>
+                                </tr>
+                            </table>
+
+                        </div>
+
+                        <!-- Radius Control Panel -->
+                        <canvas class="gtRadSample" width="240px" height="240px" style="background-color: #e9e9e9; border: 1px solid #ddd; z-index: 0;"></canvas>
+   
+
+                        <!-- rescale button -->
+                        <div class="slideGridItem" style="margin-left: 150px; margin-top: 30px;"><button onclick="rescale();">Rescale Plot</button></div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="gridItem">
+                <div class="col-6" id="module_style_canvas">
+                    <canvas class="gtCanvas" id="GravityTunnelCanvas"></canvas>
+                    <!-- Gravity Vertical Shaft Labels -->
+
+                    <table id="stats">
+                        <tr>
+                            <td><span id="depth_label"><strong>Depth:</strong></span></td><td><span id="depth_val"></span></td>
+                        </tr>
+                        <tr>
+                            <td><span id="width_label"><strong>Width:</strong></span></td><td><span id="width_val"></span></td>
+                        </tr>
+                        <tr>
+                            <td><span id="station_spacing_label"><strong>Spacing:</strong></span></td><td><span id="station_spacing_val"></span></td>
+                        </tr>
+                        <tr>
+                            <td><span id="contrast_label"><strong>Susceptibility:</strong></span></td><td><span id="contrast_val"></span></td>
+                        </tr>
+
+                        <tr>
+                            <td><span id="Dike_Trend_label"><strong>Dike Trend:</strong></span></td><td><span id="dike_trend_value"></span></td>
+                        </tr>
+                        <tr>
+                            <td><span id="incline_label"><strong>Inclination of Main Field:</strong></span></td><td><span id="incline_value"></span></td>
+                        </tr>
+                        <tr>
+                            <td><span id="num_of_obs_label"><strong>Number of Readings at Each Station:</strong></span></td><td><span id="num_of_obs_value"></span></td>
+                        </tr>
+                        <tr>
+                            <td><span id="std_label"><strong>Std. Deviation of Observations:</strong></span></td><td><span id="std_val"></span></td>
+                        </tr>
+
+                    </table>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="MagneticDike.js"></script>
+<script type="text/javascript" src="MagneticDikeControls.js"></script>
+</body>
+
+</html>

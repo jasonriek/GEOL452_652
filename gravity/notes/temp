@@ -1,0 +1,54 @@
+<div class="main">
+    <div class="header">
+        <p style="float: right"><b>pg 34</b></p>
+        <h1> Gravity: Notes: Complex Calculations </h1>
+    </div>
+    <h2>Gravity Calculations over Bodies with more Complex Shapes</h2>
+    <p>
+        Although it is possible to derive analytic expressions for the computation of the
+        gravitational acceleration over additional bodies with simple shapes (cylinders,
+        slabs, etc.), we already have enough information to describe a general scheme
+        for computing gravity anomalies over bodies with these and more complex shapes.
+        The basis for this computation lies in the
+        <a href="GravityNotes04GravityandGeology.htm">approximation of a complex body as
+            a distribution of point masses</a>.
+    <p>
+        <a href="GravityNotes31PointMassGravity.htm">Previously</a>, we derived the vertical component of the gravitational
+        acceleration due to a point mass with mass <i>m</i> as
+
+    <p style="text-align: center">
+        <img src="grav_images/vnewteq3.gif">
+    </p>
+    We can approximate the body with complex shape as a distribution of point masses. The gravitational
+    attraction of the body is then nothing more than the sum of the gravitational attractions of
+    all of the individual point masses as illustrated below.
+
+    <p style="text-align: center">
+        <img src="grav_images/sum3.gif">
+    </p>
+
+    In mathematical notation, this sum can be written as
+
+    <p style="text-align: center">
+        <img src="grav_images/sum1.gif">
+    </p>
+
+    where <i>z</i> represents the depth of burial of each point mass, <i>d</i> represents the horizontal
+    position of each point mass, and <i>x</i> represents the horizontal position of the observation point.
+    Only the first three terms have been written in this equation. There is,
+    in actuality, one term in this
+    expression for each point mass. If there are <i>N</i> point masses, this equation can be written more
+    compactly as
+
+    <p style="text-align: center">
+        <img src="grav_images/sum2.gif">
+    </p>
+    For more detailed information on the computation of gravity anomalies over complex two- and three-
+    dimensional shapes look at the following references.
+    <ul>
+        <li>Talwani, Worzel, and Landisman, Rapid Gravity Computations for Two-Dimensional Bodies with
+            Application to the Mendocino Submarine Fraction Zone, <i>Journal Geophysical Research, 64,</i>
+            49-59, 1959.
+        <li>Talwani, Manik, and Ewing, Rapid Computation of Gravitational Attraction of Three-Dimensional
+            Bodies of Arbitrary Shape, <i>Geophysics, 25,</i> 203-225, 1960.
+    </ul>

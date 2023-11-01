@@ -1,0 +1,399 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Magnetism - Data Interpretation</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link href="../../assets/css/main.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+     <!-- Header -->
+ <section id="header">
+		
+    <div class="icon major"><img class="logo" src="../../images/logo.png" alt="UNLV Geoscience">
+                    <h1 style="color: #FFFFFF;">GEOL 452/652 - Geophysics<br></h1>
+    <br>
+        
+    </div>
+    <div class="menu-container">
+        <nav id="menu">
+            <label for="tm" id="toggle-menu">Navigation <span class="drop-icon">▾</span></label>
+            <input type="checkbox" id="tm">
+            <ul class="main-menu cf">
+            
+            <li><a href="#">Introduction
+                <span class="drop-icon">▾</span>
+                <label title="Toggle Drop-down" class="drop-icon" for="sm0">▾</label>
+                </a>
+                <input type="checkbox" id="sm0">
+                <ul class="sub-menu">
+                    <li><a href="../../index.html">Home</a></li>
+                    <li><a href="../../Introduction_Philosophy.html">Philosophy</a></li>
+                    <li><a href="../../Introduction_Organization.html">Organization</a></li>
+                    <li><a href="../../Introduction_ModuleLayout.html">Module Layout</a></li>
+                    <li><a href="../../Introduction_CourseObjectives.html">Course Objectives</a></li>
+                    <li><a href="../../Introduction_TLE.html">TLE Reprint</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Gravity
+                <span class="drop-icon">▾</span>
+                <label title="Toggle Drop-down" class="drop-icon" for="sm1">▾</label>
+                </a>
+                <input type="checkbox" id="sm1">
+                <ul class="sub-menu">
+                    <li><a href="../../GravityHome.html">Notes</a></li>
+                    <li><a href="../../gravity/observations/GravityObservations.htm">Observations</a></li>
+                    <li><a href="../../gravity/rfb/GravityRequestforBid.htm">Request for Bid</a></li>
+                    <li><a href="../../gravity/design/GravitySurveyDesign.htm">Survey Design</a></li>
+                    <li><a href="../../gravity/acquisition/GravityDataAcquisition.htm">Data Acquisition</a></li>
+                    <li><a href="../../gravity/reduction/GravityDataInterpretation.htm">Interpretation</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Magnetism
+                <span class="drop-icon">▾</span>
+                <label title="Toggle Drop-down" class="drop-icon" for="sm2">▾</label>
+                </a>
+                <input type="checkbox" id="sm2">
+            
+            <ul class="sub-menu">
+                <li><a href="../../MagneticsHome.htm">Notes</a></li>
+                <li><a href="../observations/obs.html">Observations</a></li>
+                <li><a href="../rfb/rfb.html">Request for Bid</a></li>
+                <li><a href="../design/MagneticSurveyDesign.html">Survey Design</a></li>
+                <li><a href="../acquisition/acq.html">Data Acquisition</a></li>
+                <li><a href="red.html">Interpretation</a></li>
+            </ul>    
+        </li>
+            
+            <li><a href="#">Resistivity
+                    <span class="drop-icon">▾</span>
+                    <label title="Toggle Drop-down" class="drop-icon" for="sm3">▾</label>
+                    </a>
+                    <input type="checkbox" id="sm3">
+                
+                <ul class="sub-menu">
+                    <li><a href="../../DCResistivityHome.htm">Notes</a></li>
+                    <li><a href="../../resistivity/observations/obs.html">Observations</a></li>
+                    <li><a href="../../resistivity/rfb/rfb.html">Request for Bid</a></li>
+                    <li><a href="../../resistivity/design/design.html">Survey Design</a></li>
+                    <li><a href="../../resistivity/acquisition/acq.html">Data Acquisition</a></li>
+                    <li><a href="../../resistivity/reduction/red.html">Interpretation</a></li>
+                </ul>    
+            </li>
+            <li><a href="#">Refr. Seismic
+                <span class="drop-icon">▾</span>
+                <label title="Toggle Drop-down" class="drop-icon" for="sm4">▾</label>
+                </a>
+                <input type="checkbox" id="sm4">
+            
+            <ul class="sub-menu">
+                <li><a href="../../RefractionSeismicHome.htm">Notes</a></li>
+                    <li><a href="../../seismology/observations/obs.html">Observations</a></li>
+                    <li><a href="../../seismology/rfb/rfb.html">Request for Bid</a></li>
+                    <li><a href="../../seismology/design/design.html">Survey Design</a></li>
+                    <li><a href="../../seismology/acquisition/acq.html">Data Acquisition</a></li>
+                    <li><a href="../../seismology/reduction/red.html">Interpretation</a></li>
+            </ul>    
+        </li>
+            <li><a href="../../MapsInfoetc_Home.htm">Maps &amp; Info</a></li>
+            <li style="border: none;"><a href="../../OtherInformationHome.htm">Other Info.</a></li>
+            </ul>
+        </nav>
+    </div>
+</section>
+
+<section class="main">
+    <div class="container">
+            <div class="center-container">
+                
+                <h1 style="margin: 0;">Data Interpretation - Magnetic</h1>
+            </div>
+            <hr />
+
+            <div class="center-container">
+                <div class="split-side-left">
+        <h2>OBJECTIVES</h2>           
+        <p>
+            <b>There are four learning objectives:</b>
+        </p>
+        <ul class="square">
+            <li style="margin-bottom: 10px">
+                Continue to gain experience with geophysical data presentation and
+                modeling,
+            </li>
+            <li style="margin-bottom: 10px">
+                Develop an understanding for the kinds of corrections applied to magnetic
+                data,
+            </li>
+            <li style="margin-bottom: 10px">
+                Begin to develop an understanding of the power of interpreting observations
+                derived from
+            </li>
+            different types of geophysical surveys, and
+            <li style="margin-bottom: 10px">
+                Get exposure to the problem of matching magnetic anomalies with possible
+                geologic sources.
+            </li>
+        </ul>
+        <p>
+        <br />
+            To continue with this exercise, you first need to
+            <a href="../acquisition/acq.html" target="_blank">generate a magnetic data set using your survey
+                parameters</a>
+            and download them to your computer.
+            Like the gravity observations collected previously, we must do some data enhancement of the magnetic
+            observations prior to interpreting them. Unlike the gravity observations, these enhancements tend
+            to be less involved.
+        </p>
+        <p>
+            <b>There are two milestones in the process of accomplishing the objectives defined above:</b>
+        </p>
+        <ul class="square">
+            <li style="margin-bottom: 10px">Process the data to remove or minimize all sources of gravity variations
+                that can be explained by
+                sources that are not related to the target of interest and
+            </li>
+            <li style="margin-bottom: 10px">Identify all possible geologic models that explain the gravity anomaly that
+                result from the above.
+        </ul>
+        <h2 style="margin-top: 40px;">PROCEDURE</h2>
+        <p>
+            <b>For this exercise, you will need the magnetics observations generated from your survey, a spreadsheet, and
+            one
+            of the symbolic math packages pointed to below. Once you have these, you can begin on the following
+            procedure:</b>
+        </p>
+        <ul class="square">
+            <li style="margin-bottom: 10px">Process the data to remove or minimize all variations not deriving from the
+                target.
+                <ul class="circle">
+                    <li style="margin-bottom: 10px">Load the generated magnetics observations into your spreadsheet and
+                        generate plots of the
+                        observed
+                        magnetization in nT versus position along each line for every line of magnetic data collected in
+                        your
+                        survey.
+                        
+                            The data file you received should contain five columns.
+                            The first and second columns list the <i>x</i> and <i>y</i> coordinates of the observation
+                            point
+                            using
+                            the <a target="_BLANK" href="../../information/surveycor.html">standard survey coordinates</a>
+                            defined by
+                            the client.
+                            The magnetic stations listed in the file start in the south-west corner of the survey area.
+                            Locations
+                            increase in <b><i>x</i></b> first and then values of <b><i>y</i></b> increase next. That is,
+                            the first set
+                            of
+                            locations
+                            listed are those corresponding to the southern most line in the survey (where lines are
+                            defined to
+                            run
+                            from west to east) and then proceed northward for the additional lines.
+                            The second column gives the time at which the magnetic observation was made in minutes from
+                            the
+                            start
+                            of the survey.
+                            The fourth column specifies the magnetic field intensity observed at that location.
+                            The fifth column gives the magnetic field intensity observed at the base station at the time
+                            corresponding
+                            to the station observation.
+                     
+                    <li style="margin-bottom: 10px">Using your spreadsheet, correct the observed magnetic observations
+                        for the diurnal variation of
+                        the
+                        magnetic field by simply subtracting the base station observations from the field observations.
+                    </li>
+                    <li style="margin-bottom: 10px"> Correct the data for long-wavelength variations caused by deep
+                        geologic structure.
+                        As was the case in estimating the regional gravity anomaly, there are a number of different ways
+                        you
+                        can estimate the regional magnetic anomaly.
+                        <p>
+                            One of the simplest
+                            ways is to fit a low-order function to the data (say a plane or some smoothly varying
+                            surface). Then
+                            subtract the
+                            magnetic anomaly predicted by this function from the observed magnetic values.
+                            Another way to estimate the regional magnetic
+                            anomaly is to use magnetic observations from other, more spatially dispersed, magnetic
+                            surveys.
+                            Data of this nature is collected on a routine basis and models of the long-wavelength
+                            variations of
+                            the
+                            earth's
+                            magnetic field are widely available. We will use this technique to estimate and correct for
+                            the
+                            regional
+                            magnetic
+                            anomaly.
+                            One source for deriving these long-wavelength magnetic field variations is the <i>US
+                            Geological
+                            Survey</i> another source is the <i>National Geophysical
+                            Data Center</i> at <i>NOAA</i>.
+                        </p>
+                        <ul class="square">
+                            <li style="margin-bottom: 10px">Before proceeding, you will need to know the
+                                <a target="_blank" href="../../information/surveycor.html">latitudes, longitudes, and
+                                    elevations</a>
+                                of the corner points defining the survey area.
+                            </li>
+                            <li style="margin-bottom: 10px"><a href="https://www.ngdc.noaa.gov/geomag-web/#igrfwmm"
+                                                               target="_BLANK">Connect
+                                to the
+                                National
+                                Geophysical Data Center's Geomagnetic Field Calculator</a>.
+                            </li>
+                            <li style="margin-bottom: 10px">Read the documentation presented on this page. You are
+                                interested in computing the
+                                values of the
+                                <b><i>total field intensity</i></b> at the corners of your survey. These values are
+                                labeled
+                                <i>F</i> in the
+                                calculator's
+                                output.
+                            </li>
+                            <li style="margin-bottom: 10px">
+                                Proceed through the program inputs. Use today's date.
+                            </li>
+                            <li style="margin-bottom: 10px">
+                                Compute the magnetic field intensity at each corner of the survey area.
+                            <br /><br />
+                            </li>
+
+                        </ul>
+                    </li>
+
+                    <li style="margin-bottom: 10px"> 
+                        <b>Preliminary Data Presentation and Interpretation:</b>
+                        <ul class="square" style="margin-top: 10px;">
+                            <li style="margin-bottom: 10px">Plot the resulting residual magnetic field versus position
+                                along each line in your
+                                survey.
+                                Are there interpretable magnetic anomalies
+                                present?
+                            <li style="margin-bottom: 10px">Identify geologic models that should be considered in
+                                interpreting the data.
+                                <ul class="circle">
+                                    <li style="margin-bottom: 10px">Evaluate whether an anomaly associated with the
+                                        target of interest can be seen
+                                        in the
+                                        data.
+                                    <li style="margin-bottom: 10px">Identify all anomalies that appear to derive from
+                                        local geologic features.
+                                    <li style="margin-bottom: 10px">Determine which geologic models could be the source
+                                        of those local anomalies.
+                                </ul>
+                        </ul>
+                    <li style="margin-bottom: 10px"> 
+                            <b>Formal Data Interpretation:</b>
+                        
+                        <ul class="square" style="margin-top: 10px;">
+                            <li style="margin-bottom: 10px">From your spreadsheet, output a data file that contains
+                                three columns.
+                                The first two columns should be the <i>x</i> and <i>y</i> coordinates of each magnetic
+                                station.
+                                The third column should contain your residual magnetic anomalies.
+                                <i>Do not output column names as the first line in the file</i>.
+                            <li style="margin-bottom: 10px">To interpret the magnetic observations, run the reduction model below.</li>
+                            <hr class="gray">
+                            <ul style="list-style-type: none;">
+                                <li><a href="MagneticBuriedDike.html" target="_blank"><img src="../../images/app_start.png" alt="Gravity Tunnel"/> Magnetic Buried Dike </a></li>
+                            </ul>
+                                <hr class="gray">
+                           
+                            <li style="margin-bottom: 10px"> Using the parameters of the structure derived from your
+                                reinterpretation of the gravity
+                                profile, model
+                                the magnetic profile and estimate the trend and susceptibility of the buried dyke.
+                            </li>
+                            <li style="margin-bottom: 10px"> Once you have found a preferred model(s), estimate the
+                                uncertainties in the model
+                                parameters.
+                                Do this by
+                                systematically varying the model parameters about your preferred values and find all
+                                values that
+                                fit the
+                                observed
+                                data to within the data uncertainties.
+                            </li>
+                            <li style="margin-bottom: 10px">
+                                If you did not have the gravity data available to constrain some of the dyke's
+                                parameters, what
+                                could you
+                                infer from the magnetic data alone?
+                            </li>
+                            <li style="margin-bottom: 10px"> Finally, are there other models that could fit the data
+                                equally as well as your
+                                preferred model
+                                that have
+                                very different parameters? If these models are geologically plausible, describe what
+                                they are
+                                and give your
+                                rationale for choosing a preferred model(s).
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <h2 style="margin-top: 40px;">OUTCOMES</h2>
+        <p>
+            <b>The final report should be in the form of a summary report to your
+            client. The heading can be in standard memo format. The summary report should include:</b>
+        <ul class="square">
+            <li style="margin-bottom: 10px">
+                A brief review of the basis for the survey design (statement of the problem),
+            </li>
+            <li style="margin-bottom: 10px">
+                A summary of the data processing and interpretation procedures (you may want to refer to a flow
+                chart in the appendices), and
+            </li>
+            <li style="margin-bottom: 10px">
+                A clear and concise statement of your preliminary interpretation, and an indication of the action
+                that will be required to refine and validate that interpretation.
+            </li>
+        </ul>
+        <br />
+        <p>
+            <b>As usual, the body of the report must be no longer than two pages. It is important, however, to provide
+            enough information (in the appendices) for the client's geophysical staff or consultant to be able to check
+            any of your work. This would include:</b>
+        <ul class="square">
+            <li style="margin-bottom: 10px">A tabulation of the field data,</li>
+            <li style="margin-bottom: 10px">A description of each processing step, including formulas and outcomes,</li>
+            <li style="margin-bottom: 10px"> For any "standard" corrections that were not done, a description of how
+                they normally would have
+                been done and an explanation of why they were not necessary in this case, and
+            </li>
+            <li style="margin-bottom: 10px"> A narrative discussion of how and why you chose the "possible" models for
+                each anomaly.
+            </li>
+        </ul>
+        <br />
+        <p>
+            As always, remember that the your report is also a sales document; in this case, instead of selling your
+            services, it is selling your competence and the quality of your work. Also remember that your clients are
+            busy executives that probably are out of touch with the technical side of the survey. The report must
+            communicate
+            quickly and effectively, but it also should convey a sense of competence and professionalism.
+        </p>
+    </div>
+</div>
+</div>
+</section>
+
+<!-- Footer -->
+<section id="footer">
+
+<ul class="copyright">
+<li>&copy; 2019</li><li>Design: Jason Reek, Brandon Fidler, <a href="http://html5up.net"> HTML5 UP</a></li>
+<li>Content: Tom Boyd, Pamela Burnley</li>
+</ul>
+</section>
+
+</body>
+</html>
+

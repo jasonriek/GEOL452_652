@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="normalize.css" />
+    <link rel="stylesheet" href="appletFormat.css" />
+    <title>Title</title>
+  </head>
+  <body>
+    <div id="wrapper">
+      <div id="title">
+        <h1>Seismic Display Traces</h1>
+      </div>
+      <div id="csvbutton">
+        <button class="csvbutton" onclick="CSVoutput()">Create CSV File</button>
+      </div>
+      <div id="canvasWrapper">
+        <p>input file to make graph appear</p>
+        <p>"hook to create data"</p>
+        <p>Click on the trace of graph to get data</p>
+      </div>
+      <div id="fileInput">
+        <label for="file_input" class="fileText">Add your traced data:</label>
+
+        <input
+          class="fileInput"
+          type="file"
+          name="file_input"
+          id="file_input"
+        />
+      </div>
+
+      <div id="traceType">
+        <button onclick="TraceTypeAction()" id="plotValueButtonid">
+          Variable Area/Wiggle
+        </button>
+        <span id="plotValueid"></span>
+      </div>
+
+      <div id="sourceSelect">
+        <select id="source" onchange="selectSource()">
+          <option value="b">Betsy Seisgun</option>
+          <option value="h">Hammer</option>
+          <option value="d">Dynamite</option>
+        </select>
+      </div>
+      <div id="clearButtonId">
+        <button class="clearButton" onclick="clearAll()">Clear All</button>
+      </div>
+
+      <div id="outputTable">
+        <table id="stats"></table>
+      </div>
+    </div>
+  </body>
+  <script src="./lib/makeNodes.js"></script>
+  <script src="./lib/ResDisplayTraces.js"></script>
+  <script src="./lib/controls.js"></script>
+  <script src="./lib/outputData.js"></script>
+  <script src="./lib/CSVoutput.js"></script>
+</html>

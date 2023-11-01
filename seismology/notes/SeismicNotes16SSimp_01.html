@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Seismology: Notes: Determining Earth Structure From Travel-Times: Example </title>
+    <meta charset="utf-8">
+<link href="../../assets/css/main_style.css" rel="stylesheet" type="text/css"/></head>
+<body>
+    <div id="noteBG">
+        <div style="float: left">
+                <ul class="topnav" id="myTopnav">
+        <li><a href="../../index.html">Main Page</a></li>\n
+                    <li><a href="../../GravityHome.html">Gravity Notes</a></li>            
+                    <li><a href="../../MagneticsHome.htm">Magnetism Notes</a></li>
+                    <li><a href="../../DCResistivityHome.htm">DC Resistivity Notes</a></li>
+                    <li><a href="../../RefractionSeismicHome.htm">Refr. Seismic Notes</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="spacer"></div>
+
+<div class="mainContainer center_container" style="width: 1150px;">
+    <div class="main" style="width: 650px;">
+            <b style="margin-left: 600px;">pg 16</b>
+<h1>Determining Earth Structure From Travel-Times: Example</h1>    
+       
+        <p>
+            Now, what can be determined about the structure responsible for producing a first arrival travel-time curve
+            from
+            the travel-time curve itself?
+            With some assumptions, quite a bit.
+            If we assume that the structure responsible for producing the travel-time curve shown below consisted of a
+            single
+            layer over a halfspace and that the boundary separating the layer from the halfspace is horizontal,
+            then we can determine the velocity of the layer and halfspace and the thickness of the layer.
+        <p>
+            <img src="seis_images/ttp1.gif" class="center"/>
+        </p>
+        <p>
+            Let's concentrate on that portion of the travel-time curve associated with the direct arrival (green) first.
+            From the <a target="_BLANK" href="SeismicNotes11Simp1.html">wavefield snapshots and movies</a>, as recorded
+            at the Earth's surface, this
+            arrival is one that has propagated horizontally from the source across the surface of the earth at the
+            seismic
+            wave speed associated with the upper layer.
+            Thus, if we knew what the speed of wave propagation was in the layer, we could predict the arrival time of
+            the
+            direct wave by simply dividing the offset of the receiver from the source by the speed.
+            Conversely, given the time of arrival at any offset, the speed can be computed by dividing the offset by the
+            arrival time.
+            Returning to the former description, a
+            better way (better in the sense that it will be more robust to noise) of computing the speed from
+            the arrival times is to realize that the slope of the line describing the arrival times of the direct wave
+            is
+            simply equal to the reciprocal of the speed of the wave in the layer.
+        </p>
+        <p>
+            Similarly, the slope of the line describing the arrival times of the refracted wave is simply equal to the
+            reciprocal of the speed of the wave in the halfspace.
+            This is because the halfspace interface is horizontal and the head wave appears to
+            <a target="_BLANK" href="SeismicNotes12Head.html">travel along this interface</a> at the velocity of the
+            halfspace.
+            Thus, from the slopes of the two line segments describing the travel-time curve, we can compute the two
+            velocities
+            of the media involved.
+        </p>
+        <p>
+            We can also compute the thickness of the layer.
+            To get a qualitative feeling for how this can be done, consider two models with identical wave speeds but
+            one
+            has a 50 meter thick layer and the other a 100 meter thick layer.
+            How would you expect the travel-time curves for these two models to differ?
+            Would the slopes of the line segments describing the direct and refracted arrivals differ?
+            No, these attributes of the travel-time curve are controlled by the velocities alone.
+            For the model consisting of a thick, 100 meter layer, would you expect to see the head wave at longer
+            or shorter offsets than for the model consisting of a thin, 50 meter layer?
+        </p>
+        <p>
+            <img src="seis_images/ttp2.gif"/>
+        </p>
+        <p>
+            As is shown above, I would expect the head wave off of a thicker layer to be initially observed as a first
+            arrival at
+            longer offsets than would be observed for a head wave generated off of a thinner layer.
+            Why?
+        </p>
+        <p>
+            Remember that the <a target="_BLANK" href="SeismicNotes12Head.html">head wave</a> has to travel down to the
+            boundary separating the layer
+            from the halfspace and back up.
+            These segments of the <a target="_BLANK" href="SeismicNotes12Head.html">raypath</a> are completed at the
+            velocity of the layer.
+            The head wave can be observed as a first arrival, because that portion of the raypath traveling
+            along the boundary does so at the speed of the halfspace, which is faster in this example.
+            But this only happens at long enough offsets where the speed differences makes up for the longer path
+            length.
+            Thus, although the head wave travels a greater distance than the direct arrival before it is recorded, it
+            can
+            arrive before the direct arrival because it travels faster along a portion of its raypath.
+            The thicker the layer, more of the head wave's raypath travels at the slower velocity and the farther you
+            have
+            to go in offset to account for this with a portion of the raypath that propagates faster along the
+            interface.
+            You can see that this is exactly what is being shown in the two travel-time curves plotted above.
+        </p>
+        <p>
+            <img src="seis_images/deq.gif" class="center"/>
+            <br />
+            Either one of two parameters is usually used to quantify this offset dependence in where the head wave
+            becomes
+            the first arrival.
+            The first of these is referred to as the <i>cross-over distance</i>, <i>x<sub>c</sub></i> (where the black line
+            intersects the distance axis) in the plots above.
+            The cross-over distance simply refers to the offset at which the head wave becomes the first arrival.
+            The second commonly used parameter is called the <i>zero-offset time</i>, <i>t<sub>0</sub></i>,
+            (where the pink line intersects the time axis) in the plots above.
+            The zero-offset time is nothing more than the time at which the refracted arrival would be observed at a
+            distance
+            of zero meters from the source*.
+            In principle, either of these parameters could be used, but in practice, the zero-offset time is more
+            commonly used because it is easier to estimate with noisy data.
+        </p>
+        <p>
+            Thus in principle, by measuring <i>x<sub>c</sub></i> or <i>t<sub>0</sub></i>, we can compute the thickness of the layer, <i>h</i>.
+        </p>
+        <hr class="gray" />
+        <span style="font-style: italic; font-size: 12px;">
+        *Please note that the refracted arrival does not actually exist at zero offset.
+        Instead what is done is to extrapolate the straight line describing the head wave back to zero offset.
+        This is shown as the pink line in the figures above.
+        </span>
+        <hr />
+        <br />
+        <br />
+
+        <div style="margin-bottom: 50px;">
+            <a href="SeismicNotes015FirArr.html" class="noteButton noteButtonBack"
+               style="color: #000000; float: left">❮❮ Previous</a>
+            <a href="SeismicNotes17Deriv_01.html" class="noteButton noteButtonFor"
+               style="color: ivory; float: right">Next ❯❯</a>
+        </div>
+    </div>
+
+
+    <div class="noteOutline">
+<h1 style="margin-bottom: 0;">Seismology</h1>        <button class="accordion"><b> Introduction </b></button>
+        <div class="panel">
+            <ul id="myUL">
+                <li><a href="SeismicNotes01SIntro.html"> Seismic Methods: Refraction and Reflection <i
+                        style="float: right;">pg 1</i></a></li>
+                <li><a href="SeismicNotes02SAdv.html">Adv. and Disadv. of Seismic Methods V.S. Other Methods<i
+                        style="float: right;">pg 2</i></a></li>
+                <li><a href="SeismicNotes03SAdv2.html">Adv. and Disadv. of Refraction and Reflection Methods<i
+                        style="float: right;">pg 3</i></a></li>
+                <li><a href="SeismicNotes04Waves.html">Elastic Waves<i style="float: right;">pg 4</i></a></li>
+                <li><a href="SeismicNotes05SWaves.html">Types of Seismic Waves<i style="float: right;">pg 5</i></a></li>
+                <li><a href="SeismicNotes06RayPath.html">Wave Propagation: Wavefronts and Raypaths<i
+                        style="float: right;">pg 6</i></a></li>
+
+            </ul>
+        </div>
+
+        <button class="accordion"><b> Seismology and Geology </b></button>
+        <div class="panel">
+            <ul id="myUL">
+                <li><a href="SeismicNotes07Bound.html">Wave Interaction with Boundaries<i style="float: right;">pg 7</i></a>
+                </li>
+                <li><a href="SeismicNotes08Snell.html">Snell's Law<i style="float: right;">pg 8</i></a></li>
+                <li><a href="SeismicNotes09EVel.html">Velocities and Rock Properties<i style="float: right;">pg
+                    9</i></a></li>
+                <li><a href="SeismicNotes10RVel.html">Seismic Velocities of Common Earth Materials<i
+                        style="float: right;">pg 10</i></a></li>
+            </ul>
+        </div>
+
+        <button class="accordion"><b> Refraction Basics </b></button>
+        <div class="panel">
+            <ul id="myUL">
+                <li><a href="SeismicNotes11Simp1.html">Simple Earth Model: Low-Velocity Layer Over a Halfspace<i
+                        style="float: right;">pg 11</i></a></li>
+                <li><a href="SeismicNotes12Head.html">Head Waves<i style="float: right;">pg 12</i></a></li>
+                <li><a href="SeismicNotes13Seismogram.html">Records of Ground Motion<i style="float: right;">pg
+                    13</i></a></li>
+                <li><a href="SeismicNotes14TtSimp_01.html">Travel-time Curves for a Simple Earth Model<i
+                        style="float: right;">pg 14</i></a></li>
+                <li><a href="SeismicNotes015FirArr.html">First Arrivals<i style="float: right;">pg 15</i></a></li>
+                <li><a href="SeismicNotes16SSimp_01.html">Determining Earth Structure from Travel Times<i
+                        style="float: right;">pg 16</i></a></li>
+                <li><a href="SeismicNotes17Deriv_01.html">Derivation of Travel Time Equations<i style="float: right;">pg
+                    17</i></a></li>
+                <li><a href="SeismicNotes18Simp_02.html">High-Velocity Layer Over a Halfspace: Reprise<i
+                        style="float: right;">pg 18</i></a></li>
+            </ul>
+        </div>
+
+        <button class="accordion"><b> Refraction Seismic Equipment and Field Procedures </b></button>
+        <div class="panel">
+            <ul id="myUL">
+                <li><a href="SeismicNotes19EOverview.html">Equipment Overview<i style="float: right;">pg 19</i></a></li>
+                <li><a href="SeismicNotes20Source.html">Types of Seismic Sources<i style="float: right;">pg 20</i></a>
+                </li>
+                <li><a href="SeismicNotes21Geophone.html">Seismometers or Geophones<i style="float: right;">pg
+                    21</i></a></li>
+                <li><a href="SeismicNotes22Field_01.html">Rec. Ground Displacement at Several Offsets
+                    Simultaneously<i style="float: right;">pg 22</i></a></li>
+                <li><a href="SeismicNotes23Record.html">Recording Systems<i style="float: right;">pg 23</i></a></li>
+                <li><a href="SeismicNotes24First.html">Sources of Noise<i style="float: right;">pg 24</i></a></li>
+            </ul>
+        </div>
+
+        <button class="accordion"><b> Interpretation of Seismic Observations </b></button>
+        <div class="panel">
+            <ul id="myUL">
+                <li><a href="SeismicNotes25Noise.html">Picking Times of Arrivals<i style="float: right;">pg 25</i></a>
+                </li>
+                <li><a href="SeismicNotes26CMod.html">Wave Propagation with Multiple Horizontal Layers<i
+                        style="float: right;">pg 26</i></a></li>
+                <li><a href="SeismicNotes27CModTt.html">Travel Time Curves from Multiple Horizontal<i
+                        style="float: right;">pg 27</i></a></li>
+                <li><a href="SeismicNotes28Hidden.html">Hidden Layers<i style="float: right;">pg 28</i></a></li>
+                <li><a href="SeismicNotes29Dip_01.html">Head Waves from a Dipping Layer: Shooting Down Dip<i
+                        style="float: right;">pg 29</i></a></li>
+                <li><a href="SeismicNotes30Dip_02.html">Head Waves from a Dipping Layer: Shooting Up Dip<i
+                        style="float: right;">pg 30</i></a></li>
+                <li><a href="SeismicNotes31GField.html">A Field Procedure for Recognizing Dipping Beds<i
+                        style="float: right;">pg 31</i></a></li>
+                <li><a href="SeismicNotes32Dest.html">Estimating Dips and Depths from Travel<i style="float: right;">pg
+                    32</i></a></li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+
+<div id="spacer"></div>
+<div id="noteFBG"></div>
+<script src="../../assets/js/notes_accord.js"></script></body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="appletFormat.css">
+    <title>Resistivity Soundings Over Layered Structures</title>
+</head>
+
+<body>
+    <header style="text-align: center;">
+        <span style="color: #ffffff;"><strong>Resistivity Soundings Over Layered Structures</strong></span>
+    </header>
+
+    <div class="divTable">
+        <div class="divTableBody">
+            <div class="divTableRow">
+
+                <!-- Survey Model Items -->
+                <div class="divTableCell">
+                    <div class="module_style_canvas_right">
+                        <table class="stats">
+                            <tr>
+                                <td>Minimum Electrode Spacing:</td><td><span id="e-start-val"></span></td><td style="border-left: solid 9px #FFFFFF;">Standard Deviation:</td><td><span id="std-val"></span></td>
+                            </tr>
+                            <tr>
+                                <td>Number of Decades:</td><td><span id="n-dec-val"></span></td><td style="border-left: solid 9px #FFFFFF;">Maximum Amperage:</td><td><span id="max-amp-val"></span></td>
+                            </tr>
+                            <tr>
+                                <td>Spacings per Decade:</td><td><span id="es-per-dec-val"></span></td><td style="border-left: solid 9px #FFFFFF;">Readings per Spacing:</td><td><span id="n-data-val"></span></td>
+                            </tr>
+                        </table>
+                        <canvas id="survey-canvas"></canvas>
+                        <p><b>Survey Type:</b></p>
+                        <input type="radio" id="is-schlum-radio" name="survey-type" value="Schlumberger" checked="checked"/>
+                        <label for="Sch">Schlumberger</label>
+                        <input type="radio" id="is-wenner-radio" name="survey-type" value="Wenner"/>
+                        <label for="Wen">Wenner</label>
+                        <br /><br />
+                        <table class="slider-table">
+                            <tr>
+                                <td>Minimum Current Electrode Spacing (m):</td><td><input type="range" class="slider" id="e-start-slider"></td>
+                            </tr>
+                            <tr>
+                                <td>Number of Decades in Distance:</td><td><input type="range" class="slider" id="n-dec-slider"></td>
+                            </tr>
+                            <tr>
+                                <td>Electrode Spacing per Decade:</td><td><input type="range" class="slider" id="es-per-dec-slider"></td>
+                            </tr>
+                            <tr>
+                                <td>Maximum Amperage Deliverable (A):</td><td><input type="range" class="slider" id="max-amp-slider"></td>
+                            </tr>
+                            <tr>
+                                <td>Measurement Standard Deviation (V):</td><td><input type="range" class="slider" id="std-slider"></td>
+                            </tr>
+                            <tr>
+                                <td>Readings per Spacing:</td><td><input type="range" min="1" max="100" value="50" class="slider" id="n-data-slider"></td>
+                            </tr>
+                        </table>
+                     </div>  
+            </div>
+
+            <!-- Main Graph Canvas -->
+            <div class="divTableCell">
+                <div class="module_style_canvas_center">
+                    <b id="plot-title">Apparent Resistivity (Ohm-m) vs. Electrode Spacing (AB/2)</b>
+                    <canvas id="res-graph" width="400px" height="400px"></canvas>
+                      
+                 </div>
+            </div>
+
+            <!-- Earth Model Layer Items -->
+            <div class="divTableCell">
+                <div class="module_style_canvas_left">
+                    <table class="stats-2">
+                        <tr>
+                            <td>Res - Top Layer:</td><td><span id="res-toplayer-val"></span></td>
+                        </tr>
+                        <tr>
+                            <td>Thickness - Top Layer:</td><td><span id="thick-toplayer-val"></span></td>
+                        </tr>
+                       
+                        <tr>
+                            <td>Res - Middle Layer:</td><td><span id="res-midlayer-val"></span></td>
+                        </tr>
+                        <tr>
+                            <td>Thickness - Middle Layer:</td><td><span id="thick-midlayer-val"></span></td>
+                        </tr>
+                        <tr>
+                            <td>Res - Bottom Layer:</td><td><span id="res-botlayer-val"></span></td>
+                        </tr>
+                    </table>
+                    <canvas id="layer-graph"></canvas>
+                    <table class="slider-table">
+                        <tr>
+                            <td>Res - Top Layer:</td><td><input type="range" min="1" max="100" value="50" class="slider" id="res-toplayer"></td>
+                        </tr>
+                        <tr>
+                            <td>Res - Middle Layer:</td><td><input type="range" min="1" max="100" value="50" class="slider" id="res-midlayer"></td>
+                        </tr>
+                        <tr>
+                            <td>Res - Bottom Layer:</td><td><input type="range" min="1" max="100" value="50" class="slider" id="res-botlayer"></td>
+                        </tr>
+                    </table>
+                 </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!--Control modules go here-->
+  
+    <div id="module_style_text_area">
+        <h2>Resistivity Modeling - Resistivity Soundings Over Layered Structures</h2>
+        <p>
+            This JavaScript program will produce synthetic resistivity soundings, both Wenner and Schlumberger, over horizontally layered structures.  
+            You can use this script to design a resistivity survey for the project described in the request for bid. 
+            The graphic shown on this web page is the sounding result for the survey designed in the Survey Frame over the structure described in the Model Frame. 
+            You can vary the earth model by clicking with the mouse on the layer boundaries 
+            and dragging them to new depths and by setting the resistivity of each layer using the slider bars at the bottom of the Model Frame.
+  
+        </p>
+        <p>
+            Survey parameters; survey type, minimum electrode spacing (AB/2 for Schlumberger and a for Wenner), number of electrode spacings per decade in distance to collect, 
+            number of decades in distance over which to collect data, etc., are controlled via the slider bars in the Control Frame. 
+        </p>
+  
+    </div>
+
+<script type="text/javascript" src="../../assets/js/Shapes.js"></script>
+<script type="text/javascript" src="ResSoundingsOverLayeredStruc.js"></script>
+<script type="text/javascript" src="ResControls.js"></script>
+</body>
+
+</html>

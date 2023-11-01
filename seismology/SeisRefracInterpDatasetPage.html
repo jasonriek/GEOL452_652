@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="appletFormat.css">
+    <title>Seismology Refraction Interpretation Dataset</title>
+</head>
+
+<body onload="grm = new GetRefractModel();">
+<div class="container">
+    <p style="text-align: center; color: #ffffff;"><strong>Seismology Refraction Interpretation Dataset</p>
+    <!--Control modules go here-->
+    <div class="gridContainer">
+        <div class="gridItem">
+            <div class="slideContainer">
+                <div class="col-3">
+
+
+                    <div class="slideGridContainer" id="module_style_controls">
+                        <p>
+                            1) Interpretation of seismic refraction data will be the most difficult interpretation you have yet done.
+                            <br><br>
+                            2) Parameters, velocities and depths trade off, and you must develop systematic skills to be able to do
+                            this efficiently.
+                            <br><br>
+                            3) In this practice exercise, we will interpret data two ways. First, so that you get get a handle on
+                            how the data relate to the model you have generated we will import our travel time data into a spreadsheet
+                            and you will do the interpretation by hand, using the slope intercept method, as described in the notes.
+                            <br><br>
+                            4) After doing this, you will then reinterpret these data using an interpretation applet. In this exercise, you will see how absolute important it is to do your interpretation from the surface downward - not proceeding
+                            until you are absolutely certain about what you have done so far.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="gridItem">
+                <div class="col-6 right" id="module_style_canvas">
+
+
+                    <table class="stats">
+                        <tr>
+                            <th>
+                                Create New Sample Data Set
+                                <input type="button" value="Create" onclick="grm.createNewDataSet();">
+
+                                <br>
+                            </th>
+
+
+                            <th>
+                                Retrieve Sample Data Set
+                                <input type="file" name="file" id="file">
+                                <output id="list"></output>
+                                <br>
+                            </th>
+                    </table>
+                    <!-- Data table and download button -->
+                    <table>
+                        <tr><td><table class="stats" id="data_table"></table></td></tr>
+                        <tr><td><input type="button" value="Load Data" id="load_btn" onclick="grm.doGet();" style="visibility: hidden; float: right;">
+                            <input type="button" value="Save Data" id="save_btn" onclick="exportCSV(csv_rows_RefractBean);" style="visibility: hidden;"></td></tr>
+                        <tr><td><table class="stats" id="seis_data_table"></table></td></tr>
+                        <tr><td><input type="button" value="Download" id="d_btn" onclick="exportCSV(csv_rows_SeisData);" style="visibility: hidden;"></td></tr>
+                    </table>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="RefractBean.js"></script>
+<script type="text/javascript" src="ComputeRefractTimes.js"></script>
+<script type="text/javascript" src="GetRefractModel.js"></script>
+
+</body>
+
+</html>

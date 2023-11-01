@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title> Gravity: Notes: Local/Regional Gravity Anomaly Separation Example </title>
+    <meta charset="utf-8">
+    <link href="../../assets/css/main_style.css" rel="stylesheet" type="text/css"/>
+<!-- --></head>
+<body>
+    <div id="noteBG">
+        <div style="float: left">
+            <ul class="topnav" id="myTopnav">
+                <li><a href="../../index.html">Main Page</a></li>
+                <li><a class="active" href="../../GravityHome.html">Gravity Notes</a></li>
+                <li><a href="../../MagneticsHome.htm">Magnetism Notes</a></li>
+                <li><a href="../../DCResistivityHome.htm">DC Resistivity Notes</a></li>
+                <li><a href="../../RefractionSeismicHome.htm">Refr. Seismic Notes</a></li>
+            </ul>
+        </div>
+    </div>
+<div id="spacer"></div>
+
+<div class="mainContainer center_container">
+    <div class="main">
+<div>            <b style="margin-left: 500px;">pg 30</b>
+        </div>
+        <h1>Local/Regional Gravity Anomaly Separation Example</h1>
+        <p>
+            As an example of estimating the regional anomaly from the recorded data and isolating the local
+            anomaly with this estimate consider using a moving average operator.
+            With this technique, an estimate of the regional gravity anomaly at some
+            point along a profile is determined by averaging the recorded gravity values at several nearby
+            points. The number of points over which the average is calculated is referred to as the
+            length of the operator and is chosen by the data processor.
+            Averaging gravity values over several observation points enhances the long-wavelength contributions
+            to the recorded gravity field while suppressing the shorter-wavelength contributions.
+            Consider the sample gravity data shown below.
+        </p>
+        <p>
+            <img src="grav_images/rldata.gif" class="center"/>
+        </p>
+        <p>
+            Moving averages can be computed across this data set. To do this the data processor
+            chooses the length of the moving average operator. That is, the processor decides to compute the average
+            over 3,
+            5,
+            7, 15, or 51 adjacent points. As you would expect, the resulting estimate of the
+            regional gravity anomaly, and thus the local gravity anomaly, is
+            critically dependent on
+            this choice. Shown below are two estimates of the regional gravity anomaly using moving
+            average operators of lengths 15 and 35.
+        </p>
+        <img src="grav_images/mvav.gif" class="center"/>
+        <p>
+            Depending on the features of the gravity profile the processor wishes to
+            extract, either of these operators
+            may be appropriate. If we believe, for example, the gravity peak located at a distance of about
+            30 on the profile is a feature related to a local gravity anomaly, notice that the 15 length
+            operator is not long enough.
+            The average using this operator length almost tracks the raw data, thus
+            when we subtract the averages from the raw data
+            to isolate the local gravity anomaly the resulting value will be near zero.
+            The 35 length operator, on the other hand, is long enough to average out the anomaly of interest, thus
+            isolating
+            it when we subtract the moving average estimate of the regional from the raw observations.
+        </p>
+        <p>
+            The residual gravity estimates computed for each moving average operator are shown below.
+        <p>
+            <img src="grav_images/resest.gif" class="center"/>
+        </p>
+        <p>
+            As expected, few interpretable anomalies exist after applying the 15 point operator.
+            The peak at a distance of 30 has been greatly reduced in amplitude and other short-wavelength
+            anomalies apparent in the original data have been effectively removed.
+            Using the 35 length operator, the
+            peak at a distance of 30 has been successfully isolated and other short-wavelength anomalies
+            have been enhanced. Data
+            processors and interpreters are free to choose the operator length they wish to apply
+            to the data. This choice is based solely on the features they believe
+            represent the local anomalies
+            of interest. Thus, separation of the regional from the local gravity field is an interpretive
+            process.
+        </p>
+        <p>
+            Although the interpretive nature of the moving average method for estimating the regional
+            gravity contribution is readily apparent, you should be aware that all of the methods
+            described on the
+            <a href="GravityNotes29SeparationStrategy.htm" target="_blank">previous page</a>
+            require interpreter input of one form or another. Thus, no matter which method is
+            used to estimate the regional component of the gravity field, it should always be considered
+            an interpretational process.
+        </p>
+        <br/>
+        <br/>
+
+
+        <p style="margin-bottom: 50px;">
+            <a href="GravityNotes29SeparationStrategy.htm" class="noteButton noteButtonBack"
+               style="color: #000000; float: left">❮❮ Previous</a>
+            <a href="GravityNotes31PointMassGravity.htm" class="noteButton noteButtonFor"
+               style="color: ivory; float: right">Next ❯❯</a>
+
+        </p>
+
+
+    </div>
+
+    <div class="noteOutline">
+        <h1 style="margin-bottom: 0;">Gravity</h1>
+        <button class="accordion"><b> Introduction </b></button>
+        <div class="panel">
+            <ul id="myUL">
+                <li><a href="GravityNotes01GravitationalForce.htm">Gravitational Force<i style="float: right;">pg 1</i></a>
+                </li>
+                <li><a href="GravityNotes02GravitationalAcceleration.htm">Gravitational Acceleration<i
+                        style="float: right;">pg 2</i></a></li>
+                <li><a href="GravityNotes03Units.htm">Units Associated With Gravitational Acceleration<i
+                        style="float: right;">pg 3</i></a></li>
+            </ul>
+        </div>
+
+        <button class="accordion"><b> Gravity and Geology </b></button>
+        <div class="panel">
+            <ul id="myUL">
+                <li><a href="GravityNotes04GravityandGeology.htm">How is the Gravitational Acceleration, g, Related to
+                    Geology?<i style="float: right;">pg 4</i></a></li>
+                <li><a href="GravityNotes05DensityContrast.htm">The Relevant Geologic Parameter is not Density, but
+                    Density Contrast<i style="float: right;">pg 5</i></a></li>
+                <li><a href="GravityNotes06RockDensities.htm">Density Variations of Earth Materials<i
+                        style="float: right;">pg 6</i></a></li>
+                <li><a href="GravityNotes07SimpleModel.htm">A Simple Model<i style="float: right;">pg 7</i></a></li>
+            </ul>
+        </div>
+
+        <button class="accordion"><b> Measuring Gravitational Acceleration </b></button>
+        <div class="panel">
+            <ul id="myUL">
+                <li><a href="GravityNotes08MeasuringGravity.htm">How do we Measure Gravity<i style="float: right;">pg
+                    8</i></a></li>
+                <li><a href="GravityNotes09FallingBodies.htm">Falling Body Measurements<i style="float: right;">pg 9</i></a>
+                </li>
+                <li><a href="GravityNotes10PendulumMeasurements.htm">Pendulum Measurements<i style="float: right;">pg
+                    10</i></a></li>
+                <li><a href="GravityNotes11MassandSpringMeasurements.htm">Mass and Spring Measurements<i
+                        style="float: right;">pg 11</i></a></li
+            </ul>
+        </div>
+
+        <button class="accordion"><b> Factors that Affect the Gravitational Acceleration </b></button>
+        <div class="panel">
+            <ul id="myUL">
+                <li><a href="GravityNotes12SourcesofNoise.htm">Overview<i style="float: right;">pg 12</i></a></li>
+                <li style="text-align: center"><a href="#" class="header"><i>-Temporal Based Variations-</i></a></li>
+                <li><a href="GravityNotes13InstrumentDrift.htm">Instrument Drift<i style="float: right;">pg 13</i></a>
+                </li>
+                <li><a href="GravityNotes14EarthTides.htm">Tides<i style="float: right;">pg 14</i></a></li>
+                <li><a href="GravityNotes15TemporalVariationCorrectionStrategy.htm">A Correction Strategy for Instrument
+                    Drift and Tides<i style="float: right;">pg 15</i></a></li>
+                <li><a href="GravityNotes16TemporalVariationFieldProcedure.htm">Tidal and Drift Corrections: A Field
+                    Procedure<i style="float: right;">pg 16</i></a></li>
+                <li><a href="GravityNotes17TemporalVariationDataReduction.htm">Tidal and Drift Corrections: Data
+                    Reduction<i style="float: right;">pg 17</i></a></li>
+                <li style="text-align: center"><a href="#" class="header"><i>-Spatial Based Variations-</i></a></li>
+                <li><a href="GravityNotes18LatitudeVariations.htm">Latitude Dependent Changes in Gravitational
+                    Acceleration<i style="float: right;">pg 18</i></a></li>
+                <li><a href="GravityNotes19LatitudeVariationCorrections.htm">Correcting for Latitude Dependent Changes<i
+                        style="float: right;">pg 19</i></a></li>
+                <li><a href="GravityNotes20ElevationEffects.htm">Vari. in Gravitational Acceleration Due to Changes in
+                    Elevation<i style="float: right;">pg 20</i></a></li>
+                <li><a href="GravityNotes21ElevationCorrections.htm">Accounting for Elevation Vari.: The Free-Air
+                    Correction<i style="float: right;">pg 21</i></a></li>
+                <li><a href="GravityNotes22SlabEffects.htm">Variations in Gravity Due to Excess Mass<i
+                        style="float: right;">pg 22</i></a></li>
+                <li><a href="GravityNotes23SlabCorrections.htm">Correcting for Excess Mass: The Bouguer Slab
+                    Correction<i style="float: right;">pg 23</i></a></li>
+                <li><a href="GravityNotes24TopographicEffects.htm">Vari. in Gravity Due to Nearby Topography<i
+                        style="float: right;">pg 24</i></a></li>
+                <li><a href="GravityNotes25TopographyCorrections.htm">Terrain Corrections<i style="float: right;">pg
+                    25</i></a></li>
+                <li><a href="GravityNotes26CorrectionSummary.htm">Summary of Gravity Types<i style="float: right;">pg
+                    26</i></a></li>
+            </ul>
+        </div>
+
+        <button class="accordion"><b> Isolating Gravity Anomalies of Interest </b></button>
+        <div class="panel">
+            <ul id="myUL">
+                <li><a href="GravityNotes27LocalvsRegional.htm">Local and Regional Gravity Anomalies<i
+                        style="float: right;">pg 27</i></a></li>
+                <li><a href="GravityNotes28GeologicSources.htm">Sources of the Local and Regional Gravity Anomalies<i
+                        style="float: right;">pg 28</i></a></li>
+                <li><a href="GravityNotes29SeparationStrategy.htm">Separating Local and Regional Gravity Anomalies<i
+                        style="float: right;">pg 29</i></a></li>
+                <li><a href="GravityNotes30SeparationExample.htm">Local/Regional Gravity Anomaly Separation Example<i
+                        style="float: right;">pg 30</i></a></li>
+            </ul>
+        </div>
+
+        <button class="accordion"><b> Gravity Anomalies Over Bodies With Simple Shapes </b></button>
+        <div class="panel">
+            <ul id="myUL">
+                <li><a href="GravityNotes31PointMassGravity.htm">Gravity Anomaly Over a Buried Point Mass<i
+                        style="float: right;">pg 31</i></a></li>
+                <li><a href="GravityNotes32SphereGravity.htm">Gravity Anomaly Over a Buried Sphere<i
+                        style="float: right;">pg 32</i></a></li>
+                <li><a href="GravityNotes33ModelIndeterminancy.htm">Model Indeterminancy<i style="float: right;">pg
+                    33</i></a></li>
+                <li><a href="GravityNotes34ComplexCalculations.htm">Gravity Calculations over Bodies with more Complex
+                    Shapes<i style="float: right;">pg 34</i></a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div id="spacer"></div>
+<div id="noteFBG"></div>
+
+<script src="../../assets/js/notes_accord.js"></script>
+
+</body>
+
+</html>
+

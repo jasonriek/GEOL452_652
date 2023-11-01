@@ -1,0 +1,14 @@
+<%@ page language="java" contentType="text/dat" %>
+<%
+        //Grab request parameters
+        String mx = request.getParameter("mx");
+        String my = request.getParameter("my");
+        String stype = request.getParameter("stype");
+        String trend = request.getParameter("trend");
+        String smin = request.getParameter("smin");
+        String nperd = request.getParameter("nperd");
+        String ndec = request.getParameter("ndec");
+        String ndata = request.getParameter("ndata");
+%>
+Spacing(m)  	Resistivity(Ohm-m)
+<jsp:include page="/servlet/GetResistivity?type=data&mx=<%=mx%>&my=<%=my%>&stype=<%=stype%>&trend=<%=trend%>&smin=<%=smin%>&nperd=<%=nperd%>&ndec=<%=ndec%>&ndata=<%=ndata%>" flush="true" />

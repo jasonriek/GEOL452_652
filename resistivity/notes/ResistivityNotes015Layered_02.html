@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Resistivity: Notes: Current Flow in Layered Media Versus Current Electrode Spacing </title>
+    <meta charset="utf-8">
+    <link href="../../assets/css/main_style.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+    <div id="noteBG">
+        <span></span>    <div style="float: left">
+                <ul class="topnav" id="myTopnav">
+                    <li><a href="../../index.html">Main Page</a></li>
+                    <li><a class="active" href="../../GravityHome.html">Gravity Notes</a></li>            
+                    <li><a href="../../MagneticsHome.htm">Magnetism Notes</a></li>
+                    <li><a href="../../DCResistivityHome.htm">DC Resistivity Notes</a></li>
+                    <li><a href="../../RefractionSeismicHome.htm">Refr. Seismic Notes</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="spacer"></div>
+
+<div id="spacer"></div>
+
+<div class="mainContainer center_container">
+    <div class="main">
+       
+            <b style="margin-left: 500px;">pg 15</b>
+            <h1> Current Flow in Layered Media Versus Current Electrode Spacing </h1>
+        
+        <p>
+            Imagine that we conduct a series of four electrode experiments, each centered about the same point.
+            Let's assume that the potential electrodes remain centered between the current
+            electrodes and that their separation is held fixed.
+            Initially, the current electrodes are placed close together and we measure current and voltage from which we compute
+            apparent resistivity.
+            Then we perform the same experiment, but we systematically increase the current electrode
+            spacing while holding the potential electrode spacing fixed.
+            What will happen?
+        </p>
+        <p>
+            Consider the earth model shown below: a high resistivity layer over a lower resistivity layer.
+        </p>
+        <p>
+            <img src="res_images/c250o50.gif" class="center" />
+        </p>
+        <p>
+            When the current electrodes are closely spaced, in the region surrounding the
+            potential electrode positions (between the two current electrodes), most
+            of the current flows through the upper layer
+            along paths that are close to those that they would have flown along if the model were homogeneous.
+            That is, in this electrode configuration, current flow is not
+            perturbed enough near the potential electrodes for us to be able to distinguish
+            between this layered model and a <a target="_BLANK" href="ResistivityNotes09TwoCel.html">homogeneous
+            Earth model</a>
+            with a resistivity
+            equal to the resistivity of the top layer.
+            Thus,
+            the computed apparent resistivity will be close to the resistivity of the upper layer, 250 ohm-m.
+        </p>
+        <p>
+            Now, we increase the current electrode spacing and repeat the same experiment.
+            At larger current electrode spacings, the current flow near the potential
+            electrodes is significantly altered by the presence of the subsurface boundary.
+            In this case, current is preferentially drawn downward into the lower resistivity layer, decreasing the
+            current density between the two current electrodes where we will measure the
+            voltage with our two potential electrodes.
+            This decrease in current density will cause our computed value of apparent resistivity to decrease from
+            250 ohm-m.
+        </p>
+        <p>
+            At very large current electrode spacings, underneath our potential electrodes,
+            the pattern of current flow is again similar to that which we would observe
+            in a homogeneous Earth model.
+            In this case, however, the media has a resistivity of 50 ohm-m, not 250 ohm-m.
+            Thus, if we were to compute and plot apparent resistivity for a variety of
+            current electrode spacings while holding the potential electrodes fixed, we would
+            generate a plot similar to that shown below.
+        </p>
+        <p>
+            <img src="res_images/ares250o50.gif" class="center" />
+        </p>
+        <p>
+            As is common for curves of this type, notice that this plot is a <i>Log-Log</i> plot.
+            Instead of plotting apparent resistivity versus current electrode spacing, we have plotted the Log (base 10)
+            of the apparent resistivity versus the Log (base 10) of the current electrode spacing.
+            This is done because, in practice, we will find that both the apparent resistivities and the current electrode
+            spacings will vary over two to three orders of magnitude (e.g., spacings can commonly increase from
+            0.25 m to 250 m).
+            Using Log-Log plots provides us with a means of compressing the relevant information into a single graph.
+            In the example shown above, notice that the apparent resistivity does not approach the resistivity of the lower
+            layer
+            until the electrode spacing approaches 500 m!
+            Thus, large electrode spacings are required to see deep structure.
+            A good rule of thumb is that you will need current electrode spacings on the order of 10 times the
+            depth to which you would like to see.
+        </p>
+        <br />
+
+        <div style="margin-bottom: 50px;">
+            <a href="ResistivityNotes14ArLayered.html" class="noteButton noteButtonBack"
+               style="color: #000000; float: left">❮❮ Previous</a>
+            <a href="ResistivityNotes16Layered_03.html" class="noteButton noteButtonFor"
+               style="color: ivory; float: right">Next ❯❯</a>
+        </div>
+    </div>
+
+    <div class="noteOutline">
+<h1 style="margin-bottom: 0;">Resistivity</h1>        <button class="accordion"><b> Introduction </b></button>
+        <div class="panel">
+            <ul id="myUL">
+                <li><a href="ResistivityNotes01Apintro.html">Active and Passive Geophysical Methods<i style="float: right;">pg 1</i></a></li>
+                <li><a href="ResistivityNotes02Apintro2.html">Advantages and Disadvantages of Each Method<i style="float: right;">pg 2</i></a></li>
+                <li><a href="ResistivityNotes03Overview.html">Electrical Methods Overview<i style="float: right;">pg 3</i></a></li>
+            </ul>
+        </div>
+
+        <button class="accordion"><b> Resistivity Basics </b></button>
+        <div class="panel">
+            <ul id="myUL">
+                <li><a href="ResistivityNotes04Ohm.html"> Current Flow and Ohm's Law <i style="float: right;">pg 4</i></a></li>
+                <li><a href="ResistivityNotes05Resistivity.html"> The Fund. Electrical Property is Resistivity, NOT
+                    Resistance <i style="float: right;">pg 5</i></a></li>
+                <li><a href="ResistivityNotes06Rockres.html"> Resistivities for Common Earth Materials<i style="float: right;">pg 6</i></a></li>
+                <li><a href="ResistivityNotes07CD.html"> Current Density and Electric Field<i style="float: right;">pg 7</i></a></li>
+                <li><a href="ResistivityNotes08FirstEstRes.html"> A First Estimate of Resistivity<i style="float: right;">pg 8</i></a></li>
+                <li><a href="ResistivityNotes09TwoCel.html"> Current Flow From Two Closely Spaced Electrodes<i style="float: right;">pg 9</i></a></li>
+                <li><a href="ResistivityNotes10SecEstRes.html"> A Practical Way of Measuring Resistivity <i style="float: right;">pg 10</i></a></li>
+            </ul>
+        </div>
+
+        <button class="accordion"><b> Resistivity Surveys and Geology </b></button>
+        <div class="panel">
+            <ul id="myUL">
+                <li><a href="ResistivityNotes11noise.html"> Sources of Noise <i style="float: right;">pg 11</i></a></li>
+                <li><a href="ResistivityNotes12Depth.html"> Depth of Current Penetration V.S. Current ElectrodeSpacing <i style="float: right;">pg 12</i></a></li>
+                <li><a href="ResistivityNotes13Layered_01.html"> Current Flow in Layered Media <i style="float: right;">pg 13</i></a></li>
+                <li><a href="ResistivityNotes14ArLayered.html"> Variation in Apparent Resistivity: Layered Versus Homogeneous Media <i style="float: right;">pg 14</i></a></li>
+                <li><a href="ResistivityNotes015Layered_02.html"> Current Flow in Layered Media Versus Electrode Spacing <i style="float: right;">pg 15</i></a></li>
+                <li><a href="ResistivityNotes16Layered_03.html"> A Second Example of Current Flow in Layered Media<i style="float: right;">pg 16</i></a></li>
+            </ul>
+        </div>
+
+        <button class="accordion"><b> Resistivity Equipment and Field Procedures </b></button>
+        <div class="panel">
+            <ul id="myUL">
+                <li><a href="ResistivityNotes17Equipment.html"> Equipment <i style="float: right;">pg 17</i></a>
+                <li><a href="ResistivityNotes18FieldOverview.html"> Survey Types Overview: Soundings and Profiles <i style="float: right;">pg 18</i></a></li>
+                <li><a href="ResistivityNotes19Sounding.html"> Soundings: Wenner and Schlumberger <i style="float: right;">pg 19</i></a></li>
+                <li><a href="ResistivityNotes20Distance.html"> Electrode Spacings and Apparent Resistivity Plots <i style="float: right;">pg 20</i></a></li>
+                <li><a href="ResistivityNotes21ASounding.html"> Advantages and Disadvantages of Each Survey Type <i style="float: right;">pg 21</i></a></li>
+                <li><a href="ResistivityNotes22Profile.html"> Profiles <i style="float: right;">pg 22</i></a></li>
+            </ul>
+        </div>
+
+        <button class="accordion"><b> Interpretation of Resistivity Measurements </b></button>
+        <div class="panel">
+            <ul id="myUL">
+                <li><a href="ResistivityNotes23OneLayer_01.html">Proton Precession Magnetometer<i style="float: right;">pg 23</i></a></li>
+                <li><a href="ResistivityNotes24OneLayer_02.html">Total Field Measurements<i style="float: right;">pg 24</i></a></li>
+                <li><a href="ResistivityNotes25MLayer1.html">Proton Precession Magnetometer<i style="float: right;">pg 25</i></a></li>
+                <li><a href="ResistivityNotes26MLayer_02.html">Total Field Measurements<i style="float: right;">pg 26</i></a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div id="spacer"></div>
+<div id="noteFBG"></div>
+<script src="../../assets/js/notes_accord.js"></script></body></body>
+</html>

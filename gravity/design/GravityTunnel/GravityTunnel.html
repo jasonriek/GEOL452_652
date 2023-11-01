@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" charset="UTF-8" />
+    <link rel="stylesheet" href="appletFormat.css" />
+    <title>Gravity Tunnel Reduction</title>
+
+</head>
+
+<body>
+    <header style="text-align: center;">
+        <span style="color: #ffffff;"><strong>Gravity Anomaly Over a Tunnel</strong></span>
+    </header>
+    <div class="row">
+        <!-- Control Modules -->
+        <div class="leftColumn" >
+            <div id="module_style_controls">
+                <div class="slideGridContainer">
+                    <div class="slideGridItem">
+                        <strong>Station Spacing, dx (m):</strong>
+                        <table>
+                            <tr>
+                                <td><button class="ArrowButtons" onclick="dxf_LeftButton();" onmousedown="inter=setInterval(dxf_LeftButton, 100);" onmouseup="clearInterval(inter);" onmouseout="clearInterval(inter);">&#8249</button></td>
+                                <td><label for="station_spacing"></label><input type="range" class="slider" id="station_spacing"></td>
+                                <td><button class="ArrowButtons" onclick="dxf_RightButton();" onmousedown="inter=setInterval(dxf_RightButton, 100);" onmouseup="clearInterval(inter);" onmouseout="clearInterval(inter);">&#8250</button></td>
+                            </tr>
+                        </table>
+
+                    </div>
+                    <div class="slideGridItem">
+                        <strong>Density Contrast, Rho (g/cm^3):</strong>
+                        <table>
+                            <tr>
+                                <td><button class="ArrowButtons" onclick="rho_LeftButton();" onmousedown="inter=setInterval(rho_LeftButton, 100);" onmouseup="clearInterval(inter);" onmouseout="clearInterval(inter);">&#8249</button></td>
+                                <td><label for="densityContrast"></label><input type="range" min="1" max="66" value="1" class="slider" id="densityContrast"></td>
+                                <td><button class="ArrowButtons" onclick="rho_RightButton();" onmousedown="inter=setInterval(rho_RightButton, 100);" onmouseup="clearInterval(inter);" onmouseout="clearInterval(inter);">&#8250</button></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="slideGridItem">
+                        <strong>Number of Observations, N:</strong>
+                        <table>
+                            <tr>
+                                <td><button class="ArrowButtons" onclick="n_of_obs_LeftButton();" onmousedown="inter=setInterval(n_of_obs_LeftButton, 100);" onmouseup="clearInterval(inter);" onmouseout="clearInterval(inter);">&#8249</button></td>
+                                <td><label for="nOfObservations"></label><input type="range" min="1" max="21" value="1" class="slider" id="nOfObservations"></td>
+                                <td><button class="ArrowButtons" onclick="n_of_obs_RightButton();" onmousedown="inter=setInterval(n_of_obs_RightButton, 100);" onmouseup="clearInterval(inter);" onmouseout="clearInterval(inter);">&#8250</button></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="slideGridItem">
+                        <strong>Std. Dev. of Observations, std (mgal):</strong>
+                        <table>
+                            <tr>
+                                <td><button class="ArrowButtons" onclick="std_LeftButton();" onmousedown="inter=setInterval(std_LeftButton, 100);" onmouseup="clearInterval(inter);" onmouseout="clearInterval(inter);">&#8249</button></td>
+                                <td><label for="stdDev"></label><input type="range" min="1" max="12" value="1" class="slider" id="stdDev"></td>
+                                <td><button class="ArrowButtons" onclick="std_RightButton();" onmousedown="inter=setInterval(std_RightButton, 100);" onmouseup="clearInterval(inter);" onmouseout="clearInterval(inter);">&#8250</button></td>
+                            </tr>
+                        </table>
+
+                    </div>
+
+                    <!-- Radius Control Panel -->
+                    <canvas class="gtRadSample radius_control" width="240px" height="240px"></canvas>
+
+                    <!-- rescale button -->
+                    <div class="slideGridItem" style="margin-left: 150px;"><button onclick="rescale();">Rescale Plot</button></div>
+
+                </div>
+            </div>
+        </div>
+        <!-- Gravity Tunnel Applet Painted Here -->
+        <div class="rightColumn">
+            <div id="module_style_canvas">
+                <canvas class="gtCanvas" id="GravityTunnelCanvas"></canvas>
+                <!-- Gravity Vertical Shaft Labels -->
+
+                <table id="stats">
+                    <tr>
+                        <td><span id="depth_label"><strong>Depth:</strong></span></td><td><span id="depth_val"></span></td>
+                    </tr>
+                    <tr>
+                        <td><span id="radius_label"><strong>Radius:</strong></span></td><td><span id="radius_val"></span></td>
+                    </tr>
+                    <tr>
+                        <td><span id="contrast_label"><strong>Contrast:</strong></span></td><td><span id="contrast_val"></span></td>
+                    </tr>
+                    <tr>
+                        <td><span id="station_spacing_label"><strong>Station Spacing:</strong></span></td><td><span id="station_spacing_val"></span></td>
+                    </tr>
+                    <tr>
+                        <td><span id="num_of_obs_label"><strong>Number of Observations:</strong></span></td><td><span id="num_of_obs_value"></span></td>
+                    </tr>
+                    <tr>
+                        <td><span id="std_label"><strong>Standard Deviation:</strong></span></td><td><span id="std_val"></span></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <article id="module_style_text_area">
+        <h2>Gravity Anomaly Over a Tunnel</h2>
+        This JavaScript application will produce synthetic gravity anomalies over a buried tunnel.
+        You can use this script to design a gravity survey for the project described in the request for bid. The red circle in the graph below represents a tunnel with a specific radius, depth of burial,
+        and density contrast, rho.
+        The depth of burial of the tunnel can be varied by clicking with the up and down arrow buttons or pressing the up and down arrow keys on your keyboard. 
+        In addition to parameters that control the tunnel, you can also vary parameters that control gravity survey from which you will interpret observations.
+        These parameters include the spacing between gravity readings, the number of gravity readings to be average at each station, and the expected standard deviation of the observed gravity readings.
+    </article>
+    <!-- [if IE]>
+    <style>
+        .radius_control
+        {
+            margin-left: 10px;
+        }
+    </style>
+    <![Endif]-->
+    <script type="text/javascript" src="../../../assets/js/Shapes.js"></script>
+    <script type="text/javascript" src="GravityTunnel.js"></script>
+    <script type="text/javascript" src="GravityControls.js"></script>
+
+</body>
+
+</html>
